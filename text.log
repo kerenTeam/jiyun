@@ -1,0 +1,55 @@
+array (
+  0 => 
+  array (
+    'name' => '43.jpg',
+    'type' => 'image/jpeg',
+    'tmp_name' => 'C:\\Users\\xi520\\AppData\\Local\\Temp\\phpD3B5.tmp',
+    'error' => 0,
+    'size' => 122485,
+  ),
+  1 => 
+  array (
+    'name' => 'a4.png',
+    'type' => 'image/png',
+    'tmp_name' => 'C:\\Users\\xi520\\AppData\\Local\\Temp\\phpD3B6.tmp',
+    'error' => 0,
+    'size' => 216576,
+  ),
+)
+jpgpngarray (
+  0 => 
+  array (
+    'name' => 'a4 - 副本.png',
+    'type' => 'image/png',
+    'tmp_name' => 'C:\\Users\\xi520\\AppData\\Local\\Temp\\php37FF.tmp',
+    'error' => 0,
+    'size' => 216576,
+  ),
+  1 => 
+  array (
+    'name' => 'a5.png',
+    'type' => 'image/png',
+    'tmp_name' => 'C:\\Users\\xi520\\AppData\\Local\\Temp\\php380F.tmp',
+    'error' => 0,
+    'size' => 183078,
+  ),
+)
+png1png1array (
+  0 => 
+  array (
+    'name' => '32.jpg',
+    'type' => 'image/jpeg',
+    'tmp_name' => 'C:\\Users\\xi520\\AppData\\Local\\Temp\\php3500.tmp',
+    'error' => 0,
+    'size' => 220211,
+  ),
+  1 => 
+  array (
+    'name' => 'a1.png',
+    'type' => 'image/png',
+    'tmp_name' => 'C:\\Users\\xi520\\AppData\\Local\\Temp\\php3501.tmp',
+    'error' => 0,
+    'size' => 231659,
+  ),
+)
+jpgpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngjpgpngpngpngpngpngpngpngpngpngjpgpngpngpngpngpngpngpngpngpngpngjpgjpgpngpngpngpngpngjpgjpgpngpngpngpngjpgjpgpngpngpngpngjpgjpgpngpngpngjpgjpgpngpngpngpngpngjpgjpgpngpngpngpngpngjpgjpgpngjpgjpgpngpngpngpngpngjpgjpgpngpngjpgjpgpngpngpngpngpngpngpngpngpngjpgpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpngpng

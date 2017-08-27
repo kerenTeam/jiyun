@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>极云天下-后台管理</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <base href="<?php echo base_url('public/');?>">
+    <link rel="icon" type="image/png" href="admin/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="admin/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="admin/css/amazeui.min.css" />
+    <link rel="stylesheet" href="admin/css/admin.css">
+    <link rel="stylesheet" href="admin/css/app.css"> 
+    <script src="admin/js/echarts.min.js"></script>
+
+</head>
+
+<body data-type="index">
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="admin/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
+                
+                 
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+
+                <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    <a class="tpl-header-list-link" href="javascript:;">
+                        <span class="tpl-header-list-user-nick"><?php echo $_SESSION['users']['username']?></span><span class="tpl-header-list-user-ico"> </span>
+                    </a>
+                </li>
+                <li><a href="<?php echo site_url('login/login_out');?>" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+               管理中心
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/index');?>" class="nav-link <?php if($menu == 'index'){echo 'active';}?>">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/user_list');?>" class="nav-link <?php if($menu == 'user_list'){echo 'active';}?>">
+                            <i class="am-icon-user"></i>
+                            <span>管理员</span>
+                            
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/bannerList');?>" class="nav-link <?php if($menu == 'bannerList'){echo 'active';}?>">
+                            <i class="am-icon-picture-o"></i>
+                            <span>banner管理</span>
+                            
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/news');?>" class="nav-link <?php if($menu == 'news'){echo 'active';}?>">
+                            <i class="am-icon-list"></i>
+                            <span>咨讯管理</span>
+                            
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/produc');?>" class="nav-link <?php if($menu == 'produc'){echo 'active';}?>">
+                            <i class="am-icon-table"></i>
+                            <span>产品管理</span>
+                            
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/cates');?>" class="nav-link <?php if($menu == 'cates'){echo 'active';}?>">
+                            <i class="am-icon-wpforms"></i>
+                            <span>分类管理</span>
+                            
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/parnter');?>" class="nav-link <?php if($menu == 'parnter'){echo 'active';}?>">
+                            <i class="am-icon-wpforms"></i>
+                            <span>合作伙伴</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Welcome/systemSet');?>" class="nav-link <?php if($menu == 'systemSet'){echo 'active';}?>">
+                            <i class="am-icon-bars"></i>
+
+                            <span>设置</span>
+                        </a>
+                    </li>
+                    
+                    
+                     <!-- <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-expeditedssl"></i>
+                            <span>权限管理</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="limitGroup.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>权限组</span>
+                                    
+                                </a>
+
+                                <a href="limitList.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>权限列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="tpl-left-nav-item">
+                        <a href="log.html" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bars"></i>
+                            <span>日志</span>
+
+                        </a>
+                    </li> -->
+                    <li class="tpl-left-nav-item">
+                        <a href="<?php echo site_url('Login/login_out');?>" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-key"></i>
+                            <span>退出登录</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    <script src="admin/js/jquery.min.js"></script>
+    <script src="admin/js/amazeui.min.js"></script>
+    <script src="admin/js/iscroll.js"></script>
+    <script src="admin/js/app.js"></script>
+
+        <div class="tpl-content-wrapper">
+            <?php $this->load->view($page);?>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

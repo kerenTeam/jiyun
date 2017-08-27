@@ -1,0 +1,278 @@
+
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">分类管理</a></li> 
+            </ol>
+            <div class="tpl-portlet-components">
+                
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="am-u-sm-12 am-u-md-6">
+                            <div class="am-btn-toolbar">
+                                <div class="am-btn-group am-btn-group-xs" >
+                                    <button type="button" class="am-btn am-btn-default am-btn-success" data-am-modal="{target: '#doc-modal-1',}"
+                                    ><span class="am-icon-plus"></span> 新增</button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+                          <div class="am-modal-dialog" style="overflow: scroll;">
+                            <div class="am-modal-hd">新增分类
+                              <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                            </div>
+                            <div class="am-modal-bd">
+                              <div class="am-g">
+                                <div class="tpl-form-body tpl-form-line lll">
+                                    <form class="am-form tpl-form-line-form" action="<?php echo site_url('Welcome/add_cates');?>" method="post" enctype="multipart/form-data">
+                                        <div class="am-form-group">
+                                            <label for="user-name" class="am-u-sm-3 am-form-label">分类名称</label>
+                                            <div class="am-u-sm-9">
+                                                <input type="text" class="tpl-form-input user-name" name="catename" placeholder="请输入分类名" required>  
+                                            </div>
+                                        </div>
+                                         <div class="am-form-group">
+                                            <label class="am-u-sm-3 am-form-label">类别归属</label>
+                                            <div class="am-u-sm-9" style="text-align: -webkit-auto;">
+                                                <select class="cpselect" data-am-selected="{maxHeight: 300}" name="type">
+                                                    <option value="1">产品分类</option>
+                                                    <option value="2">新闻咨询分类</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                         <div class="am-form-group onlyCP">
+                                            <label for="user-weibo" class="am-u-sm-3 am-form-label">分类ICON</label>
+                                            <div class="am-u-sm-9">
+                                                <div class="am-form-group am-form-file">
+                                                    <div class="tpl-form-file-img">
+                                                        <img src="admin/img/img.svg" class="bannerView" alt="">
+                                                    </div>
+                                                    <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                    <i class="am-icon-cloud-upload"></i> 添加分类ICON</button>
+                                                    <input class="doc-form-file" type="file" name="img" multiple >
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="am-form-group onlyCP" >
+                                            <label class="am-u-sm-3 am-form-label">分类简介</label>
+                                            <div class="am-u-sm-9">
+                                                <textarea class="" name="info" rows="2" placeholder="不超过50字" maxlength="50"  ></textarea>
+  
+                                            </div>
+                                        </div>
+                                       
+                                         <div class="am-form-group">
+                                            <label class="am-u-sm-3 am-form-label">上级分类</label>
+                                            <div class="am-u-sm-9" style="text-align: -webkit-auto;">
+                                                <select data-am-selected="{maxHeight: 300}" name="pid">
+                                                    <option value="0">--</option>
+                                                    <?php foreach($cate as $v):?>
+                                                    <option value="<?php echo $v['cate_id'];?>"><?php echo $v['cate_name'];?></option>
+                                                    <?php endforeach;?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="am-form-group">
+                                            
+                                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                                <button type="button" class="am-btn am-btn-default " data-am-modal-close>取消</button>
+                                                <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success submit">提交</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            
+                            </div>
+                           
+                          </div>
+                        </div>
+                        <!-- <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-input-group am-input-group-sm">
+                                <input type="text" class="am-form-field">
+                                <span class="am-input-group-btn">
+                                <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
+                              </span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="am-g">
+                        <div class="am-u-sm-12">
+                            <div class="am-form tpl-form-line-form">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th class="table-id">ID</th>
+                                            <th class="table-title">分类名称</th> 
+                                            <th class="table-date am-hide-sm-only">分类类型</th>
+                                            <th class="table-date am-hide-sm-only">修改日期</th>
+                                            <th class="table-set">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach($cates as $val):?>
+                                        <tr>
+                                           
+                                            <td><?php echo $val['cate_id'];?></td>
+                                          
+                                           <?php if($val['pid'] == '0'):?>
+
+                                        <td class="am-text-middle">├<?php echo $val['cate_name']?></td>
+
+                                    <?php else:?>
+
+                                        <td class="am-text-middle">│
+
+                                        <?php echo str_repeat(' &nbsp;&nbsp; ',$val['lev']),' └─  '.$val['cate_name'];?></td>
+
+                                    <?php endif;?>
+                                        <td class="am-hide-sm-only"><?php if($val['type'] == '1'){echo "产品分类";}else{echo "新闻咨询分类";}?></td>
+                                        <td class="am-hide-sm-only"><?php echo $val['create_time'];?></td>
+                                            <td>
+                                                <div class="am-btn-toolbar">
+                                                    <div class="am-btn-group am-btn-group-xs">
+                                                        <button type="button" class="am-btn am-btn-default am-btn-xs am-text-secondary" data-am-modal="{target: '#edit<?php echo $val['cate_id'];?>',}"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                                                       
+                                                        <a href="<?php echo site_url('Welcome/del_cates/').$val['cate_id'];?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </td>
+                                        </tr>
+                                        <!-- 编辑 -->
+                                        <div class="am-modal am-modal-no-btn" tabindex="-1" id="edit<?php echo $val['cate_id'];?>">
+                                          <div class="am-modal-dialog" style="overflow: scroll;">
+                                            <div class="am-modal-hd">编辑分类
+                                              <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                                            </div>
+                                            <div class="am-modal-bd">
+                                              <div class="am-g">
+                                                <div class="tpl-form-body tpl-form-line lll">
+                                                    <form class="am-form tpl-form-line-form" action="<?php echo site_url('Welcome/edit_cates');?>" method="post" enctype="multipart/form-data">
+                                                        <div class="am-form-group">
+                                                            <label for="user-name" class="am-u-sm-3 am-form-label">分类名称</label>
+                                                            <div class="am-u-sm-9">
+                                                                <input type="text" class="tpl-form-input user-name" name="catename" value="<?php echo $val['cate_name']?>" placeholder="请输入分类名" required>  
+                                                            </div>
+                                                        </div>
+                                                         <div class="am-form-group">
+                                                            <label class="am-u-sm-3 am-form-label">类别归属</label>
+                                                            <div class="am-u-sm-9" style="text-align: -webkit-auto;">
+                                                                <select class="cpselect" data-am-selected="{maxHeight: 300}" name="type">
+                                                                    <option value="1" <?php if($val['type'] == '1'){echo "selected";}?>>产品分类</option>
+                                                                    <option value="2" <?php if($val['type'] == '2'){echo "selected";}?>>新闻咨询分类</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="am-form-group onlyCP">
+                                                            <label for="user-weibo" class="am-u-sm-3 am-form-label">分类ICON</label>
+                                                            <div class="am-u-sm-9">
+                                                                <div class="am-form-group am-form-file">
+                                                                    <div class="tpl-form-file-img">
+                                                                        <?php if($val['icon'] != ''){?>
+                                                                        <img src="../<?php echo $val['icon'];?>" class="bannerView" alt="">
+                                                                         <?php }else{?>
+                                                                        <img src="admin/img/img.svg" class="bannerView" alt="">
+                                                                        <?php } ?>
+                                                                    </div>
+                                                                
+                                                                    <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                                    <i class="am-icon-cloud-upload"></i> 添加分类ICON</button>
+                                                                    <input class="doc-form-file" type="file" name="img" multiple >
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="am-form-group onlyCP" >
+                                                            <label class="am-u-sm-3 am-form-label">分类简介</label>
+                                                            <div class="am-u-sm-9">
+                                                                <textarea class="" name="info" rows="2" placeholder="不超过50字" maxlength="50" ><?php echo $val['info'];?></textarea>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        
+                                                        <div class="am-form-group">
+                                                            <label class="am-u-sm-3 am-form-label">上级分类</label>
+                                                            <div class="am-u-sm-9" style="text-align: -webkit-auto;">
+                                                                <select data-am-selected="{maxHeight: 300}" name="pid">
+                                                                    <option value="0">--</option>
+                                                                    <?php foreach($cate as $v):?>
+                                                                    <option value="<?php echo $v['cate_id'];?>" <?php if($v['cate_id'] == $val['pid']){echo "selected";}?>><?php echo $v['cate_name'];?></option>
+                                                                    <?php endforeach;?>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="am-form-group">
+                                                            
+                                                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                                                <input type="hidden" name="cate_id" value="<?php echo $val['cate_id'];?>">
+                                                                <button type="button" class="am-btn am-btn-default " data-am-modal-close>取消</button>
+                                                                <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success submit">提交</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                            
+                                            </div>
+                                           
+                                          </div>
+                                        </div>
+                                        <?php endforeach;?>
+                                    </tbody>
+                                </table>
+                         
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tpl-alert"></div>
+            </div>   
+ 
+        </div>
+
+    </div>
+<script>
+    //单图上传
+     $(".doc-form-file").change(function(){
+            var objUrl = getObjectURL(this.files[0]) ;
+            console.log("objUrl = "+objUrl) ;
+            if (objUrl) {
+                $(this).parentsUntil('.tpl-form-line').find('.bannerView').attr("src", objUrl) ;
+            }
+        }) ;
+        //建立一個可存取到該file的url
+        function getObjectURL(file) {
+            var url = null ; 
+            if (window.createObjectURL!=undefined) { // basic
+                url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+        } 
+        //选中产品分类  
+        $('.cpselect').each(function(){ 
+            if($(this).find('option:selected').text()!='产品分类'){ 
+                $(this).parentsUntil('.am-modal-bd').find('.onlyCP').css('display','none')
+            }else{
+                $(this).parentsUntil('.am-modal-bd').find('.onlyCP').css('display','block')
+                
+            }
+            $(this).on('change', function(){ 
+               
+                if($(this).find('option:selected').text()!='产品分类'){ 
+                    $(this).parentsUntil('.am-modal-bd').find('.onlyCP').css('display','none')
+                }else{
+                    $(this).parentsUntil('.am-modal-bd').find('.onlyCP').css('display','block')
+                    
+                }
+            })
+        }) 
+</script>

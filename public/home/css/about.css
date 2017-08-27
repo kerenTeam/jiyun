@@ -1,0 +1,33 @@
+.bigPic .container{
+    padding: 10% 1%;
+    font-size: 35px;
+    color: #fff;}
+.bigPic{
+    background: url(../img/bigPic.png) no-repeat 100% 50% / cover;
+}
+.sceneDiv .sceneImg{
+    width: 100%;
+    transition: all .5s;
+}
+.sceneDiv .col-md-3{
+    padding: 0.6%;
+}
+.Introduction h5{
+    font-size: 22px;
+    margin-bottom: 3%;
+}
+.lianxi img {
+    width: 18px;
+    margin-right: 12px;
+}
+.IntroductionP{
+    line-height: 2;
+}
+.lianxi p{
+    line-height: 2.4;
+}
+.sceneDiv .sceneImg:hover{
+    transform:scale(1.4,1.4);
+    position: relative;
+    z-index: 100;
+}

@@ -1,0 +1,98 @@
+<footer class="indexF " id="footer">
+    <div class="container">
+        <div class="row indexF1">
+            <div class="col-md-3 col-xs-6">
+                <img class="imgF1" src="home/img/peipic.svg">
+                百倍故障赔偿
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <img class="imgF1" src="home/img/peipic.svg">
+                备案多久送多久
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <img class="imgF1" src="home/img/peipic.svg">
+                1V1大客户服务
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <img class="imgF1" src="home/img/peipic.svg">
+                7x24小时服务
+            </div>
+        </div>
+        <div class="row indexF2">
+            <div class="col-md-3 col-xs-5">
+                <ul>
+                    <li>产品与服务</li>
+
+                    <li class="link"><a href="<?php echo site_url('/');?>#price">IDC服务</a></li>
+                    <li class="link"><a href="<?php echo site_url('/');?>#price">计算与网络</a></li>
+                    <li class="link"><a href="<?php echo site_url('/');?>#price">网站服务</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-5">
+                <ul>
+                    <li>解决方案</li>
+
+                    <li class="link"><a href="<?php echo site_url('/');?>#programme">游戏解决方案</a></li>
+                    <li class="link"><a href="<?php echo site_url('/');?>#programme">建站解决方案</a></li>
+                    <li class="link"><a href="<?php echo site_url('/');?>#programme">电商解决方案</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-5">
+                <ul>
+                    <li>技术与支持</li>
+
+                    <li class="link"><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
+                    <li class="link"><a target="_blank"  href="http://www.ip138.com/idc/">IDC公司</a></li>
+                    <li class="link"><a href="<?php echo site_url('/');?>#case">合作企业</a></li>
+                    <!-- <li class="link">招商代理</li> -->
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-5">
+               <ul>
+                    <li>关于我们</li>
+
+                    <li class="link"> <a href="<?php echo site_url('Welcome/about');?>#knowME">公司简介</a> </li>
+                    <li class="link"><a href="<?php echo site_url('Welcome/about');?>#jifang">机房介绍</a></li>
+                    <li class="link"><a href="<?php echo site_url('Welcome/about');?>#knowME">联系我们</a></li>
+                    <li class="link"><a href="<?php echo site_url('Welcome/about');?>#knowME">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="indexF3">
+            <p>
+                <?php echo $system['record'];?>
+            </p>
+        </div>
+        <div class="jaintou">
+            <a href="#"><img src="home/img/jiantou.svg"></a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    //自动播放
+    // $('.carousel').carousel({
+    //   interval: 10000
+    // })
+    var fadeInUp = document.getElementsByClassName('fadeInUp');
+    [].forEach.call(fadeInUp, function(ele,index) {
+        ele.onmouseover = function(){
+            if (!ele.className.includes('fadeInUpActive')) {//不包含
+                [].forEach.call(fadeInUp, function(ele,index) {
+                   ele.className = ele.className.replace('fadeInUpActive ',' ');
+                });
+                ele.className += ' fadeInUpActive ';
+
+            }
+        }
+    });
+    
+
+
+
+</script>
+</body>
+</html>

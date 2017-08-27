@@ -1,0 +1,40 @@
+.width200, .width300{
+    background:none;
+}
+.myTitle {
+    font-size: 28px;
+}
+.summary h2 {
+    font-size: 23px;
+}
+/*.info-banner{
+    background: none;
+    position: relative;
+}
+.info-banner img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.info-banner{
+    height: 450px;
+}*/
+.more-list {
+     padding-bottom: 0px; 
+}
+.jiagou{
+    margin-bottom: 10%;
+}
+.jiagou p{
+    padding: 25px;
+    width: 80%;
+    float: right;
+    border: 1px solid #ccc;
+    line-height: 32px;
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 800px){
+
+}

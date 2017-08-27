@@ -1,0 +1,187 @@
+
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">产品编辑</a></li> 
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                   
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                        <div class="portlet-input input-small input-inline">
+                            <div class="input-icon right">
+                                <i class="am-icon-search"></i>
+                                <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tpl-block">
+                    <form class="am-form tpl-form-line-form" action="<?php echo site_url('Welcome/eidt_product');?>" method="post" enctype="multipart/form-data">
+                                                        
+                        <div class="am-form-group">
+                            <label class="am-u-sm-3 am-form-label">名称</label>
+                            <div class="am-u-sm-9">
+                                <input type="text" name="title" value="<?php echo $product['title'];?>" class="tpl-form-input banner-url" placeholder="请输入名称" required> 
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label class="am-u-sm-3 am-form-label">简介</label>
+                            <div class="am-u-sm-9">
+                                    <textarea class="" name="info"  rows="2" placeholder="不超过50字" maxlength="50" required><?php echo $product['info'];?></textarea>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label class="am-u-sm-3 am-form-label">价格（月起）</label>
+                            <div class="am-u-sm-9">
+                                <input type="number" name="price" value="<?php echo $product['price'];?>" min="1" class="tpl-form-input banner-url" placeholder="请输入价格" required> 
+                            </div>
+                        </div>
+                        
+                        <div class="am-form-group">
+                            <label class="am-u-sm-3 am-form-label">分类</label>
+                            <div class="am-u-sm-9" style="text-align: -webkit-auto;">
+                                <select data-am-selected="{maxHeight: 300}" name="cate_id">
+                                    <?php foreach($cates as $val):?>
+                                    <option value="<?php echo $val['cate_id'];?>" <?php if($val['cate_id'] == $product['cate_id']){echo "selected";}?>><?php echo $val['cate_name'];?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="user-weibo" class="am-u-sm-3 am-form-label">产品图片</label>
+                            <div class="am-u-sm-9">
+                                <div class="am-form-group am-form-file">
+                                    <div class="tpl-form-file-img">
+                                        <img src="../<?php echo $product['thumb'];?>" class="bannerView" alt="">
+                                    </div>
+                                    <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                    <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                    <input class="doc-form-file" type="file" name="img" multiple>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label class="am-u-sm-3 am-form-label">内容</label>
+                            <div class="am-u-sm-9">
+                                <div class="editor" id="editor"> <!--数字++-->
+                                          <input type="hidden" name="editer" class="editerInput"> 
+                                    <div class="editor" name='content' id="editor0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            
+                            <div class="am-u-sm-9 am-u-sm-push-3">
+                                <input type="hidden" name="id" value="<?php echo $product['id'];?>">
+                                <button type="button" class="am-btn am-btn-default " data-am-modal-close>取消</button>
+                                <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success submit">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tpl-alert"></div>
+            </div>   
+ 
+        </div>
+
+    </div>
+
+
+    <script src="admin/js/wangEditor.min.js"></script>
+      <script type="text/javascript"> 
+         //创建编辑器
+        var E = window.wangEditor;
+        var editors = document.getElementsByClassName('editor'); 
+        var editerInput = document.getElementsByClassName('editerInput'); 
+        
+        $('.editor').each(function(index,element){
+            var editor = new E('#editor'+index) 
+
+                        //设置图片大小
+                        editor.customConfig.uploadImgMaxSize = 2 * 1024 * 1024
+                        // 下面两个配置，使用其中一个即可显示“上传图片”的tab。但是两者不要同时使用！！！
+                        // editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+                        editor.customConfig.uploadImgServer = '<?php echo site_url("Welcome/upload");?>'  // 上传图片到服务器
+
+                        editor.customConfig.uploadImgHooks = {
+                            before: function (xhr, editor, files) {
+                                // 图片上传之前触发
+                                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+                            },
+                            success: function (xhr, editor, result) { 
+                                console.log(result);
+                                console.log('imgs',JSON.parse(xhr.response));
+                                let imgs = JSON.parse(xhr.response).data
+                                imgs.forEach(function(element) {
+                                    editor.txt.append("<img src='../"+element+"'/>")
+                                }, this);
+                              
+                            $('.editerInput').eq(index).val(editor.txt.html());
+                               
+                                // 图片上传并返回结果，图片插入成功之后触发
+                                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+                            },
+                            fail: function (xhr, editor, result) {
+                                // 图片上传并返回结果，但图片插入错误时触发
+                                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+                            },
+                            error: function (xhr, editor) {
+                                console.log(xhr);
+                                // 图片上传出错时触发
+                                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+                            },
+                            timeout: function (xhr, editor) {
+                                // 图片上传超时时触发
+                                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+                            },
+
+                            // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+                            // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+                            customInsert: function (insertImg, result, editor) { 
+                                // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+                                // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+
+                                // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+                                var url = result.url
+                                insertImg(url)
+
+                                // result 必须是一个 JSON 格式字符串！！！否则报错
+                            }
+                        }
+
+            // document.getElementById('editor'+i).outerHTML
+
+                 editor.customConfig.onchange = function (html) {
+                       editerInput[index].value =editor.txt.html();
+                    }
+                
+                        editor.create();  
+                        editerInput[index].value = editor.txt.html();
+                        editor.txt.html('<?php echo $product["content"];?>');
+  
+                        
+        });
+                     
+        
+        $(".doc-form-file").change(function(){
+            var objUrl = getObjectURL(this.files[0]) ;
+            console.log("objUrl = "+objUrl) ;
+            if (objUrl) {
+                $(this).parentsUntil('.tpl-form-line').find('.bannerView').attr("src", objUrl) ;
+            }
+        }) ;
+        //建立一個可存取到該file的url
+        function getObjectURL(file) {
+            var url = null ; 
+            if (window.createObjectURL!=undefined) { // basic
+                url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+        }
+       
+    </script>

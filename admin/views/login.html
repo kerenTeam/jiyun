@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>极云天下 - 后台管理系统</title>
+  <meta name="description" content="极云天下 - 后台管理系统">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<base href="<?php echo base_url().'public/'?>">
+  <link rel="icon" type="image/png" href="admin/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="admin/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="admin/css/amazeui.min.css" />
+  <link rel="stylesheet" href="admin/css/admin.css">
+  <link rel="stylesheet" href="admin/css/app.css">
+</head>
+
+<body data-type="login">
+  <div class="am-g myapp-login">
+	<div class="myapp-login-logo-block  tpl-login-max">
+		<div class="myapp-login-logo-text">
+			<div class="myapp-login-logo-text">
+				极云天下<i class="am-icon-skyatlas"></i>
+				
+			</div>
+		</div>
+
+		<div class="login-font">
+			 
+		</div>
+		<div class="am-u-sm-10 login-am-center">
+			<form class="am-form" action="<?php echo site_url('login/login_up');?>" method="post">
+				<fieldset>
+					<div class="am-form-group" style="margin-bottom: 10px">
+						<input type="text" class="" name="name" id="doc-ipt-email-1" placeholder="用户名">
+					</div>
+					<div class="am-form-group">
+						<input type="password" class="" name="password" id="doc-ipt-pwd-1" placeholder="密码">
+					</div>
+					<?php if(isset($error)):?>
+						<div class="am-form-group" id="error">
+							<p style="color:red;margin-top:10px;"><?php echo $error;?></p>
+						</div>
+						    <script>  setTimeout(function(){//5秒后隐藏
+
+                        $("#error").fadeOut();
+
+                    }, 5000);</script>
+					<?php endif;?>
+					<p><button type="submit" id="submit" class="am-btn am-btn-default">登录</button></p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+  <script src="admin/js/jquery.min.js"></script>
+  <script src="admin/js/amazeui.min.js"></script>
+  <script src="admin/js/app.js"></script>
+  <script type="text/javascript">
+  	$('#submit').click(function(){
+  		var account = $('#doc-ipt-email-1').val();
+  		var password = $('#doc-ipt-pwd-1').val();
+  		if(account == ''){
+  			alert('用户名不能为空')
+  			return false
+  		}else if(password == ''){
+  			alert('请输入密码')
+  			return false
+
+  		}else{
+
+  		}
+  	})
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>极云天下 - <?php echo $system['seotitle'];?></title>
+    <base href="<?php echo base_url('public/');?>" target="">
+
+    <link rel="stylesheet" href="home/css/xiaoniao/home.min.css?v=4392">
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home/css/main.css" rel="stylesheet">
+    <link href="home/css/index.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="<?php echo base_url('public/');?>home/js/html5shiv.js"></script>
+    <script src="<?php echo base_url('public/');?>home/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin: 0px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <?php if(empty($system['logo'])):?>
+          <a class="navbar-brand" href="<?php echo site_url('/');?>"  alt="">极云天下</a>
+          <?php else:?>
+            <a class="navbar-brand" href="<?php echo site_url('/');?>"  alt=""><img src="<?php echo base_url().$system['logo'];?>"></a>
+
+          <?php endif;?>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php echo site_url('/');?>#price">产品</a></li>
+            <li><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
+            <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
+            <li><a href="<?php echo site_url('/');?>#footer">常见问题</a></li>
+            <li><a href="<?php echo site_url('/');?>#footer">关于我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 轮播图 -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <?php foreach($banner as $k=>$v):?>
+        <li data-target="#carousel-example-generic" data-slide-to="<?php echo $k;?>" <?php if($k == 0){echo 'class="active"';}?> ></li>
+        <?php endforeach;?>
+        <!-- <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>  -->
+      </ol>
+      <div class="carousel-inner" role="listbox">
+
+    <?php foreach($banner as $k=>$v):?>
+        <div class="item <?php if($k== '0'){echo "active";}?>">
+          <img src="../<?php echo $v['banner_pic']?>" data-holder-rendered="true">
+        </div>
+    <?php endforeach;?>
+         <!-- <div class="item active">
+          <img src="<?php echo base_url('public/');?>home/img/banner.png" data-holder-rendered="true">
+        </div>
+        <div class="item">
+          <img src="<?php echo base_url('public/');?>home/img/banner.png" data-holder-rendered="true">
+        </div>  -->
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="width100" style="display: none;">
+        <div class="container">
+            <div class="row" style="background-color: #f5f7f7">
+              <div class="col-md-3 col-xs-3">
+                <div class="clo44">
+                    <img src="home/img/liaojie.svg">
+                    <h5>了解JUTX</h5>
+                    <span>为您提供有效、可靠的解决方案</span>
+                </div>        
+              </div>
+              <div class="col-md-3 col-xs-3">
+                <div class="clo44">
+                    <img src="home/img/liaojie.svg">
+                    <h5>了解JUTX</h5>
+                    <span>为您提供有效、可靠的解决方案</span>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                  <div class="clo44">
+                    <img src="home/img/liaojie.svg">
+                    <h5>了解JUTX</h5>
+                    <span>为您提供有效、可靠的解决方案</span>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-3">
+                  <div class="clo44">
+                    <img src="home/img/liaojie.svg">
+                    <h5>了解JUTX</h5>
+                    <span>为您提供有效、可靠的解决方案</span>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <section id="price">
+        <div class="container">
+            <div class="row">
+            
+                <div class="sec-title text-center wow animated fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                    <h2><b>基础云产品</b>满足云端一切所需</h2>
+                    <p>基础云产品满足云端一切所需,基础云产品满足云端一切所需,基础云产品满足云端一切所需</p>
+                </div>
+                
+                <div class="fadeInUpActive col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1">计算与网络</span>
+                        <img class="priceLogo" src="home/img/fuwuqi.svg">
+                        <h3>弹性云服务器</h3>
+                        <p>高性能企业级云服务器<br>
+                        安全可靠、弹性灵活、按需付费</p>
+                        <span class="span2"> <b>￥300</b>/月起 </span>
+                        <div>
+                            <button type="button" class="btn btn-info">立即购买</button>
+                            <button type="button" class="btn btn-default">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1">IDC服务</span>
+                        <img class="priceLogo" src="home/img/fuwuqi.svg">
+                        <h3>服务器托管</h3>
+                        <p>全网部署独立万兆光纤 <br>
+                        独立IP，共享宽带，专人维护</p>
+                        <span class="span2"> <b>￥300</b>/月起 </span>
+                        <div>
+                            <button type="button" class="btn btn-info">立即购买</button>
+                            <button type="button" class="btn btn-default">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1">网站服务</span>
+                        <img class="priceLogo" src="home/img/fuwuqi.svg">
+                        <h3>云虚拟主机</h3>
+                        <p>高性价比全能云虚拟主机<br>
+                        性能卓越、独享隔离、安全可靠</p>
+                        <span class="span2"> <b>￥300</b>/月起 </span>
+                        <div>
+                            <button type="button" class="btn btn-info">立即购买</button>
+                            <button type="button" class="btn btn-default">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1">网站服务</span>
+                        <img class="priceLogo" src="home/img/fuwuqi.svg">
+                        <h3>云虚拟主机</h3>
+                        <p>高性价比全能云虚拟主机<br>
+                        性能卓越、独享隔离、安全可靠</p>
+                        <span class="span2"> <b>￥300</b>/月起 </span>
+                        <div>
+                            <button type="button" class="btn btn-info">立即购买</button>
+                            <button type="button" class="btn btn-default">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--优势栅格布局-->  
+
+<div class="width200">
+    <div class="container summary">
+        <h3 class="myTitle" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">我们的<span>优势</span>
+            <div>我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+        </h3>
+        <div class="row">
+            <div class="col-md-4 advantage">
+                <img  style="width: 11%" src="home/img/fuwuqi.svg">
+                <h2>全球化</h2>
+                <p>腾讯云在全球多个区域拥有 14 个数据中心，并成立了本地化的团队。</p>
+            </div>
+            <div class="col-md-4 advantage">
+                <img style="width: 11%" src="home/img/fuwuqi.svg">
+                <h2>高安全</h2>
+                <p>腾讯云提供Anti-DDoS、WAF、移动安全等全面的安全解决方案，并拥有全球多项顶级数据安全隐私认证。</p>
+            </div>
+            <div class="col-md-4 advantage">
+                <img style="width: 11%" src="home/img/fuwuqi.svg">
+                <h2>高性能</h2>
+                <p>腾讯云曾多次打破 Sort Benchmark 等世界计算性能测试纪录。</p>
+            </div>
+        </div>
+    </div>
+</div>    
+<div class="container summary">
+    <!-- <hr class="feature-divider"> -->
+
+<!--特性 标签页-->
+<!-- <hr class="feature-divider" id="programme"> -->
+   <h3 class="myTitle" id="programme" style="text-align: center;  margin:0% 0 5% 0;padding-top: 8%">行业解决<span>方案</span>
+        <div>我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+   </h3>
+    <ul class="nav nav-tabs" id="tablists" role="tablist">
+        <li role="presentation" class="active"><a  href="#Chrome" aria-controls="home" role="tab" data-toggle="tab">游戏解决方案</a></li>
+        <li role="presentation"><a href="#Firefox" aria-controls="profile" role="tab" data-toggle="tab">建站解决方案</a></li>
+        <li role="presentation"><a href="#Safari" aria-controls="messages" role="tab" data-toggle="tab">电商解决方案</a></li>
+    </ul>
+    <div class="tab-content" >
+        <div role="tabpanel" class="tab-pane active" id="Chrome">
+            <div class="row feature">
+                <div class="col-md-8">
+                    <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2>
+                    <p class="lead">腾讯云的一站式建站服务可以帮助各种规模的企业提供快速在中国建站的解决方案， 并享受与腾讯数十亿规模的电商业务一样的基础设施。</p>
+                    <a href="<?php echo site_url('Welcome/program');?>">
+                        <button type="button" class="btn btn-default programBtn">查看详情</button>
+                    </a>
+                </div>
+                <div class="col-md-4"><img class="feature-image img-responsive" src="home/img/youxi.svg"></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="Firefox">
+            <div class="row feature">
+                <div class="col-md-8">
+                    <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2>
+                    <p class="lead">腾讯云为您提供全套网站解决方案，为建站提供域名、云主机、备案等基础服务，也可以选择CDN加速服务让用户获得极速体验；网站上线后，腾讯云负责为您保障网站安全。腾讯云让您建站过程、日常运营省心安心。</p>
+                       <a href="<?php echo site_url('Welcome/program');?>">
+                    <button type="button" class="btn btn-default programBtn">查看详情</button>
+                    </a>
+                </div>
+                <div class="col-md-4"><img class="feature-image img-responsive" src="home/img/jianzhan.svg"></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="Safari">
+            <div class="row feature">
+                <div class="col-md-8">
+                    <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2>
+                    <p class="lead">腾讯云为电商客户提供高效便捷、安全可靠、灵活开放的各类云服务产品，针对行业场景定制多种专属产品和工具，满足各类场景需求，帮助企业从容面对业务高峰、安全压力，助力电商快速发展，是电商上云的第一选择。</p>
+                       <a href="<?php echo site_url('Welcome/program');?>">
+                    <button type="button" class="btn btn-default programBtn">查看详情</button>
+                    </a>
+                </div>
+                <div class="col-md-4"><img class="feature-image img-responsive" src="home/img/dianshang.svg"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 统计图表 -->
+    <div class="map-service">
+        <div class="cloud-product map-product">
+            <p class="cloud-product-title"><span>您的业务可以<span class="color-blue">遍布全国各地</span></span>
+            </p>
+            <p class="cloud-product-explain">无论在任何角落，灵活流畅的上网体验，让您的业务覆盖更多用户</p>
+        </div>
+        <div class="auto">
+            <div class="map-service-box clearfix">
+                <div class="map-service-left">
+                    <ul class="data-list">
+                        <li class="data-list-li">
+                            <a class="data-list-title list-title-1">已开通区域</a>
+                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国辽宁</a>
+                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国北京</a>
+                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">香港国际</a>
+                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国江苏</a>
+                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国广东</a>
+                            <!--<a href="javascript:;" class="data-list-item">辽宁高防</a>-->
+                        </li>
+                        <li class="data-list-li">
+                            <a class="data-list-title list-title-2">即将开放</a>
+                            <a class="data-list-item">中国内蒙古</a>
+                        </li>
+                        <li class="data-list-li">
+                            <a class="data-list-title list-title-3">待开通区域</a>
+                            <a class="data-list-item">中国四川</a>
+                            <a class="data-list-item">中国山东</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-service-right">
+                    <div class="china-map">
+                        <div class="region-list postition-1">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                        </div>
+                        <div class="region-list postition-2 underline-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>四川节点</span></div>
+                        </div>
+                        <div class="region-list postition-3">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                        </div>
+                        <div class="region-list postition-4">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                        </div>
+                        <div class="region-list postition-5">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                        </div>
+                        <div class="region-list active postition-6 online-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>广东节点</span></div>
+                        </div>
+                        <div class="region-list waite postition-13 waite-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>内蒙古节点</span></div>
+                        </div>
+                        <div class="region-list postition-11 underline-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>山东节点</span></div>
+                        </div>
+                        <div class="region-list active postition-7 online-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>辽宁节点</span></div>
+                        </div>
+                        <div class="region-list active postition-8 online-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>北京节点</span></div>
+                        </div>
+                        <div class="region-list active postition-9 online-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>江苏节点</span></div>
+                        </div>
+                        <div class="region-list active postition-10 online-node">
+                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            <div class="show-regin"><span>香港节点</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div><!-- contain -->
+
+
+
+<!-- 案例 -->
+<div class="width300" id="case">
+    <div class="container caseList">
+        <h3 class="myTitle" style="text-align: center;  margin:0% 0 4% 0;padding-top: 6%">他们在用<span>腾讯云</span>
+            <div>我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+       </h3>
+        <div class="row">
+            <?php foreach($parnter as $val):?>
+            <div class="col-md-2 col-xs-4"><img src="../<?php echo $val['logo'];?>" alt="<?php echo $val['name'];?>"></div>
+            <?php endforeach;?>
+            </div>
+    </div>
+</div>
+
+<!-- 新闻栅格系统  -->
+<div class="container newList" style="padding: 0;">
+    <hr class="feature-divider">
+    <div class="row">
+        <?php foreach($news as $val):?>
+        <div class="col-md-4">
+            <div class="newDiv">
+                <p><b><?php echo mb_substr($val['cate_name'],0,'2');?> <br><?php echo mb_substr($val['cate_name'],2);?></b> </p>
+                <img class="imgN" src="home/img/ff.png">
+            </div>
+            <?php if(!empty($val['news'])):?>
+                <?php foreach($val['news'] as $v):?>
+                <p class="PN">
+                    <a href="<?php echo site_url('Welcome/news_content/').$v['news_id'];?>">
+                        <b>【<?php echo date('m-d',strtotime($val['create_time']));?>】</b><?php echo $v['title'];?>
+                    </a>
+                </p>
+                <?php endforeach;;?>
+            <?php else:?>
+            <p>暂无新闻内容！</p>
+            <?php endif;?>
+          
+        </div>
+        <?php endforeach;?>
+        <!-- <div class="col-md-4">
+            <div class="newDiv">
+                <p><b>产品 <br> 更新</b> </p>
+                <img class="imgN" src="home/img/ff.png">
+            </div>
+            
+            <p class="PN"><b>【04-17】</b>中华人民共和国网络安全法，中华人民共和国网络安全法</p>
+            <p class="PN"><b>【04-17】</b>Windows系统高危漏洞预警公告</p>
+            <p class="PN"><b>【04-17】</b>关于清理虚假用户的通知</p>
+        </div>
+        <div class="col-md-4">
+            <div class="newDiv">
+                <p><b>安全 <br> 资讯</b> </p>
+                <img class="imgN" src="home/img/ff.png">
+            </div>
+            
+            <p class="PN"><b>【04-17】</b>中华人民共和国网络安全法，中华人民共和国网络安全法</p>
+            <p class="PN"><b>【04-17】</b>Windows系统高危漏洞预警公告</p>
+            <p class="PN"><b>【04-17】</b>关于清理虚假用户的通知</p>
+        </div> -->
+    </div>
+</div>
