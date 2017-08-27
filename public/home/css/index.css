@@ -52,9 +52,12 @@ a{
 
 
 /*首页nav调整*/
+.navbar-fixed-bottom, .navbar-fixed-top{
+    position: absolute !important;
+}
 .navbar-default {
-    background-color: rgba(0,0,0,.4);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    box-shadow: none;
 }
 .navbar {
     border: none;
@@ -81,6 +84,9 @@ a{
 }
 .navbar{
     margin-bottom: 0;
+}
+.navbar-default .navbar-toggle{
+    border-color: transparent;
 }
 
 /* nav高度设置 */
@@ -439,6 +445,13 @@ img.img-responsive{
     } 
 }
 @media (max-width: 800px){
+    .navbar-default {
+        background-color: rgba(0,0,0,.4);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+    .biaoqian{
+        line-height: 35px;
+    }
     .width100 .clo44 span{
         display: none;
     }

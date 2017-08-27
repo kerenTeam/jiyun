@@ -1,5 +1,5 @@
 .bigPic .container{
-    padding: 10% 1%;
+    padding: 14% 1%;
     font-size: 35px;
     color: #fff;}
 .bigPic{
@@ -30,4 +30,10 @@
     transform:scale(1.4,1.4);
     position: relative;
     z-index: 100;
+}
+
+@media (max-width: 800px){
+    .bigPic .container{
+        color: transparent;
+    }
 }

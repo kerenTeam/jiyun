@@ -1,19 +1,19 @@
 <footer class="indexF " id="footer">
     <div class="container">
         <div class="row indexF1">
-            <div class="col-md-3 col-xs-6">
+            <div class="col-md-3 col-xs-6 biaoqian">
                 <img class="imgF1" src="home/img/peipic.svg">
                 百倍故障赔偿
             </div>
-            <div class="col-md-3 col-xs-6">
+            <div class="col-md-3 col-xs-6 biaoqian">
                 <img class="imgF1" src="home/img/peipic.svg">
                 备案多久送多久
             </div>
-            <div class="col-md-3 col-xs-6">
+            <div class="col-md-3 col-xs-6 biaoqian">
                 <img class="imgF1" src="home/img/peipic.svg">
                 1V1大客户服务
             </div>
-            <div class="col-md-3 col-xs-6">
+            <div class="col-md-3 col-xs-6 biaoqian">
                 <img class="imgF1" src="home/img/peipic.svg">
                 7x24小时服务
             </div>
@@ -64,14 +64,14 @@
             </p>
         </div>
         <div class="jaintou">
-            <a href="#"><img src="home/img/jiantou.svg"></a>
+            <a id="back-to-top"><img src="home/img/jiantou.svg"></a>
         </div>
     </div>
 </footer>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="home/js/jquery.min.js"></script>
+<script src="home/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     //自动播放
     // $('.carousel').carousel({
@@ -88,6 +88,11 @@
 
             }
         }
+    });
+
+    $("#back-to-top").click(function(){
+        $('body,html').animate({scrollTop:0},500);
+        return false;
     });
     
 

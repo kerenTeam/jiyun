@@ -43,6 +43,25 @@
         -webkit-align-items: center;
         align-items: center;
     }
+    .navbar-right{margin-top: 12px}
+    .navbar-brand>img{height: 58px;margin-top: 5px;}
+    .navbar-right li a{font-size: 15px}
+    /* .yingcang{display: none;} */
+    .carousel-indicators .active{    
+        width: 28px;
+        height: 2px;
+        margin: 0;
+        background-color: #13abe4;
+    }
+    .carousel-indicators li{
+        width: 28px;
+        height: 2px;
+        margin: 0;
+        background-color: #fff;
+        border: none;
+        margin: 0 5px;
+    }
+    .width200{background: none}
     
     </style>
 </head>
@@ -68,10 +87,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="<?php echo site_url('/');?>#price">产品</a></li>
-            <li><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
+            <li style="display: none"><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
             <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
-            <li><a href="<?php echo site_url('/');?>#footer">常见问题</a></li>
-            <li><a href="<?php echo site_url('/');?>#footer">关于我们</a></li>
+            <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
+            <li><a href="<?php echo site_url('Welcome/about');?>">关于我们</a></li>
           </ul>
         </div>
       </div>
@@ -149,7 +168,7 @@
             
                 <div class="sec-title text-center wow animated fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
                     <h2><b>基础云产品</b>满足云端一切所需</h2>
-                    <p>基础云产品满足云端一切所需,基础云产品满足云端一切所需,基础云产品满足云端一切所需</p>
+                    <p class="yingcang">基础云产品满足云端一切所需,基础云产品满足云端一切所需,基础云产品满足云端一切所需</p>
                 </div>
                 
                 <div class="fadeInUpActive col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
@@ -220,34 +239,34 @@
 <div class="width200">
     <div class="container summary">
         <h3 class="myTitle" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">我们的<span>优势</span>
-            <div>我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+            <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
         </h3>
         <div class="row">
             <div class="col-md-4 advantage">
-                <img  style="width: 11%" src="home/img/fuwuqi.svg">
+                <img  style="width: 13%" src="home/img/quanqiu.svg">
                 <h2>全球化</h2>
                 <p>腾讯云在全球多个区域拥有 14 个数据中心，并成立了本地化的团队。</p>
             </div>
             <div class="col-md-4 advantage">
-                <img style="width: 11%" src="home/img/fuwuqi.svg">
+                <img style="width: 11%" src="home/img/anquan.svg">
                 <h2>高安全</h2>
                 <p>腾讯云提供Anti-DDoS、WAF、移动安全等全面的安全解决方案，并拥有全球多项顶级数据安全隐私认证。</p>
             </div>
             <div class="col-md-4 advantage">
-                <img style="width: 11%" src="home/img/fuwuqi.svg">
+                <img style="width: 12.5%" src="home/img/xingneng.svg">
                 <h2>高性能</h2>
                 <p>腾讯云曾多次打破 Sort Benchmark 等世界计算性能测试纪录。</p>
             </div>
         </div>
     </div>
 </div>    
-<div class="container summary">
+<div class="container summary" style="display: none">
     <!-- <hr class="feature-divider"> -->
 
 <!--特性 标签页-->
 <!-- <hr class="feature-divider" id="programme"> -->
    <h3 class="myTitle" id="programme" style="text-align: center;  margin:0% 0 5% 0;padding-top: 8%">行业解决<span>方案</span>
-        <div>我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+        <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
    </h3>
     <ul class="nav nav-tabs" id="tablists" role="tablist">
         <li role="presentation" class="active"><a  href="#Chrome" aria-controls="home" role="tab" data-toggle="tab">游戏解决方案</a></li>
@@ -294,89 +313,89 @@
     </div>
     <!-- 统计图表 -->
     <div class="map-service">
-        <div class="cloud-product map-product">
-            <p class="cloud-product-title"><span>您的业务可以<span class="color-blue">遍布全国各地</span></span>
-            </p>
-            <p class="cloud-product-explain">无论在任何角落，灵活流畅的上网体验，让您的业务覆盖更多用户</p>
-        </div>
-        <div class="auto">
-            <div class="map-service-box clearfix">
-                <div class="map-service-left">
-                    <ul class="data-list">
-                        <li class="data-list-li">
-                            <a class="data-list-title list-title-1">已开通区域</a>
-                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国辽宁</a>
-                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国北京</a>
-                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">香港国际</a>
-                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国江苏</a>
-                            <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国广东</a>
-                            <!--<a href="javascript:;" class="data-list-item">辽宁高防</a>-->
-                        </li>
-                        <li class="data-list-li">
-                            <a class="data-list-title list-title-2">即将开放</a>
-                            <a class="data-list-item">中国内蒙古</a>
-                        </li>
-                        <li class="data-list-li">
-                            <a class="data-list-title list-title-3">待开通区域</a>
-                            <a class="data-list-item">中国四川</a>
-                            <a class="data-list-item">中国山东</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="map-service-right">
-                    <div class="china-map">
-                        <div class="region-list postition-1">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                        </div>
-                        <div class="region-list postition-2 underline-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>四川节点</span></div>
-                        </div>
-                        <div class="region-list postition-3">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                        </div>
-                        <div class="region-list postition-4">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                        </div>
-                        <div class="region-list postition-5">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                        </div>
-                        <div class="region-list active postition-6 online-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>广东节点</span></div>
-                        </div>
-                        <div class="region-list waite postition-13 waite-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>内蒙古节点</span></div>
-                        </div>
-                        <div class="region-list postition-11 underline-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>山东节点</span></div>
-                        </div>
-                        <div class="region-list active postition-7 online-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>辽宁节点</span></div>
-                        </div>
-                        <div class="region-list active postition-8 online-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>北京节点</span></div>
-                        </div>
-                        <div class="region-list active postition-9 online-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>江苏节点</span></div>
-                        </div>
-                        <div class="region-list active postition-10 online-node">
-                            <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            <div class="show-regin"><span>香港节点</span></div>
+            <div class="cloud-product map-product">
+                <p class="cloud-product-title"><span>您的业务可以<span class="color-blue">遍布全国各地</span></span>
+                </p>
+                <p class="cloud-product-explain">无论在任何角落，灵活流畅的上网体验，让您的业务覆盖更多用户</p>
+            </div>
+            <div class="auto">
+                <div class="map-service-box clearfix">
+                    <div class="map-service-left">
+                        <ul class="data-list">
+                            <li class="data-list-li">
+                                <a class="data-list-title list-title-1">已开通区域</a>
+                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国四川</a>
+                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国北京</a>
+                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">香港国际</a>
+                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国江苏</a>
+                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国广东</a>
+                                <!--<a href="javascript:;" class="data-list-item">辽宁高防</a>-->
+                            </li>
+                            <li class="data-list-li">
+                                <a class="data-list-title list-title-2">即将开放</a>
+                                <a class="data-list-item">中国内蒙古</a>
+                            </li>
+                            <li class="data-list-li">
+                                <a class="data-list-title list-title-3">待开通区域</a>
+                                <a class="data-list-item">中国辽宁</a>
+                                <a class="data-list-item">中国山东</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="map-service-right">
+                        <div class="china-map">
+                            <div class="region-list postition-1">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            </div>
+                            <div class="region-list active postition-2 online-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>四川节点</span></div>
+                            </div>
+                            <div class="region-list postition-3">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            </div>
+                            <div class="region-list postition-4">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            </div>
+                            <div class="region-list postition-5">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                            </div>
+                            <div class="region-list active postition-6 online-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>广东节点</span></div>
+                            </div>
+                            <div class="region-list waite postition-13 waite-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>内蒙古节点</span></div>
+                            </div>
+                            <div class="region-list postition-11 underline-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>山东节点</span></div>
+                            </div>
+                            <div class="region-list postition-7  underline-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>辽宁节点</span></div>
+                            </div>
+                            <div class="region-list active postition-8 online-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>北京节点</span></div>
+                            </div>
+                            <div class="region-list active postition-9 online-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>江苏节点</span></div>
+                            </div>
+                            <div class="region-list active postition-10 online-node">
+                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
+                                <div class="show-regin"><span>香港节点</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+    
         </div>
-
-    </div>
-
-</div><!-- contain -->
+    
+    </div><!-- contain -->
 
 
 
@@ -395,7 +414,7 @@
 </div>
 
 <!-- 新闻栅格系统  -->
-<div class="container newList" style="padding: 0;">
+<div class="container newList" id="dynamic" style="padding: 0;">
     <hr class="feature-divider">
     <div class="row">
         <?php foreach($news as $val):?>

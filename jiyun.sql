@@ -25,7 +25,7 @@ CREATE TABLE `jy_admin_group` (
   `state` int(10) DEFAULT NULL COMMENT '组状态',
   `rules` varchar(5000) DEFAULT NULL COMMENT '规则或权限id',
   PRIMARY KEY (`group_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_admin_group
@@ -47,7 +47,7 @@ CREATE TABLE `jy_admin_rule` (
   `islink` varchar(100) DEFAULT NULL COMMENT '链接',
   `sort` varchar(10) DEFAULT NULL COMMENT '排序',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_admin_rule
@@ -66,7 +66,7 @@ CREATE TABLE `jy_admin_user` (
   `user_state` varchar(255) DEFAULT NULL COMMENT '用户状态',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_admin_user
@@ -85,7 +85,7 @@ CREATE TABLE `jy_banner` (
   `banner_url` varchar(200) DEFAULT NULL COMMENT 'banner 链接',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`banner_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_banner
@@ -110,7 +110,7 @@ CREATE TABLE `jy_category` (
   `sort` int(10) DEFAULT NULL COMMENT '排序',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_category
@@ -133,7 +133,7 @@ CREATE TABLE `jy_news` (
   `read` int(10) DEFAULT '0' COMMENT '点击量',
   `state` int(1) DEFAULT '1' COMMENT '状态',
   PRIMARY KEY (`news_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_news
@@ -155,7 +155,7 @@ CREATE TABLE `jy_parnter` (
   `logo` varchar(400) DEFAULT NULL COMMENT 'logo图',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_parnter
@@ -177,7 +177,7 @@ CREATE TABLE `jy_product` (
   `state` int(2) DEFAULT '1' COMMENT '产品状态  1正常   0下架',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_product
@@ -196,7 +196,7 @@ CREATE TABLE `jy_system` (
   `logo` varchar(500) DEFAULT NULL COMMENT '网站logo',
   `code` varchar(500) DEFAULT NULL COMMENT '二维码地址',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_system
@@ -214,7 +214,7 @@ CREATE TABLE `jy_system_log` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '操作时间',
   `login_ip` varchar(200) DEFAULT NULL COMMENT '登陆ip',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jy_system_log
