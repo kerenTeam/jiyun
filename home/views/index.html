@@ -28,7 +28,7 @@
         text-align: center;
         font-size: 18px;
         background: #fff;
-        
+
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -47,7 +47,7 @@
     .navbar-brand>img{height: 58px;margin-top: 5px;}
     .navbar-right li a{font-size: 15px}
     /* .yingcang{display: none;} */
-    .carousel-indicators .active{    
+    .carousel-indicators .active{
         width: 28px;
         height: 2px;
         margin: 0;
@@ -62,7 +62,7 @@
         margin: 0 5px;
     }
     .width200{background: none}
-    
+
     </style>
 </head>
 <body>
@@ -136,7 +136,7 @@
                     <img src="home/img/liaojie.svg">
                     <h5>了解JUTX</h5>
                     <span>为您提供有效、可靠的解决方案</span>
-                </div>        
+                </div>
               </div>
               <div class="col-md-3 col-xs-3">
                 <div class="clo44">
@@ -165,13 +165,13 @@
     <section id="price">
         <div class="container">
             <div class="row">
-            
+
                 <div class="sec-title text-center wow animated fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
                     <h2><b>基础云产品</b>满足云端一切所需</h2>
                     <p class="yingcang">基础云产品满足云端一切所需,基础云产品满足云端一切所需,基础云产品满足云端一切所需</p>
                 </div>
-                
-                <div class="fadeInUpActive col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+
+                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">计算与网络</span>
                         <img class="priceLogo" src="home/img/fuwuqi.svg">
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">IDC服务</span>
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">网站服务</span>
@@ -225,8 +225,11 @@
                         性能卓越、独享隔离、安全可靠</p>
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                            <button type="button" class="btn btn-info">立即购买</button>
-                            <button type="button" class="btn btn-default">查看详情</button>
+                            <a href="<?php echo site_url('Welcome/CSlist');?>">
+                                <button type="button" class="btn btn-info">立即购买</button>
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -234,7 +237,7 @@
             </div>
         </div>
     </section>
-    <!--优势栅格布局-->  
+    <!--优势栅格布局-->
 
 <div class="width200">
     <div class="container summary">
@@ -259,7 +262,7 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
 <div class="container summary" style="display: none">
     <!-- <hr class="feature-divider"> -->
 
@@ -392,9 +395,9 @@
                     </div>
                 </div>
             </div>
-    
+
         </div>
-    
+
     </div><!-- contain -->
 
 
@@ -434,7 +437,7 @@
             <?php else:?>
             <p>暂无新闻内容！</p>
             <?php endif;?>
-          
+
         </div>
         <?php endforeach;?>
         <!-- <div class="col-md-4">
@@ -442,7 +445,7 @@
                 <p><b>产品 <br> 更新</b> </p>
                 <img class="imgN" src="home/img/ff.png">
             </div>
-            
+
             <p class="PN"><b>【04-17】</b>中华人民共和国网络安全法，中华人民共和国网络安全法</p>
             <p class="PN"><b>【04-17】</b>Windows系统高危漏洞预警公告</p>
             <p class="PN"><b>【04-17】</b>关于清理虚假用户的通知</p>
@@ -452,10 +455,27 @@
                 <p><b>安全 <br> 资讯</b> </p>
                 <img class="imgN" src="home/img/ff.png">
             </div>
-            
+
             <p class="PN"><b>【04-17】</b>中华人民共和国网络安全法，中华人民共和国网络安全法</p>
             <p class="PN"><b>【04-17】</b>Windows系统高危漏洞预警公告</p>
             <p class="PN"><b>【04-17】</b>关于清理虚假用户的通知</p>
         </div> -->
     </div>
 </div>
+<script>
+    var fadeInUp = document.getElementsByClassName('fadeInUp');
+    [].forEach.call(fadeInUp, function(ele,index) {
+        ele.onmouseover = function(){
+            if (!ele.className.includes('fadeInUpActive')) {//不包含
+                [].forEach.call(fadeInUp, function(ele,index) {
+                   ele.className = ele.className.replace('fadeInUpActive ',' ');
+                });
+                ele.className += ' fadeInUpActive ';
+
+            }
+        }
+        ele.onmouseout = function(){
+            this.className = this.className.replace('fadeInUpActive ',' ');
+        }
+    });
+</script>

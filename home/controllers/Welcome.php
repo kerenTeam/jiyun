@@ -96,6 +96,15 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	function CSlist(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('cloudServer/productList.html',$data);
+		$this->load->view('footer.html');
+	}
+
+
+
 	//解决方案
 
 

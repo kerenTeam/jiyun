@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>极云天下 - <?php echo $system['seotitle'];?></title>
+     <base href="<?php echo base_url('public/');?>" target=""> 
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="home/css/main.css" rel="stylesheet"> -->
+    <link href="home/css/index.css" rel="stylesheet">
+    <link href="home/css/articleDetails.css" rel="stylesheet">
+    <link href="home/css/productList.css" rel="stylesheet">
+    <style>
+        body{
+            min-width: 1240px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="hom/js/html5shiv.js"></script>
+    <script src="hom/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo site_url('/');?>"><img src="<?php echo base_url().$system['logo'];?>" alt=""></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php echo site_url('/');?>#price">产品</a></li>
+            <li style="display: none"><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
+            <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
+            <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
+            <li><a href="<?php echo site_url('Welcome/about');?>">关于我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pathNav">
+        <div class="container">
+            <ol class="breadcrumb">
+              <li><a style="color: #2277da" href="<?php echo site_url('/');?>">极云天下首页</a></li>
+              <li><a>云服务器选购</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="conWrap1">
+        <div class="container con1">
+            <div class="low1 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">系统镜像</div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                     <label class="lab" id="">
+                        <input type="radio" checked name="jingxiang">
+                        <div class="behind">Windows 2012 R2 标准版 64位中文版</div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="lab" id="">
+                        <input type="radio" name="jingxiang">
+                        <div class="behind">Windows 2008 R2 SP1 64位</div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="lab" id="">
+                        <input type="radio" name="jingxiang">
+                        <div class="behind">CentOS 7.2 64位</div>
+                    </label>
+                    
+                </div>
+            </div>
+
+            <div class="low1 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">机型配置</div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="lab" id="">
+                        <input type="radio" checked name="jixin">
+                        <div class="behind">入门配置（1核1GB）<br> <span>适用于起步阶段的个人网站</span> </div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="lab" id="">
+                        <input type="radio" name="jixin">
+                        <div class="behind">基础配置（1核2GB）<br> <span>有一定访问量的网站或APP</span> </div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="lab" id="">
+                        <input type="radio" name="jixin">
+                        <div class="behind">基础配置（1核2GB）<br> <span>有一定访问量的网站或APP</span> </div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label class="lab" id="">
+                        <input type="radio" name="jixin">
+                        <div class="behind">基础配置（1核2GB）<br> <span>有一定访问量的网站或APP</span> </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="low1 low2 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">地域选择</div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <label class="lab" id="">
+                        <input type="radio" checked name="diqu">
+                        <div class="behind">广州</span> </div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <label class="lab" id="">
+                        <input type="radio" name="diqu">
+                        <div class="behind">广州</div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <label class="lab" id="">
+                        <input type="radio" name="diqu">
+                        <div class="behind">广州</span> </div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <label class="lab" id="">
+                        <input type="radio" name="diqu">
+                        <div class="behind">广州</span> </div>
+                    </label>
+                </div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <label class="lab" id="">
+                        <input type="radio" name="diqu">
+                        <div class="behind">广州</span> </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="low1 low3 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">公网带宽</div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                   <input type="number" min="1" step="1" value="1" name="" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                </div>
+                <div class="Mbps behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    Mbps
+                </div>
+            </div>
+
+            <div class="low1 low3 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">购买数量</div>
+                <div class="behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                   <input type="number" min="1" step="1" value="1" name="" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                </div>
+                <div class="Mbps behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    台
+                </div>
+            </div>
+
+            <div class="low1 low4 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">购买时长</div>
+                
+                <label class="lab behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1" id="">
+                    <input type="radio" checked name="shichang">
+                    <div class="">1个月</div>
+                </label>
+                <label class="lab behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1" id="">
+                    <input type="radio" name="shichang">
+                    <div class="">1个月</div>
+                </label>
+                <label class="lab behindWrap col-xs-1 col-sm-1 col-md-1 col-lg-1" id="">
+                    <input type="radio" name="shichang">
+                    <div class="">1个月</div>
+                </label>
+                
+            </div>
+
+            <div class="low1 low5 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2">费用:</div>
+                <div class="behindWrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <b>6120.00元</b>
+                    <span>12240.00元</span>
+                </div>
+            </div>
+            <div class="low1 low6 row">
+                <div class="front col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="behindWrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <a>立即购买</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    
