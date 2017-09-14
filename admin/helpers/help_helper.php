@@ -18,7 +18,6 @@ function subtree($arr,$a = '',$id=0,$lev=1) {
     }
     return $subs;
 }
-
 //获取腾讯云签名
 function Qcloud_Hmac($time,$region){
 
@@ -27,6 +26,7 @@ function Qcloud_Hmac($time,$region){
     $signStr = base64_encode(hash_hmac('sha1', $srcStr, $secretKey, true));
     return $signStr;
 }
+
 
 
 ?>
