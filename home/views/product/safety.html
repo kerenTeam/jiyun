@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>安全增值服务</title>
+    <base href="<?php echo base_url('public/');?>">
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home/css/index.css" rel="stylesheet">
+    <link href="home/css/main.css" rel="stylesheet">
+    <link href="home/css/about.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar-right{margin-top: 12px}
+        .navbar-brand>img{height: 58px;margin-top: 5px;}
+        .navbar-right li a{font-size: 15px}
+        .myTitle span {
+            color: #252525;
+        }
+
+    </style>
+    <style>
+<!--table
+ {mso-displayed-decimal-separator:"\.";
+ mso-displayed-thousand-separator:"\,";}
+@page
+ {
+ mso-header-data:"";
+ mso-footer-data:"";
+ margin:1in 0.75in 1in 0.75in;
+ mso-header-margin:0.511805555555556in;
+ mso-footer-margin:0.511805555555556in;
+ mso-page-orientation:Portrait;
+ }
+tr
+ {mso-height-source:auto;
+ mso-ruby-visibility:none;}
+col
+ {mso-width-source:auto;
+ mso-ruby-visibility:none;}
+br
+ {mso-data-placement:same-cell;}
+ruby
+ {ruby-align:left;}
+.style0
+ {
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:Normal;
+ mso-style-id:0;}
+.font0
+ {
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font1
+ {
+ color:#000000;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif"; }
+.font2
+ {
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif"; }
+.font3
+ {
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font4
+ {
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font5
+ {
+ color:#FA7D00;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font6
+ {
+ color:#3F3F76;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font7
+ {
+ color:#9C0006;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font8
+ {
+ color:#FA7D00;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font9
+ {
+ color:#44546A;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font10
+ {
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font11
+ {
+ color:#44546A;
+ font-size:15pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font12
+ {
+ color:#44546A;
+ font-size:18pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font13
+ {
+ color:#0000FF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ text-decoration:underline;
+ font-family:"宋体","sans-serif"; }
+.font14
+ {
+ color:#006100;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font15
+ {
+ color:#44546A;
+ font-size:13pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font16
+ {
+ color:#FF0000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font17
+ {
+ color:#9C6500;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font18
+ {
+ color:#3F3F3F;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+.font19
+ {
+ color:#7F7F7F;
+ font-size:11pt;
+ font-weight:400;
+ font-style:italic;
+ font-family:"宋体","sans-serif"; }
+.font20
+ {
+ color:#800080;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ text-decoration:underline;
+ font-family:"宋体","sans-serif"; }
+.font21
+ {
+ color:#000000;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif"; }
+td
+ {mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-ignore:padding;}
+.style0
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"Normal";
+ }
+.style1
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style2
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style3
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style4
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style5
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style6
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style7
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style8
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style9
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style10
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style11
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style12
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style13
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.style14
+ {
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ }
+.x15
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ }
+.style16
+ {
+ mso-number-format:"0%";
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ mso-style-name:"Percent";
+ }
+.style17
+ {
+ mso-number-format:"_ \0022¥\0022* \#\,\#\#0\.00_ \;_ \0022¥\0022* -\#\,\#\#0\.00_ \;_ \0022¥\0022* \0022-\0022??_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ mso-style-name:"Currency";
+ }
+.style18
+ {
+ mso-number-format:"_ \0022¥\0022* \#\,\#\#0_ \;_ \0022¥\0022* -\#\,\#\#0_ \;_ \0022¥\0022* \0022-\0022_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ mso-style-name:"Currency [0]";
+ }
+.style19
+ {
+ mso-number-format:"_ * \#\,\#\#0\.00_ \;_ * -\#\,\#\#0\.00_ \;_ * \0022-\0022??_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ mso-style-name:"Comma";
+ }
+.style20
+ {
+ mso-number-format:"_ * \#\,\#\#0_ \;_ * -\#\,\#\#0_ \;_ * \0022-\0022_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ mso-protection:locked visible;
+ mso-style-name:"Comma [0]";
+ }
+.style21
+ {
+ mso-number-format:"_ \0022￥\0022* \#\,\#\#0_ \;_ \0022￥\0022* \\-\#\,\#\#0_ \;_ \0022￥\0022* \0022-\0022_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"货币[0]";
+ }
+.style22
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#EDEDED;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"20% - 强调文字颜色 3";
+ }
+.style23
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFCC99;
+ mso-pattern:auto none;
+ color:#3F3F76;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid #7F7F7F;
+ border-right:1px solid #7F7F7F;
+ border-bottom:1px solid #7F7F7F;
+ border-left:1px solid #7F7F7F;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"输入";
+ }
+.style24
+ {
+ mso-number-format:"_ \0022￥\0022* \#\,\#\#0\.00_ \;_ \0022￥\0022* \\-\#\,\#\#0\.00_ \;_ \0022￥\0022* \0022-\0022??_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"货币";
+ }
+.style25
+ {
+ mso-number-format:"_ * \#\,\#\#0_ \;_ * \\-\#\,\#\#0_ \;_ * \0022-\0022_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"千位分隔[0]";
+ }
+.style26
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#DBDBDB;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"40% - 强调文字颜色 3";
+ }
+.style27
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFC7CE;
+ mso-pattern:auto none;
+ color:#9C0006;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"差";
+ }
+.style28
+ {
+ mso-number-format:"_ * \#\,\#\#0\.00_ \;_ * \\-\#\,\#\#0\.00_ \;_ * \0022-\0022??_ \;_ \@_ ";
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"千位分隔";
+ }
+.style29
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#C9C9C9;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"60% - 强调文字颜色 3";
+ }
+.style30
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#0000FF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ text-decoration:underline;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"超链接";
+ }
+.style31
+ {
+ mso-number-format:"0%";
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"百分比";
+ }
+.style32
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#800080;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ text-decoration:underline;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"已访问的超链接";
+ }
+.style33
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFFFCC;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid #B2B2B2;
+ border-right:1px solid #B2B2B2;
+ border-bottom:1px solid #B2B2B2;
+ border-left:1px solid #B2B2B2;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"注释";
+ }
+.style34
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#F4B183;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"60% - 强调文字颜色 2";
+ }
+.style35
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#44546A;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"标题 4";
+ }
+.style36
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#FF0000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"警告文本";
+ }
+.style37
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#44546A;
+ font-size:18pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"标题";
+ }
+.style38
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#7F7F7F;
+ font-size:11pt;
+ font-weight:400;
+ font-style:italic;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"解释性文本";
+ }
+.style39
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#44546A;
+ font-size:15pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:none;
+ border-right:none;
+ border-bottom:2px solid #5B9BD5;
+ border-left:none;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"标题 1";
+ }
+.style40
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#44546A;
+ font-size:13pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:none;
+ border-right:none;
+ border-bottom:2px solid #5B9BD5;
+ border-left:none;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"标题 2";
+ }
+.style41
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#9DC3E6;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"60% - 强调文字颜色 1";
+ }
+.style42
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#44546A;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:none;
+ border-right:none;
+ border-bottom:2px solid #ADCDEA;
+ border-left:none;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"标题 3";
+ }
+.style43
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFD966;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"60% - 强调文字颜色 4";
+ }
+.style44
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#F2F2F2;
+ mso-pattern:auto none;
+ color:#3F3F3F;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid #3F3F3F;
+ border-right:1px solid #3F3F3F;
+ border-bottom:1px solid #3F3F3F;
+ border-left:1px solid #3F3F3F;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"输出";
+ }
+.style45
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#F2F2F2;
+ mso-pattern:auto none;
+ color:#FA7D00;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid #7F7F7F;
+ border-right:1px solid #7F7F7F;
+ border-bottom:1px solid #7F7F7F;
+ border-left:1px solid #7F7F7F;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"计算";
+ }
+.style46
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#A5A5A5;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:4px double #3F3F3F;
+ border-right:4px double #3F3F3F;
+ border-bottom:4px double #3F3F3F;
+ border-left:4px double #3F3F3F;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"检查单元格";
+ }
+.style47
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#E2F0D9;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"20% - 强调文字颜色 6";
+ }
+.style48
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#ED7D31;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"强调文字颜色 2";
+ }
+.style49
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#FA7D00;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:none;
+ border-right:none;
+ border-bottom:4px double #FF8001;
+ border-left:none;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"链接单元格";
+ }
+.style50
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:11pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid #5B9BD5;
+ border-right:none;
+ border-bottom:4px double #5B9BD5;
+ border-left:none;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ mso-style-name:"汇总";
+ }
+.style51
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#C6EFCE;
+ mso-pattern:auto none;
+ color:#006100;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"好";
+ }
+.style52
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFEB9C;
+ mso-pattern:auto none;
+ color:#9C6500;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"适中";
+ }
+.style53
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#DAE3F3;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"20% - 强调文字颜色 5";
+ }
+.style54
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#5B9BD5;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"强调文字颜色 1";
+ }
+.style55
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#DEEBF7;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"20% - 强调文字颜色 1";
+ }
+.style56
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#BDD7EE;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"40% - 强调文字颜色 1";
+ }
+.style57
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FBE5D6;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"20% - 强调文字颜色 2";
+ }
+.style58
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#F8CBAD;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"40% - 强调文字颜色 2";
+ }
+.style59
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#A5A5A5;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"强调文字颜色 3";
+ }
+.style60
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFC000;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"强调文字颜色 4";
+ }
+.style61
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFF2CC;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"20% - 强调文字颜色 4";
+ }
+.style62
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#FFE699;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"40% - 强调文字颜色 4";
+ }
+.style63
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#4472C4;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"强调文字颜色 5";
+ }
+.style64
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#B4C7E7;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"40% - 强调文字颜色 5";
+ }
+.style65
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#8FAADC;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"60% - 强调文字颜色 5";
+ }
+.style66
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#70AD47;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"强调文字颜色 6";
+ }
+.style67
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#C5E0B4;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"40% - 强调文字颜色 6";
+ }
+.style68
+ {
+ text-align:general;
+ vertical-align:bottom;
+ white-space:nowrap;
+ background:#A9D18E;
+ mso-pattern:auto none;
+ color:#FFFFFF;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border:none;
+ mso-protection:locked visible;
+ mso-style-name:"60% - 强调文字颜色 6";
+ }
+.x69
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid windowtext;
+ border-right:1px solid windowtext;
+ border-bottom:1px solid windowtext;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x70
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:center;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ border-top:1px solid windowtext;
+ border-right:1px solid windowtext;
+ border-bottom:1px solid windowtext;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x71
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ border-top:1px solid windowtext;
+ border-right:1px solid windowtext;
+ border-bottom:1px solid windowtext;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x72
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:center;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid windowtext;
+ border-right:1px solid windowtext;
+ border-bottom:none;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x73
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:center;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ border-top:none;
+ border-right:1px solid windowtext;
+ border-bottom:none;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x74
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:center;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"Arial","sans-serif";
+ border-top:none;
+ border-right:1px solid windowtext;
+ border-bottom:1px solid windowtext;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x75
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid windowtext;
+ border-right:1px solid windowtext;
+ border-bottom:1px solid windowtext;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+.x76
+ {
+ mso-style-parent:style0;
+ mso-number-format:General;
+ text-align:center;
+ vertical-align:middle;
+ white-space:normal;word-wrap:break-word;
+ background:#FFFFFF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:11pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:"宋体","sans-serif";
+ border-top:1px solid windowtext;
+ border-right:1px solid windowtext;
+ border-bottom:1px solid windowtext;
+ border-left:1px solid windowtext;
+ mso-diagonal-down:none;
+ mso-diagonal-up:none;
+ mso-protection:locked visible;
+ }
+-->
+</style>
+<style>
+.anquanbiaoge ,.anquanbiaoge td, .anquanbiaoge tr{
+     border: 1px solid #999 !important;
+}
+    .anquanbiaoge td{
+        padding:10px;
+        border: 1px solid #999;
+    }
+    .jianshu{
+        text-indent: 0em;
+    }
+    .jianshu h4{
+        font-size: 25px;
+        margin-bottom: 7%;
+    }
+    .jianshu p{
+        margin: 4% 0;
+     }
+</style>
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo site_url('/');?>"><img src="<?php echo base_url().$system['logo'];?>" alt=""></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    产品<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">IDC服务</a></li>
+                    <li><a href="#">云服务器</a></li>
+                    <li><a href="#">海外服务器</a></li>
+                    <li><a href="#">安全增值服务</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
+            <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
+            <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
+            <li><a href="<?php echo site_url('Welcome/about');?>#knowME">关于我们</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 大图 -->
+    <div class="bigPic">
+        <div class="container">
+            品质服务专员定期回访，不留任何服务死角
+        </div>
+    </div>
+
+    <div class="container Introduction">
+        <h3 class="myTitle" id="knowME" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">运维服务</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <table class="anquanbiaoge" border=0 cellpadding=0 cellspacing=0 width=702 style='border-collapse: 
+                     collapse;table-layout:fixed;width:100%'>
+                     <col width=72 style='width:54pt'>
+                     <col width=117 style='mso-width-source:userset;width:87pt'>
+                     <col width=513 style='mso-width-source:userset;width:384pt'>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r0'>
+                    <td height=18 class=x69 width=72 style='height:13.5pt;width:54pt;' >服务项目</td>
+                    <td class=x69 width=117 style='width:87.75pt;' >服务内容</td>
+                    <td class=x69 width=513 style='width:384.75pt;' >服务标准</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r1'>
+                    <td height=18 class=x70 style='height:13.5pt;' >测试</td>
+                    <td class=x70>部署测试机</td>
+                    <td class=x71>提供临时测试用机，为客户部署测试</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r2'>
+                    <td rowspan=9 height=256 class=x76 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:192pt;overflow:hidden;' ><font class="font3">设备安装和调试</font><font class="font2"> </font></td>
+                    <td class=x70>现场接待</td>
+                    <td class=x71>机房7×24小时开放，接受客户来现场进行调试工作</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r3'>
+                    <td class=x70>设备上、下架</td>
+                    <td class=x71>为不方便到现场的客户代为上下架服务，并完成相关的流程(录入资料等）</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r4'>
+                    <td class=x70>网络交换机配置</td>
+                    <td class=x71>为不方便到现场的客户根据实际需求和客户的要求完成交换机配置、提供技术支持</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r5'>
+                    <td class=x70>网线制作</td>
+                    <td class=x71>根据实际需求（长短，交叉线，直通线），制作网线</td>
+                     </tr>
+                     <tr height=72 style='mso-height-source:userset;height:54pt' id='r6'>
+                    <td class=x70>网络布线</td>
+                    <td class=x71 style='overflow:hidden;' >根据客户需求，提供机柜内网络规划、网络布线服务，其中包括内网、外网、管理端口、电源线、配线架、导线槽、光跳线、线标、交换机与服务器的整体规划与实施，做到外观整洁、多而不乱。所有跳线和配线架均采用超五类，并有多种颜色选择以便区分。</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r7'>
+                    <td class=x70>配置RAID</td>
+                    <td class=x71>为客户服务器做硬件RAID的配置</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r8'>
+                    <td class=x70>调试设备</td>
+                    <td class=x71>为客户来机房现场调试时提供临时调试电脑、显示器、键盘、鼠标</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r9'>
+                    <td class=x70>常用工具</td>
+                    <td class=x71>为现场调试客户提供螺丝刀等常用工具借用服务</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r10'>
+                    <td class=x70>外设服务</td>
+                    <td class=x71 style='overflow:hidden;' >提供给用户外接软驱、外接光驱提供现场安装或调试系统时所需要的软盘\移动硬盘借用服务，以及光盘刻录服务。</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r11'>
+                    <td rowspan=9 height=295 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:221.25pt;' >设备代维</td>
+                    <td class=x70>技术咨询</td>
+                    <td class=x71>7×24小时机房工程师随时为客户提供电话技术支持</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r12'>
+                    <td class=x70>设备重启</td>
+                    <td class=x71>及时响应客户需求，无限次重启设备</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r13'>
+                    <td class=x70>硬件故障排查</td>
+                    <td class=x71 style='overflow:hidden;' >为不方便维护的客户，由专业资深工程师协助客户排查服务器硬件故障，在最短时间内为客户判断问题，提出解决方案，并协助客户解决问题</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r14'>
+                    <td rowspan=2 height=56 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:42pt;' >硬件更换及升级</td>
+                    <td class=x71>免费协助客户的设备厂家工程师进入机房进行硬件维修，升级工作。 </td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r15'>
+                    <td class=x71 style='overflow:hidden;' >  如因需专业资深工程师进行硬件更换及升级服务，因此造成客户的硬件损坏，公司负责赔偿客户损坏配件。</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r16'>
+                    <td class=x70>代客调试</td>
+                    <td class=x71>按客户授权，工程师按客户电话指令进行服务器本地端操作和设备调试</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r17'>
+                    <td class=x70>更换、搬迁设备</td>
+                    <td class=x71 style='overflow:hidden;' >在客户授权的前提下，在尽量不影响用户访问的情况下，保证在最短时间内完成IP地址对调、服务器移架、服务器配件对调、服务器系统对调等工作</td>
+                     </tr>
+                     <tr height=54 style='mso-height-source:userset;height:40.5pt' id='r18'>
+                    <td class=x70>备件服务</td>
+                    <td class=x71 style='overflow:hidden;' >提供配置钥匙的独立备件箱，供客户储存备件及其他物品，按照客户要求进行更换硬件操作。每次操作后统计备件情况，并每月出具当月的替换记录、坏件记录和完整的备件清单。（世纪城机房提供）</td>
+                     </tr>
+                     <tr height=57 style='mso-height-source:userset;height:42.75pt' id='r19'>
+                    <td class=x70>备机服务</td>
+                    <td class=x71 style='overflow:hidden;' >根据客户需求，提供相当于DELL 1950/2950（或者HP360/380）水平的备用服务器（1CPU/2G内存/80G硬盘），作为临时备机，给客户在服务器发生故障后第一时间内做紧急切换用。OS可选windows或linux</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r20'>
+                    <td rowspan=9 height=256 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:192pt;' >系统代维</td>
+                    <td class=x70>技术咨询</td>
+                    <td class=x71>7×24小时机房工程师随时为客户提供电话技术支持</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r21'>
+                    <td class=x70>操作系统安装、设置</td>
+                    <td class=x71>在客户授权的前提下根据客户要求安装、设置指定的系统</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r22'>
+                    <td class=x70>系统升级</td>
+                    <td class=x71>按客户授权，进入操作系统，为客户做补丁在线升级</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r23'>
+                    <td class=x70> IP设置</td>
+                    <td class=x71>按照客户授权，进入系统为客户配制IP地址</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r24'>
+                    <td class=x70>软件安装</td>
+                    <td class=x75 style='overflow:hidden;' >提供并安装客户指定软件，安装完成后按照客户需求进行配置。（客户负责版权）</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r25'>
+                    <td class=x70>数据库代装</td>
+                    <td class=x71 style='overflow:hidden;' >由于SQL Server2000数据库必须在现场断开网线的情况下安装，不能远程安装，所以可以按客户授权，代客户安装该数据库软件</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r26'>
+                    <td class=x70>双线测试</td>
+                    <td class=x71>对于客户提供的目标地址，使用机房的不同运营商出口，进行一次性ping测试和路由追踪测试</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r27'>
+                    <td class=x70>病毒库升级</td>
+                    <td class=x71>按客户授权进入系统为客户进行杀毒软件的在线升级</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r28'>
+                    <td class=x70>优化与配置</td>
+                    <td class=x71>针对客户问题对当前系统做全面细致的检查，提出合理配置方案，并按照客户要求优化配置。</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r29'>
+                    <td rowspan=4 height=165 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:123.75pt;' >监控与分析</td>
+                    <td class=x70>网络监控</td>
+                    <td class=x71>7X24小时的网络监控</td>
+                     </tr>
+                     <tr height=55 style='mso-height-source:userset;height:41.25pt' id='r30'>
+                    <td class=x70>端口流量监控</td>
+                    <td class=x71 style='overflow:hidden;' >MRTG流量监控软件基于路由器、交换机端口实时采集流量信息，每5分钟统计更新一次。通过客户自助服务中心，随时查看站点的流量状况，界面友好、易于使用</td>
+                     </tr>
+                     <tr height=55 style='mso-height-source:userset;height:41.25pt' id='r31'>
+                    <td class=x70>设备状态监控</td>
+                    <td class=x71 style='overflow:hidden;' >根据客户需求定期（每周一次）检查服务器硬件状态，发现问题立即通告客户(短信），并协助客户进行排查，巡检依据为服务器外部状态指示灯；每次巡检的同时对服务器进行外部清洁服务，保证服务器正常运转。</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r32'>
+                    <td class=x70>端口流量分析</td>
+                    <td class=x71 style='overflow:hidden;' >提供流量图。网银互联专家根据客户应用特点为客户提供建设性的意见和建议，保证客户系统的带宽资源的利用率达到最佳。</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r33'>
+                    <td rowspan=3 height=73 class=x76 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:54.75pt;' >同步</td>
+                    <td class=x70>域名解析服务</td>
+                    <td class=x75>对客户被访问资源做出不同的地址指向，加快访问速度。</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r34'>
+                    <td class=x70>数据同步</td>
+                    <td class=x71 style='overflow:hidden;' >根据客户需求，提供全千兆内网环境供用户对自身服务器间的数据库数据或文件数据进行实时或定期同步，并为用户访问的准确性和效率性提供保障</td>
+                     </tr>
+                     <tr height=19 style='mso-height-source:userset;height:14.25pt' id='r35'>
+                    <td class=x70>负载均衡</td>
+                    <td class=x71>可使用DNSNG进行，基于域名的负载均衡</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r36'>
+                    <td rowspan=6 height=275 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:206.25pt;overflow:hidden;' >安全加固与防护</td>
+                    <td class=x70>病毒防护</td>
+                    <td class=x71 style='overflow:hidden;' >提供病毒检测和清除服务，监护系统，使之远离各种病毒源。提供防病毒策略，以及安装维护防病毒软件，升级病毒库（客户负责版权）</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r37'>
+                    <td class=x70>防火墙</td>
+                    <td class=x71 style='overflow:hidden;' >为客户提供定制防火墙服务，对系统进行修补和加固，按照安全策略进行安全配置和优化,提供详细操作报告、代价分析和紧急恢复措施报告</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r38'>
+                    <td class=x70>漏洞扫描和安全评估</td>
+                    <td class=x71 style='overflow:hidden;' >包括用户安全,操作系统安全, 网络服务安全，系统程序安全，对系统内部安全弱点进行全面地扫描与分析，并提供分析报告。推荐每月执行一次</td>
+                     </tr>
+                     <tr height=73 style='mso-height-source:userset;height:54.75pt' id='r39'>
+                    <td class=x70>系统安全和监控管理</td>
+                    <td class=x71 style='overflow:hidden;' >通过网络级安全监控软件，监视客户所有进出流量中的攻击和滥用行为，核实后向用户电话报警，并进行基本安全处理，实现自动阻断和自动Email报警。对于严重入侵事件将向用户建议启动紧急响应服务。每月提供安全事件总结报告</td>
+                     </tr>
+                     <tr height=37 style='mso-height-source:userset;height:27.75pt' id='r40'>
+                    <td class=x70>网络安全和监控</td>
+                    <td class=x71>windows下各类网站安全漏洞的检测和被黑后的修复、清理木马后门等措施,杀毒软件、防火墙安装。</td>
+                     </tr>
+                     <tr height=55 style='mso-height-source:userset;height:41.25pt' id='r41'>
+                    <td class=x70>系统安检</td>
+                    <td class=x71 style='overflow:hidden;' >在第一时间给用户提供信息系统安全漏洞的状况分析，对系统的安全性能进行评估，发现可以被黑客利用的漏洞，指出对系统可能的攻击行为，并提出相应的修补解决方案，提供分析报告，从而提高信息网络风险控制水平； </td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r42'>
+                    <td rowspan=4 height=126 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:94.5pt;overflow:hidden;' >数据备份与恢复</td>
+                    <td class=x70>本地备份</td>
+                    <td class=x71 style='overflow:hidden;' >为客户制定备份策略，根据客户需求提供日备份、周备份、月备份、年备份，并根据客户实际情况为用户量身制定增量备份策略</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r43'>
+                    <td class=x70>异地备份</td>
+                    <td class=x71>将客户数据备份到磁带，异地保存，客户独享磁带。每月全备份数据</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r44'>
+                    <td class=x70>紧急数据恢复</td>
+                    <td class=x71 style='overflow:hidden;' >用户数据发生意外时，专用备份空间中的数据又不能用于恢复数据时，可指定特定日期的备份磁带，将其中数据恢复至服务器。</td>
+                     </tr>
+                     <tr height=36 style='mso-height-source:userset;height:27pt' id='r45'>
+                    <td class=x70>本地磁盘存储</td>
+                    <td class=x71 style='overflow:hidden;' >将磁盘阵列的部分空间提供给客户使用。该磁盘阵列支持多种文件的访问方式。将按使用时间和使用容量进行服务收费</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r46'>
+                    <td rowspan=5 height=90 class=x70 style='border-right:1px solid windowtext;border-bottom:1px solid windowtext;height:67.5pt;' >其他服务</td>
+                    <td class=x70>设备代管</td>
+                    <td class=x71>对有特殊要求的客户，其设备等可以暂时存放在机房的库房内</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r47'>
+                    <td class=x70>代收设备</td>
+                    <td class=x71>客户采购的设备，可以由供应商直接送到机房，由机房工程师代为清点</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r48'>
+                    <td class=x70>代收快件</td>
+                    <td class=x71>客户所需的配件，可以直接快递机房，由机房工程师代为接收</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r49'>
+                    <td class=x70>预定车辆</td>
+                    <td class=x71>为现场调试客户预约回程出租车</td>
+                     </tr>
+                     <tr height=18 style='mso-height-source:userset;height:13.5pt' id='r50'>
+                    <td class=x70>预定宾馆</td>
+                    <td class=x71>外地客户来机房现场调试，事先按照客户的要求协助预定宾馆房间</td>
+                     </tr>
+                    <![if supportMisalignedColumns]>
+                     <tr height=0 style='display:none'>
+                      <td width=72 style='width:54pt'></td>
+                      <td width=117 style='width:87.75pt'></td>
+                      <td width=513 style='width:384.75pt'></td>
+                     </tr>
+                     <![endif]>
+                    </table>
+            </div>
+            <div class="col-md-4 jianshu" style="padding-left: 6%;">
+                <h4>用心的服务</h4>
+                
+                 <p>1, 所有机房免费金盾/傲盾硬件防火墙保护</p>
+                 <p>2, 完全白名单防护，确保接入安全，不受非法接入影响 </p>
+                 <p>3, 指定客户经理、技术经理、备案专员、信息安全专员立体服务</p>
+                 <p>4, 所有机房做到真正24小时驻机房现场维护 </p>
+                 <p>5, 24小时畅通投诉电话（两线），第一时间协调客户疑难问题</p>
+                 <p>6, 业务、运维等均提供单点两门以上线路，避免线路繁忙</p>
+                  <p>
+                    7, 大量部署备用服务器，客户需求后5分钟内免费提供  
+                    
+                 </p>
+                 <p>8, 品质服务专员定期回访，不留任何服务死角</p>
+            </div>
+        </div>
+    </div>

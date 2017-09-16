@@ -103,6 +103,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer.html');
 	}
 
+	// idc
+	function idcFun(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/idcService.html',$data);
+		$this->load->view('footer.html');
+	}
+	/*安全增值服务*/
+	function safetyFun(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/safety.html',$data);
+		$this->load->view('footer.html');
+	}
+
 
 
 	//解决方案

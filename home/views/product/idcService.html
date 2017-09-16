@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IDC服务</title>
+    <base href="<?php echo base_url('public/');?>">
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+    <link href="home/css/index.css" rel="stylesheet">
+    <link href="home/css/main.css" rel="stylesheet">
+    <link href="home/css/about.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar-right{margin-top: 12px}
+        .navbar-brand>img{height: 58px;margin-top: 5px;}
+        .navbar-right li a{font-size: 15px}
+        .myTitle span {
+            color: #252525;
+        }   
+        /*.jianshu p{
+            margin: 4% 0;
+         }*/
+         .zupin{
+            width: 80%;
+            line-height: 68px;
+            font-size: 21px;
+         }
+    </style>
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo site_url('/');?>"><img src="<?php echo base_url().$system['logo'];?>" alt=""></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    产品<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">IDC服务</a></li>
+                    <li><a href="#">云服务器</a></li>
+                    <li><a href="#">海外服务器</a></li>
+                    <li><a href="#">安全增值服务</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
+            <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
+            <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
+            <li><a href="<?php echo site_url('Welcome/about');?>#knowME">关于我们</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 大图 -->
+    <div class="bigPic">
+        <div class="container">
+            精选优质数据中心，完美解决企业IT信息化服务器数据中心网络服务
+        </div>
+    </div>
+
+    <div class="container Introduction">
+        <h3 class="myTitle" id="knowME" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">服务器托管</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table table-striped">
+                    <tr>
+                        <td>设备大小</td>
+                        <td>独享带宽</td>
+                        <td>公网IP</td>
+                        <td>线路</td>
+                        <td>价格</td>
+                    </tr>
+                    <tr>
+                        <td>1U</td>
+                        <td>10M</td>
+                        <td>1个</td>
+                        <td>电信</td>
+                        <td>7800元/年</td>
+                    </tr>
+                    <tr>
+                        <td>1U</td>
+                        <td>100M</td>
+                        <td>1个</td>
+                        <td>电信</td>
+                        <td>39800元/年</td>
+                    </tr>
+                    <tr>
+                        <td>2U</td>
+                        <td>10M</td>
+                        <td>1个</td>
+                        <td>电信</td>
+                        <td>9800元/年</td>
+                    </tr>
+                    <tr>
+                        <td>2U</td>
+                        <td>100M</td>
+                        <td>1个</td>
+                        <td>电信</td>
+                        <td>41800元/年</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4 jianshu" style="padding-left: 6%;">
+                 <p>
+                     将服务器以及相关网络设备托管到具有完善机房设施、高品质网络环境、丰富带宽资源和运营经验以及可对用户的网络和设备进行实时监控的网络数据中心内，以此使系统达到安全、可靠、稳定、高效运行的目的，保障服务器稳定高效运行并且确保服务器数据安全。
+                 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container Introduction">
+        <h3 class="myTitle" id="knowME" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">服务器租用</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <table class="table table-striped">
+                    <tr>
+                        <td>配置一</td>
+                        <td>4核/8G/500G硬盘</td>
+                        <td>10M独享</td>
+                        <td>电信</td>
+                        <td>1IP</td>
+                        <td>8600元/年</td>
+                    </tr>
+                    <tr>
+                        <td>配置二</td>
+                        <td>8核/8G/500G硬盘</td>
+                        <td>10M独享</td>
+                        <td>电信</td>
+                        <td>1IP</td>
+                        <td>9600元/年</td>
+                    </tr>
+                    <tr>
+                        <td>配置三</td>
+                        <td>8核/16G/1T硬盘</td>
+                        <td>10M独享</td>
+                        <td>电信</td>
+                        <td>1IP</td>
+                        <td>10600元/年</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="col-md-4 jianshu" style="padding-left: 6%;">
+                 <p>
+                     服务器租用是指由IDC服务商提供硬件，按照用户的要求装好系统及环境，租给用户使用。
+                 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container Introduction">
+        <h3 class="myTitle" id="knowME" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">机柜租赁</h3>
+        <div class="row">
+            <div class="col-md-8" >
+                <table class="zupin">
+                    <tr>
+                        <td>整柜</td>
+                        <td>连排机柜</td>
+                    </tr>
+                    <tr>
+                        <td>VIP区</td>
+                        <td>区域围拢</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4 jianshu" style="padding-left: 6%;">
+                 <p>
+                    48U机柜， 标配13A电流 ，电量可根据用户要求增加 ，1U可放设备18-20台 2U设备可放12-15台 
+                 </p>
+                 <p>42U机柜，标配10A电流 ，电量可根据用户要求增加 ，1U可放设备12-15台 2U设备可放10-12台 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container Introduction">
+        <h3 class="myTitle" id="knowME" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">大带宽</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <p style="margin-bottom: 5%">
+                    极云天下与全国大部分的IDC运营商有着良好的合作关系，可以提供全国多家机房的大带宽出租业务，多年来为国内知名游戏厂商，视频网站，IDC同行提供了性价比优质的大带宽服务．我们保证提供的带宽质量和机房质量以及价格具有绝对优势！
+                </p>
+                <table class="table table-striped">
+                    <tr>
+                        <td></td>
+                        <td>线路</td>
+                        <td>价格</td>
+                    </tr>
+                    <tr>
+                        <td>100M</td>
+                        <td>电信</td>
+                        <td>3000元/月</td>
+                    </tr>
+                    <tr>
+                        <td>1G</td>
+                        <td>电信</td>
+                        <td>可面议</td>
+                    </tr>
+                    <tr>
+                        <td>万兆</td>
+                        <td>电信</td>
+                        <td>可面议</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="col-md-4 jianshu jianshu2" style="padding-left: 6%;">
+                 <p>服务器托管免费测试3天，满意后付款;</p>
+                 <p>机房7×24小时工程师值守，无限次快速响应重启服务；</p>
+                 <p>机柜预留服务，针对1-2年内有增量需求的客户提供连排机柜预留，保证用户业务增长的需求；</p>
+                 <p>免费重装系统及安全设置，并代为安装指定软件；</p>
+                 <p>协助处理远程桌面、网卡、防火墙等服务设置问题；</p>
+                 <p>免费提供宕机监控及巡检服务；</p>
+                 <p>独立静态IP地址一个；</p>
+                 <p>网络连通率99.99%以上；</p>
+                 <p>免费服务器环境搭建、免费数据迁移、免费清理网页挂马；</p>
+                 <p>硬件故障排查处理，用户授权下更换问题服务器硬件；</p>
+                 <p>每月日志报告，对用户设备情况进行每月定期检查并发送检查情况报告。</p>
+            </div>
+        </div>
+    </div>

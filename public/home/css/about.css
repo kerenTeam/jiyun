@@ -31,6 +31,15 @@
     position: relative;
     z-index: 100;
 }
+/*idc产品*/
+.jianshu{
+    line-height: 30px;
+    text-indent: 2em;
+}
+.jianshu2{
+    line-height: 30px;
+    text-indent: 0em;
+}
 
 @media (max-width: 800px){
     .bigPic .container{

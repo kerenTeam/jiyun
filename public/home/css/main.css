@@ -159,7 +159,7 @@ main > section {
 }
 
 .sec-title {
-    margin-bottom: 70px;
+    margin-bottom: 4%;
 }
 
 .sec-title.white {
@@ -167,7 +167,7 @@ main > section {
 }
 
 .sec-title h2 {
-    margin: 8% 0px;
+    margin: 6% 0px;
     font-size: 28px;
     margin-bottom: 2%;
     position: relative;
@@ -794,7 +794,8 @@ ul.external li a:hover {
 }
 
 .price-table {
-    border: 1px solid #e3e3e3;
+    border: 1px solid rgba(227, 227, 227, 0.61);
+    box-shadow: 1px 1px 8px rgba(208,205,205,.51);
 }
 
 .price-table.featured {
@@ -807,7 +808,7 @@ ul.external li a:hover {
     color: #252525;
     display: block;
     font-size: 24px;
-    padding: 17px 0;
+    padding: 22px 0;
     text-transform: uppercase;
 }
 
@@ -1191,6 +1192,7 @@ textarea.form-control {
 /* price */
     .price-table {
         margin-bottom: 50px;
+
     }
 
 /* contact form */

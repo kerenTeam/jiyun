@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>极云天下 - <?php echo $system['seotitle'];?></title>
     <base href="<?php echo base_url('public/');?>" target="">
-
     <link rel="stylesheet" href="home/css/xiaoniao/home.min.css?v=4392">
     <link href="home/css/bootstrap.min.css" rel="stylesheet">
     <link href="home/css/main.css" rel="stylesheet">
     <link href="home/css/index.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
     <script src="<?php echo base_url('public/');?>home/js/html5shiv.js"></script>
     <script src="<?php echo base_url('public/');?>home/js/respond.min.js"></script>
     <![endif]-->
-
     <style>
-
     .swiper-container {
         width: 100%;
         height: 300px;
@@ -28,7 +24,6 @@
         text-align: center;
         font-size: 18px;
         background: #fff;
-
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -62,7 +57,9 @@
         margin: 0 5px;
     }
     .width200{background: none}
-
+    .programBtn{
+        display: none;
+    }
     </style>
 </head>
 <body>
@@ -86,11 +83,23 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo site_url('/');?>#price">产品</a></li>
-            <li style="display: none"><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
+            <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    产品<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">IDC服务</a></li>
+                    <li><a href="#">云服务器</a></li>
+                    <li><a href="#">海外服务器</a></li>
+                    <li><a href="#">安全增值服务</a></li>
+                </ul>
+            </li>
+            <li ><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
             <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
             <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
             <li><a href="<?php echo site_url('Welcome/about');?>">关于我们</a></li>
+
           </ul>
         </div>
       </div>
@@ -127,72 +136,41 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
-    <div class="width100" style="display: none;">
-        <div class="container">
-            <div class="row" style="background-color: #f5f7f7">
-              <div class="col-md-3 col-xs-3">
-                <div class="clo44">
-                    <img src="home/img/liaojie.svg">
-                    <h5>了解JUTX</h5>
-                    <span>为您提供有效、可靠的解决方案</span>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-3">
-                <div class="clo44">
-                    <img src="home/img/liaojie.svg">
-                    <h5>了解JUTX</h5>
-                    <span>为您提供有效、可靠的解决方案</span>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-3">
-                  <div class="clo44">
-                    <img src="home/img/liaojie.svg">
-                    <h5>了解JUTX</h5>
-                    <span>为您提供有效、可靠的解决方案</span>
-                </div>
-              </div>
-              <div class="col-md-3 col-xs-3">
-                  <div class="clo44">
-                    <img src="home/img/liaojie.svg">
-                    <h5>了解JUTX</h5>
-                    <span>为您提供有效、可靠的解决方案</span>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
+    
     <section id="price">
         <div class="container">
             <div class="row">
 
                 <div class="sec-title text-center wow animated fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
                     <h2><b>基础云产品</b>满足云端一切所需</h2>
-                    <p class="yingcang">基础云产品满足云端一切所需,基础云产品满足云端一切所需,基础云产品满足云端一切所需</p>
-                </div>
-
-                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-                    <div class="price-table text-center">
-                        <span class="span1">计算与网络</span>
-                        <img class="priceLogo" src="home/img/fuwuqi.svg">
-                        <h3>弹性云服务器</h3>
-                        <p>高性能企业级云服务器<br>
-                        安全可靠、弹性灵活、按需付费</p>
-                        <span class="span2"> <b>￥300</b>/月起 </span>
-                        <div>
-                            <button type="button" class="btn btn-info">立即购买</button>
-                            <button type="button" class="btn btn-default">查看详情</button>
-                        </div>
-                    </div>
+                    <p class="yingcang">计算、存储、监控、安全，完善的云产品满足您的一切所需</p>
                 </div>
 
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">IDC服务</span>
                         <img class="priceLogo" src="home/img/fuwuqi.svg">
-                        <h3>服务器托管</h3>
-                        <p>全网部署独立万兆光纤 <br>
-                        独立IP，共享宽带，专人维护</p>
+                        <p>标准化的运营管理系统 <br> 向客户提供服务器托管、服务器租用等服务</p>
+                        <span class="span2"> <b>￥300</b>/月起 </span>
+                        <div>
+                        <a href="<?php echo site_url('Welcome/idcFun');?>">
+                            <button type="button" class="btn btn-info">立即购买</button>
+                            <button type="button" class="btn btn-default">查看详情</button>
+                        </a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1">云服务器</span>
+                        <img class="priceLogo" src="home/img/yunfuwuqi.svg">
+                        <!-- <h3>安全稳定的计算服务</h3> -->
+                        <p>
+                            云服务器（Cloud Virtual <br> Machine，CVM）为您提供安全可靠的弹性计算服务。
+                        </p>
+                        
+                        <!-- <p>全网部署独立万兆光纤 <br> 独立IP，共享宽带，专人维护</p> -->
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
                             <button type="button" class="btn btn-info">立即购买</button>
@@ -203,11 +181,9 @@
 
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
-                        <span class="span1">网站服务</span>
-                        <img class="priceLogo" src="home/img/fuwuqi.svg">
-                        <h3>云虚拟主机</h3>
-                        <p>高性价比全能云虚拟主机<br>
-                        性能卓越、独享隔离、安全可靠</p>
+                        <span class="span1">海外服务器</span>
+                        <img class="priceLogo" src="home/img/haiwai.svg">
+                        <p>包括了全球各地的服务器<br>，除了中国大陆以外的服务器都是海外服务器</p>
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
                             <button type="button" class="btn btn-info">立即购买</button>
@@ -218,14 +194,12 @@
 
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
-                        <span class="span1">网站服务</span>
-                        <img class="priceLogo" src="home/img/fuwuqi.svg">
-                        <h3>云虚拟主机</h3>
-                        <p>高性价比全能云虚拟主机<br>
-                        性能卓越、独享隔离、安全可靠</p>
+                        <span class="span1">安全增值服务</span>
+                        <img class="priceLogo" src="home/img/fuwuanquan.svg">
+                        <p>为企业客户提供 <br> 基于电信平台全面安全监控、检测、加固服务。</p>
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                            <a href="<?php echo site_url('Welcome/CSlist');?>">
+                            <a href="<?php echo site_url('Welcome/safetyFun');?>">
                                 <button type="button" class="btn btn-info">立即购买</button>
                                 <button type="button" class="btn btn-default">查看详情</button>
                             </a>
@@ -263,142 +237,117 @@
         </div>
     </div>
 </div>
-<div class="container summary" style="display: none">
+<div class="container summary" >
     <!-- <hr class="feature-divider"> -->
 
 <!--特性 标签页-->
 <!-- <hr class="feature-divider" id="programme"> -->
-   <h3 class="myTitle" id="programme" style="text-align: center;  margin:0% 0 5% 0;padding-top: 8%">行业解决<span>方案</span>
-        <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+   <h3 class="myTitle" id="programme" style="text-align: center;  margin:0% 0 5% 0;padding-top: 6%">行业解决<span>方案</span>
+        <div class="yingcang">针对各行业业务特性，打造个性化行业解决方案，为您提供一站式的产品与服务</div>
    </h3>
     <ul class="nav nav-tabs" id="tablists" role="tablist">
-        <li role="presentation" class="active"><a  href="#Chrome" aria-controls="home" role="tab" data-toggle="tab">游戏解决方案</a></li>
-        <li role="presentation"><a href="#Firefox" aria-controls="profile" role="tab" data-toggle="tab">建站解决方案</a></li>
-        <li role="presentation"><a href="#Safari" aria-controls="messages" role="tab" data-toggle="tab">电商解决方案</a></li>
+        <li role="presentation" class="active">
+            <a  href="#gameF" role="tab" data-toggle="tab" aria-controls="home">游戏行业解决方案</a>
+        </li>
+        <li role="presentation">
+            <a href="#videoF" role="tab" data-toggle="tab" aria-controls="profile" >视频行业解决方案</a>
+        </li>
+        <li role="presentation">
+            <a href="#ElebusF" role="tab" data-toggle="tab" aria-controls="messages">电商行业解决方案</a>
+        </li>
+        <li role="presentation">
+            <a href="#financialF" role="tab" data-toggle="tab" aria-controls="messages">金融行业解决方案</a>
+        </li>
+        <li role="presentation">
+            <a href="#APPF" role="tab" data-toggle="tab" aria-controls="messages">移动APP解决方案</a>
+        </li>
     </ul>
     <div class="tab-content" >
-        <div role="tabpanel" class="tab-pane active" id="Chrome">
+        <div role="tabpanel" class="tab-pane active" id="gameF">
             <div class="row feature">
                 <div class="col-md-8">
-                    <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2>
-                    <p class="lead">腾讯云的一站式建站服务可以帮助各种规模的企业提供快速在中国建站的解决方案， 并享受与腾讯数十亿规模的电商业务一样的基础设施。</p>
+                    <!-- <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2> -->
+                    <p class="lead">
+                        覆盖全球数据中心及网络资源,多中心布局规划,实现手游, 页游, 端游高可用架构;
+                    </p>
+                    <p class="lead">
+                        接入负载均衡, 提供充足的机柜, 宽带, IP资源及最高性能服务器, 支持数达十万pps, Gbps级宽带的网络吞吐能力, 满足玩家在高峰期的游戏体验;
+                    </p>
                     <a href="<?php echo site_url('Welcome/program');?>">
                         <button type="button" class="btn btn-default programBtn">查看详情</button>
                     </a>
                 </div>
-                <div class="col-md-4"><img class="feature-image img-responsive" src="home/img/youxi.svg"></div>
+                <div class="col-md-4 fangan11" style=""><img class="feature-image img-responsive" src="home/img/youxi.svg"></div>
             </div>
         </div>
-        <div role="tabpanel" class="tab-pane" id="Firefox">
+        <div role="tabpanel" class="tab-pane" id="videoF">
             <div class="row feature">
                 <div class="col-md-8">
-                    <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2>
-                    <p class="lead">腾讯云为您提供全套网站解决方案，为建站提供域名、云主机、备案等基础服务，也可以选择CDN加速服务让用户获得极速体验；网站上线后，腾讯云负责为您保障网站安全。腾讯云让您建站过程、日常运营省心安心。</p>
+                    <p class="lead">
+                        全球资源布局, 实现海量视频存储;
+                    </p>
+                    <p class="lead">
+                        全球CDN节点, 可实现直播加速, 点播加速, 上传加速, 移动加速, 点对点云传输加速等, 全方位保障视频文件快速安全传输, 带来更流畅的视频观看体验;
+                    </p>
                        <a href="<?php echo site_url('Welcome/program');?>">
                     <button type="button" class="btn btn-default programBtn">查看详情</button>
                     </a>
                 </div>
-                <div class="col-md-4"><img class="feature-image img-responsive" src="home/img/jianzhan.svg"></div>
+                <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/jianzhan.svg"></div>
             </div>
         </div>
-        <div role="tabpanel" class="tab-pane" id="Safari">
+        <div role="tabpanel" class="tab-pane" id="ElebusF">
             <div class="row feature">
                 <div class="col-md-8">
-                    <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2>
-                    <p class="lead">腾讯云为电商客户提供高效便捷、安全可靠、灵活开放的各类云服务产品，针对行业场景定制多种专属产品和工具，满足各类场景需求，帮助企业从容面对业务高峰、安全压力，助力电商快速发展，是电商上云的第一选择。</p>
+                    <p class="lead">
+                        中港, 中美, 港美 ,等国际专线及全球BGP网络 ,实现全球快速访问 ;
+                    </p>
+                    <p class="lead">
+                        对静态内容, 流媒体等内容, 进行全网加速 ,解决跨运营商跨网访问瓶颈, 提升用户注册, 登录 , 浏览商品, 购物结算的体验;
+                    </p>
+                    <a href="<?php echo site_url('Welcome/program');?>">
+                        <button type="button" class="btn btn-default programBtn">查看详情</button>
+                    </a>
+                </div>
+                <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/dianshang.svg"></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="financialF">
+            <div class="row feature">
+                <div class="col-md-8">
+                    <p class="lead">
+                        全球数据中心分布, 提供全球多点备份.
+                    </p>
+                    <p class="lead">
+                        提供按需接入方案 ,主机租用 ,私有云 ,混合云多种接入模式 ,灾备节点通过私有云与物理集群打通 ,实现异地容灾;
+                    </p>
+                    <a href="<?php echo site_url('Welcome/program');?>">
+                        <button type="button" class="btn btn-default programBtn">查看详情</button>
+                    </a>
+                </div>
+                <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/jingrong.svg"></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="APPF">
+            <div class="row feature">
+                <div class="col-md-8">
+                    <p class="lead">
+                        智能BGP优化用户访问质量.
+                    </p>
+                    <p class="lead">
+                        移动云应用虚拟化系统为客户提供最佳的应用性能及灵活的应用虚拟化服务，帮助客户实现手机、平板电脑等移动设备安全顺畅地访问各种应用软件。
+                    </p>
                        <a href="<?php echo site_url('Welcome/program');?>">
                     <button type="button" class="btn btn-default programBtn">查看详情</button>
                     </a>
                 </div>
-                <div class="col-md-4"><img class="feature-image img-responsive" src="home/img/dianshang.svg"></div>
+                <div class="col-md-4 fangan11" ><img class="feature-image img-responsive" src="home/img/appF.svg"></div>
             </div>
         </div>
     </div>
-    <!-- 统计图表 -->
-    <div class="map-service">
-            <div class="cloud-product map-product">
-                <p class="cloud-product-title"><span>您的业务可以<span class="color-blue">遍布全国各地</span></span>
-                </p>
-                <p class="cloud-product-explain">无论在任何角落，灵活流畅的上网体验，让您的业务覆盖更多用户</p>
-            </div>
-            <div class="auto">
-                <div class="map-service-box clearfix">
-                    <div class="map-service-left">
-                        <ul class="data-list">
-                            <li class="data-list-li">
-                                <a class="data-list-title list-title-1">已开通区域</a>
-                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国四川</a>
-                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国北京</a>
-                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">香港国际</a>
-                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国江苏</a>
-                                <a target="_blank" href="" class="default-transition-fast data-list-item light-list-item">中国广东</a>
-                                <!--<a href="javascript:;" class="data-list-item">辽宁高防</a>-->
-                            </li>
-                            <li class="data-list-li">
-                                <a class="data-list-title list-title-2">即将开放</a>
-                                <a class="data-list-item">中国内蒙古</a>
-                            </li>
-                            <li class="data-list-li">
-                                <a class="data-list-title list-title-3">待开通区域</a>
-                                <a class="data-list-item">中国辽宁</a>
-                                <a class="data-list-item">中国山东</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="map-service-right">
-                        <div class="china-map">
-                            <div class="region-list postition-1">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            </div>
-                            <div class="region-list active postition-2 online-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>四川节点</span></div>
-                            </div>
-                            <div class="region-list postition-3">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            </div>
-                            <div class="region-list postition-4">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            </div>
-                            <div class="region-list postition-5">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                            </div>
-                            <div class="region-list active postition-6 online-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>广东节点</span></div>
-                            </div>
-                            <div class="region-list waite postition-13 waite-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>内蒙古节点</span></div>
-                            </div>
-                            <div class="region-list postition-11 underline-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>山东节点</span></div>
-                            </div>
-                            <div class="region-list postition-7  underline-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>辽宁节点</span></div>
-                            </div>
-                            <div class="region-list active postition-8 online-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>北京节点</span></div>
-                            </div>
-                            <div class="region-list active postition-9 online-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>江苏节点</span></div>
-                            </div>
-                            <div class="region-list active postition-10 online-node">
-                                <div class="area-box"><span class="dot"></span><span class="pulse"></span></div>
-                                <div class="show-regin"><span>香港节点</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
 
-        </div>
-
-    </div><!-- contain -->
+</div><!-- contain -->
 
 
 
@@ -406,7 +355,7 @@
 <div class="width300" id="case">
     <div class="container caseList">
         <h3 class="myTitle" style="text-align: center;  margin:0% 0 4% 0;padding-top: 6%">他们在用<span>腾讯云</span>
-            <div>我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+            <div>致力于帮助合作伙伴及用户构建基于腾讯云计算的成功业务实践和解决方案</div>
        </h3>
         <div class="row">
             <?php foreach($parnter as $val):?>
