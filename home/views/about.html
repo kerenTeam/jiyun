@@ -37,62 +37,105 @@
           <a class="navbar-brand" href="<?php echo site_url('/');?>"><img src="<?php echo base_url().$system['logo'];?>" alt=""></a>
         </div>
 
+<!-- 导航 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
-            <li class="dropdown">
+            <li ><a href="<?php echo site_url('/');?>">首页</a></li>
+            <li class="dropdown navidc">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    产品<span class="caret"></span>
+                    IDC产品<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">IDC服务</a></li>
-                    <li><a href="#">云服务器</a></li>
-                    <li><a href="#">海外服务器</a></li>
-                    <li><a href="#">安全增值服务</a></li>
+                    <li><a href="#">服务器托管</a></li>
+                    <li><a href="#">服务器租用</a></li>
+                    <li><a href="#">机柜租赁</a></li>
+                    <li><a href="#">大带宽业务</a></li>
                 </ul>
             </li>
-            <li><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
-            <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
-            <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
-            <li><a href="<?php echo site_url('Welcome/about');?>#knowME">关于我们</a></li>
-            
+            <li class="dropdown navyun">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    云服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">腾讯云</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navhaiwai">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    海外服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">美国服务器</a></li>
+                    <li><a href="#">香港服务器</a></li>
+                    <li><a href="#">韩国服务器</a></li>
+                    <li><a href="#">日本服务器</a></li>
+                    <li><a href="#">新加坡服务器</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navgaofang">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    高防服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">DDOS高防IP</a></li>
+                    <li><a href="#">高防服务器</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navshuju">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    数据中心<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/dataDetail0');?>">温江多线数据中心</a></li>
+                    <li><a href="#">中国西部数据中心</a></li>
+                    <li><a href="#">二枢纽数据中心</a></li>
+                    <li><a href="#">光华电信数据中心</a></li>
+                    <li><a href="#">万达数据中心</a></li>
+                    <li><a href="#">香港数据中心</a></li>
+                    <li><a href="#">美国数据中心</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navfuwu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    服务支持<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">运维服务</a></li>
+                    <li><a href="#">免费备案</a></li>
+                    <li><a href="#">技术支持</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navwomen">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    关于我们<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/about');?>#jianjie">公司简介</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>">客服案例</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>">极云团队</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>#women">联系我们</a></li>
+                </ul>
+            </li>
+
+            <!-- <li ><a href="<?php echo site_url('/');?>#programme">解决方案</a></li> -->
+            <!-- <li><a href="<?php echo site_url('/');?>#case">案例</a></li> -->
+            <!-- <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li> -->
+
           </ul>
         </div>
+        <!-- 导航 结束-->
       </div>
     </nav>
 
     <!-- 大图 -->
     <div class="bigPic">
         <div class="container">
-            为了无法计算的价值
+            诚信为本，一站式服务。
         </div>
     </div>
-    <div class="width200">
-            <div class="container summary">
-                <h3 class="myTitle" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">我们的<span>优势</span>
-                    <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
-                </h3>
-                <div class="row">
-                    <div class="col-md-4 advantage">
-                        <img  style="width: 13%" src="home/img/quanqiu.svg">
-                        <h2>全球化</h2>
-                        <p>腾讯云在全球多个区域拥有 14 个数据中心，并成立了本地化的团队。</p>
-                    </div>
-                    <div class="col-md-4 advantage">
-                        <img style="width: 11%" src="home/img/anquan.svg">
-                        <h2>高安全</h2>
-                        <p>腾讯云提供Anti-DDoS、WAF、移动安全等全面的安全解决方案，并拥有全球多项顶级数据安全隐私认证。</p>
-                    </div>
-                    <div class="col-md-4 advantage">
-                        <img style="width: 12.5%" src="home/img/xingneng.svg">
-                        <h2>高性能</h2>
-                        <p>腾讯云曾多次打破 Sort Benchmark 等世界计算性能测试纪录。</p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    <div class="container Real sceneDiv">
-        <h3 class="myTitle" id="jifang" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">机房实景</h3>
+    <div class="container Real sceneDiv" style="display: none;">
+        <h3 class="myTitle" id="jifang" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%;">机房实景</h3>
         <div class="row">
             <div class="col-md-3"><img class="sceneImg" src="home/img/jifang (1).JPG"></div>
             <div class="col-md-3"><img class="sceneImg" src="home/img/jifang (2).JPG"></div>
@@ -105,27 +148,80 @@
         </div>
     </div>
     <div class="container Introduction">
-        <h3 class="myTitle" id="knowME" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">了解我们</h3>
+        <h3 class="myTitle" id="knowME" style="text-align: center;
+            margin: 0% 0 3% 0;
+            padding-top: 0%;
+            display: none;">了解我们</h3>
         <div class="row">
-            <div class="col-md-8">
-                <h5>公司简介</h5>
-                <p class="IntroductionP">成都极云天下科技有限公司，是一家专注于互联网、IDC服务、技术研发和机房运维的企业，为客户提供业界领先的互联网基础服务，并通过旗下优质的互联网数据中心资源帮助企业全面提升其互联网基础设施的性能、可用性和安全性，全面助力互联网业务的开展。</p>
+            <div class="col-md-3 lianxi" style="padding-right: 4%;position: sticky;top: 50px;margin-top: 68px;">
+                 <div class="list-group">
+                  <!-- <a href="#" class="list-group-item disabled">
+                   快速访问
+                  </a> -->
+                  <a href="<?php echo site_url('Welcome/about');?>#jianjie" class="list-group-item">1. 公司简介</a>
+                  <a href="<?php echo site_url('Welcome/about');?>#wenhua" class="list-group-item">2. 公司文化</a>
+                  <a href="<?php echo site_url('Welcome/about');?>#lilian" class="list-group-item">3. 经营理念</a>
+                  <a href="<?php echo site_url('Welcome/about');?>#women" class="list-group-item">4. 联系我们</a>
+                </div>
+            </div>
 
-                <p class="IntroductionP">公司将致力于向企业提供电信业务解决方案的服务，针对用户进行网络优化，互联网接入服务支持，为各省市网络公司提供互联网大带宽接入方案以及传输电路、IDC服务器托管服务,为客户量身定做电信级业务解决方案，以满足日益增长的高速信息传输市场的需求，帮助客户提高整体竞争能力，构筑双赢的战略合作伙伴关系。依靠创新技术，遵循政府产业政策引导，发展紧密的客户关系，将客户的需求与最适合的接入方案结合起来，创造质量价格具有绝对竞争优势的通信解决方案。</p>
+            <div class="col-md-9">
+                <h5 id="jianjie" style="padding-top:50px">公司简介</h5>
+                <p class="IntroductionP">
+                 成都极云天下科技有限公司，是一家专注于互联网、IDC服务、技术研发和机房运维的企业，为客户提供业界领先的互联网基础服务，并通过旗下优质的互联网数据中心资源帮助企业全面提升其互联网基础设施的性能、可用性和安全性，全面助力互联网业务的开展。    
+                 </p>
+                <p class="IntroductionP">
+                    公司将致力于向企业提供电信业务解决方案的服务，针对用户进行网络优化，互联网接入服务支持，为各省市网络公司提供互联网大带宽接入方案以及传输电路、IDC服务器托管服务,为客户量身定做电信级业务解决方案，以满足日益增长的高速信息传输市场的需求，帮助客户提高整体竞争能力，构筑双赢的战略合作伙伴关系。依靠创新技术，遵循政府产业政策引导，发展紧密的客户关系，将客户的需求与最适合的接入方案结合起来，创造质量价格具有绝对竞争优势的通信解决方案。
+                </p>
+
+
+                <h5 id="wenhua" style="padding-top: 40px;">公司文化</h5>
+                <p class="IntroductionP">
+                    核心理念 : 至真至诚，不断超越<br>
+                    经营理念 : 及时将先进科学融入产品中，为顾客创造价值利润<br>
+                    
+                    市场理念 : 以产品质量求生存、以市场信誉求发展，坚守信用 注重服务<br>
+                    
+                    经营方针 : 品牌经营、方针战略<br>
+                    
+                    质量方针 : 注重细节、立足创新、持续改进、追求完美<br>
+                    
+                    企业信条 : 诚挚做人、认真做事。<br>
+                    
+                    人才理念 : 平等、和谐、尊重、团结，只要企业提供足够大的平台，足够的支持、激励，人之潜能便会发挥无尽不断超越。<br>
+                    
+                    发展策略 : 不断学习、实干、不断创新、铸就未来<br>
+                    
+                    竞争策略 : 品质，服务，诚信。<br>
+                </p>
+
+                <h5 id="lilian" style="padding-top: 40px;">经营理念</h5>
+                <p>
+                    一、以质为先，稳健经营。 <br>
+                稳健是以质量为核心，在追求企业快速发展的同事，遵循规律，循序渐进。<br>
+                二、开拓创新，“量身定做”<br>
+                开拓创新，即保持理念领先，复合市场变幻，产品创新，依客户需求定做，服务创新，技术规范化、现代化。<br>
+                三、诚信为本，一站式服务。<br>
+                服务是以诚信为根本，在与客户合作中，不推脱，不食言，及时快速处理问题，全方位服务。
+
+                </p>
+
+                <div class="lianxi" >
+                 <h5 id="women" style="margin-bottom:2%;padding-top: 40px ">联系我们</h5>
+                 <p>
+                    <img src="home/img/bi.svg">极云天下科技有限公司
+                 </p>
+                 <p style="padding-left: 30px;">四川省成都市高新区</p>
+                 <p style="padding-left: 30px;">天府四街长虹大厦 B座 505</p>
+                 <p>
+                    <img src="home/img/dianhua.svg">联系电话: 028-65773958
+                 </p>
+                 <p>
+                    <img style="visibility: hidden;" src="home/img/youxiang.svg">24小时紧急联系电话: 18981809745
+                 </p>
             </div>
-            <div class="col-md-4 lianxi" style="padding-left: 6%;">
-                 <h5 style="margin-bottom: 5.3%;">联系我们</h5>
-                 <p>
-                    <img src="home/img/bi.svg">极云天下
-                 </p>
-                 <p style="padding-left: 30px;">天府四街长虹大厦</p>
-                 <p style="padding-left: 30px;">中国成都</p>
-                 <p>
-                    <img src="home/img/dianhua.svg">Phone: 028-65773958
-                 </p>
-                 <p>
-                    <img src="home/img/youxiang.svg">185022575@qq.com
-                 </p>
+                
             </div>
+            
         </div>
     </div>

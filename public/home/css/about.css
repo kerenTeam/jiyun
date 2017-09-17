@@ -1,5 +1,5 @@
 .bigPic .container{
-    padding: 14% 1%;
+    padding: 12% 1%;
     font-size: 35px;
     color: #fff;}
 .bigPic{
@@ -40,6 +40,16 @@
     line-height: 30px;
     text-indent: 0em;
 }
+.bigPic .tuoguanjianshu {
+    padding: 9% 1%;
+    padding-right: 32%;
+    padding-bottom: 5%;
+    font-size: 23px;
+    color: #fff;
+    line-height: 33px;
+}
+
+
 
 @media (max-width: 800px){
     .bigPic .container{

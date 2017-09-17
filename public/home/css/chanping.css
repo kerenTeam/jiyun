@@ -1,0 +1,32 @@
+.itemC .Cjianjie{
+    text-indent: 2em;
+}
+.itemC{
+    margin-top: 35px;
+    padding: 50px;
+    box-shadow: rgba(0,0,0,.2) 1px 1px 4px;
+}
+.itemC h3{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.itemC ul{
+    overflow: hidden;
+    padding-left: 0;
+}
+.itemC ul li{
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+.itemC ul img{
+    width: 100%;
+}
+.itemC table{
+    width: 80%;
+}
+.itemC table td{
+    border: 1px solid #999;
+    padding: 5px;
+    font-size: 16px;
+}

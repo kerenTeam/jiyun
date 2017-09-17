@@ -80,28 +80,94 @@
 
           <?php endif;?>
         </div>
-
+        <!-- 导航 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
-            <li class="dropdown">
+            <li ><a href="<?php echo site_url('/');?>">首页</a></li>
+            <li class="dropdown navidc">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    产品<span class="caret"></span>
+                    IDC产品<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">IDC服务</a></li>
-                    <li><a href="#">云服务器</a></li>
-                    <li><a href="#">海外服务器</a></li>
-                    <li><a href="#">安全增值服务</a></li>
+                    <li><a href="<?php echo site_url('Welcome/tuoguan');?>">服务器托管</a></li>
+                    <li><a href="<?php echo site_url('Welcome/zuyong');?>">服务器租用</a></li>
+                    <li><a href="<?php echo site_url('Welcome/jigui');?>">机柜租赁</a></li>
+                    <li><a href="<?php echo site_url('Welcome/dakuandai');?>">大带宽业务</a></li>
                 </ul>
             </li>
-            <li ><a href="<?php echo site_url('/');?>#programme">解决方案</a></li>
-            <li><a href="<?php echo site_url('/');?>#case">案例</a></li>
-            <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li>
-            <li><a href="<?php echo site_url('Welcome/about');?>">关于我们</a></li>
+            <li class="dropdown navyun">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    云服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">腾讯云</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navhaiwai">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    海外服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">美国服务器</a></li>
+                    <li><a href="#">香港服务器</a></li>
+                    <li><a href="#">韩国服务器</a></li>
+                    <li><a href="#">日本服务器</a></li>
+                    <li><a href="#">新加坡服务器</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navgaofang">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    高防服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">DDOS高防IP</a></li>
+                    <li><a href="#">高防服务器</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navshuju">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    数据中心<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/dataDetail0');?>">温江多线数据中心</a></li>
+                    <li><a href="#">中国西部数据中心</a></li>
+                    <li><a href="#">二枢纽数据中心</a></li>
+                    <li><a href="#">光华电信数据中心</a></li>
+                    <li><a href="#">万达数据中心</a></li>
+                    <li><a href="#">香港数据中心</a></li>
+                    <li><a href="#">美国数据中心</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navfuwu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    服务支持<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">运维服务</a></li>
+                    <li><a href="#">免费备案</a></li>
+                    <li><a href="#">技术支持</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navwomen">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    关于我们<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/about');?>#jianjie">公司简介</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>">客服案例</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>">极云团队</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>#women">联系我们</a></li>
+                </ul>
+            </li>
+
+            <!-- <li ><a href="<?php echo site_url('/');?>#programme">解决方案</a></li> -->
+            <!-- <li><a href="<?php echo site_url('/');?>#case">案例</a></li> -->
+            <!-- <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li> -->
 
           </ul>
         </div>
+        <!-- 导航 结束-->
       </div>
     </nav>
     <!-- 轮播图 -->
@@ -142,21 +208,26 @@
             <div class="row">
 
                 <div class="sec-title text-center wow animated fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
-                    <h2><b>基础云产品</b>满足云端一切所需</h2>
+                    <h2><b>基础产品</b>满足您的一切所需</h2>
                     <p class="yingcang">计算、存储、监控、安全，完善的云产品满足您的一切所需</p>
                 </div>
 
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
-                        <span class="span1">IDC服务</span>
+                        <span class="span1">IDC产品</span>
                         <img class="priceLogo" src="home/img/fuwuqi.svg">
-                        <p>标准化的运营管理系统 <br> 向客户提供服务器托管、服务器租用等服务</p>
+                        <p>
+                           <a href="<?php echo site_url('Welcome/tuoguan');?>">服务器托管 <br></a> 
+                            <a href="">服务器租用 <br></a> 
+                            <a href="">机柜租赁 <br> </a>
+                            <a href="">大带宽</a> 
+                        </p>
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                        <a href="<?php echo site_url('Welcome/idcFun');?>">
-                            <button type="button" class="btn btn-info">立即购买</button>
-                            <button type="button" class="btn btn-default">查看详情</button>
-                        </a>    
+                            <a href="<?php echo site_url('Welcome/idcFun');?>">
+                                <button type="button" class="btn btn-info">立即购买</button>
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>    
                         </div>
                     </div>
                 </div>
@@ -168,6 +239,7 @@
                         <!-- <h3>安全稳定的计算服务</h3> -->
                         <p>
                             云服务器（Cloud Virtual <br> Machine，CVM）为您提供安全可靠的弹性计算服务。
+                            <br> <span style="visibility: hidden;">占位</span>
                         </p>
                         
                         <!-- <p>全网部署独立万兆光纤 <br> 独立IP，共享宽带，专人维护</p> -->
@@ -183,7 +255,7 @@
                     <div class="price-table text-center">
                         <span class="span1">海外服务器</span>
                         <img class="priceLogo" src="home/img/haiwai.svg">
-                        <p>包括了全球各地的服务器<br>，除了中国大陆以外的服务器都是海外服务器</p>
+                        <p>包括了全球各地的服务器<br>，除了中国大陆以外的服务器都是海外服务器<br> <span style="visibility: hidden;">占位</span></p>
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
                             <button type="button" class="btn btn-info">立即购买</button>
@@ -194,9 +266,9 @@
 
                 <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
-                        <span class="span1">安全增值服务</span>
+                        <span class="span1">安全防御产品</span>
                         <img class="priceLogo" src="home/img/fuwuanquan.svg">
-                        <p>为企业客户提供 <br> 基于电信平台全面安全监控、检测、加固服务。</p>
+                        <p>为企业客户提供 <br> 基于电信平台全面安全监控、检测、加固服务。<br> <span style="visibility: hidden;">占位</span></p>
                         <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
                             <a href="<?php echo site_url('Welcome/safetyFun');?>">
@@ -215,24 +287,51 @@
 
 <div class="width200">
     <div class="container summary">
-        <h3 class="myTitle" style="text-align: center;  margin:0% 0 5% 0;padding-top: 7%">我们的<span>优势</span>
-            <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div>
+        <h3 class="myTitle" style="text-align: center;  margin:0% 0 5% 0;padding-top: 5%">我们的<span>优势</span>
+            <!-- <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div> -->
         </h3>
         <div class="row">
-            <div class="col-md-4 advantage">
+            <div class="col-md-3 advantage">
+                <img  style="width: 13%" src="home/img/quanqiu.svg">
+                <h2>高安全</h2>
+                <p>机房配备各种 <br> 安全软硬件设备，保障设备及其数据安全</p>
+            </div>
+            <div class="col-md-3 advantage">
+                <img style="width: 11%" src="home/img/anquan.svg">
+                <h2>高可靠</h2>
+                <p>完善的辅助设施 <br>电力持续供应保证99.99%</p>
+            </div>
+            <div class="col-md-3 advantage">
+                <img style="width: 12.5%" src="home/img/xingneng.svg">
+                <h2>高稳定</h2>
+                <p>机房网络线路 <br> 直连省出口，稳定安全</p>
+            </div>
+            <div class="col-md-3 advantage">
+                <img style="width: 12.5%" src="home/img/xingneng.svg">
+                <h2>高效率</h2>
+                <p>优越的机房环境 <br>保证设备稳定高效运转</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 advantage">
                 <img  style="width: 13%" src="home/img/quanqiu.svg">
                 <h2>全球化</h2>
-                <p>腾讯云在全球多个区域拥有 14 个数据中心，并成立了本地化的团队。</p>
+                <p>和全球多地运营 <br> 商机房合作，满足各种业务类型需求</p>
             </div>
-            <div class="col-md-4 advantage">
+            <div class="col-md-3 advantage">
                 <img style="width: 11%" src="home/img/anquan.svg">
-                <h2>高安全</h2>
-                <p>腾讯云提供Anti-DDoS、WAF、移动安全等全面的安全解决方案，并拥有全球多项顶级数据安全隐私认证。</p>
+                <h2>品质保证</h2>
+                <p>提供高品质 <br> 低价格的优质产品</p>
             </div>
-            <div class="col-md-4 advantage">
+            <div class="col-md-3 advantage">
                 <img style="width: 12.5%" src="home/img/xingneng.svg">
                 <h2>高性能</h2>
-                <p>腾讯云曾多次打破 Sort Benchmark 等世界计算性能测试纪录。</p>
+                <p>机房采用一流 <br> 高端网络设备，稳定高效</p>
+            </div>
+            <div class="col-md-3 advantage">
+                <img style="width: 12.5%" src="home/img/xingneng.svg">
+                <h2>实时快速响应</h2>
+                <p>提供免费的实时监控<br>，在客户发现问题前响应并解决</p>
             </div>
         </div>
     </div>
@@ -354,8 +453,8 @@
 <!-- 案例 -->
 <div class="width300" id="case">
     <div class="container caseList">
-        <h3 class="myTitle" style="text-align: center;  margin:0% 0 4% 0;padding-top: 6%">他们在用<span>腾讯云</span>
-            <div>致力于帮助合作伙伴及用户构建基于腾讯云计算的成功业务实践和解决方案</div>
+        <h3 class="myTitle" style="text-align: center;  margin:0% 0 4% 0;padding-top: 6%"><span>合作伙伴</span>
+            <div>致力于帮助合作伙伴及用户构建成功的业务实践和解决方案</div>
        </h3>
         <div class="row">
             <?php foreach($parnter as $val):?>

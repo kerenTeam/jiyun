@@ -151,6 +151,11 @@ a{
     padding: 5% 7%;
     padding-top: 11%;
     font-size: 18px;
+    line-height: 30px;
+}
+.price-table p a{
+    /*color: #009eff;*/
+    text-decoration: underline;
 }
 .price-table span.span1{
     background-color: #eee;
@@ -159,6 +164,7 @@ a{
 }
 .price-table span.span2{
     font-size: 18px;
+    visibility: hidden;
 }
 .price-table span.span2 b{
     color: #ffa748;
@@ -179,6 +185,10 @@ body{
     -o-transition: all .2s; /* Opera */
 }
 
+.fadeInUpActive a{
+    color: #009eff;
+    text-decoration: underline;
+}
 .fadeInUpActive{
     -webkit-transform:scale(0.9,0.9);
 
@@ -237,9 +247,12 @@ body{
 }
 
 /*标签页和优势*/
-.summary .col-md-4{
-    margin-bottom: 7%;
+.summary .col-md-3{
+    margin-bottom: 5%;
     text-align: center;
+}
+.summary .col-md-3 p{
+    font-size: 15px;
 }
 .advantage{
     transition: all .5s;
@@ -276,7 +289,7 @@ body{
 }
 .summary h2{
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 20px;
 
 }
 img.img-responsive{
@@ -307,6 +320,7 @@ img.img-responsive{
 }
 .caseList img{
     width: 100%;
+    height: 80px;
     -webkit-filter: grayscale(1);
     transition: all .5s; 
     cursor: pointer;
@@ -316,7 +330,7 @@ img.img-responsive{
     -webkit-filter: grayscale(0);
 }
 .caseList .col-md-2{
-    padding:2%;
+    padding: 5px;
 }
 
 /*新闻栅格*/
@@ -462,6 +476,15 @@ img.img-responsive{
 }
 .animated h3{
     font-size: 20px;
+}
+.dropdown:hover a.dropdown-toggle, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    text-decoration: underline;
+} 
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.caret{
+    display: none;
 }
 
 

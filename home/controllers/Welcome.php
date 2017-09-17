@@ -156,6 +156,45 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer.html');
 	}
 
+	/*服务器托管*/
+	function tuoguan(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/idcService/tuoguan.html',$data);
+		$this->load->view('footer.html');
+	}
+	// 服务器租用
+	function zuyong(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/idcService/zuyong.html',$data);
+		$this->load->view('footer.html');
+	}
+	// 机柜租用
+	function jigui(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/idcService/jigui.html',$data);
+		$this->load->view('footer.html');
+	}
+	// 打宽带
+	function dakuandai(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/idcService/dakuandai.html',$data);
+		$this->load->view('footer.html');
+	}
+
+
+	// 数据中心
+	function dataDetail0(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/dataCenter/dataDetail.html',$data);
+		$this->load->view('footer.html');
+	}
+	
+
 
 
 	//解决方案
