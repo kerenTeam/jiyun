@@ -299,7 +299,7 @@ img.img-responsive{
     top: 20px;
 }
 .width200 img{
-    -webkit-filter: grayscale(1);
+    /*-webkit-filter: grayscale(1);*/
 }
 .programBtn{
     float: right;
@@ -486,6 +486,10 @@ img.img-responsive{
 .caret{
     display: none;
 }
+.navbar-nav>li:nth-child(4), .navbar-nav>li:nth-child(5), .navbar-nav>li:nth-child(6){
+    display: none;
+}
+
 
 
 

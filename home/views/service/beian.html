@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>极云天下 - <?php echo $system['seotitle'];?></title>
+     <base href="<?php echo base_url('public/');?>" target=""> 
+
+    <!-- <link rel="stylesheet" href="https://www.niaoyun.com/template/Home/Niaoyun/PC/Static/css/module/home/home.min.css?v=4392"/> -->
+    <link href="home/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="home/css/main.css" rel="stylesheet"> -->
+    <link href="home/css/index.css" rel="stylesheet">
+    <link href="home/css/articleDetails.css" rel="stylesheet">
+    <link href="home/css/chanping.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="hom/js/html5shiv.js"></script>
+    <script src="hom/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo site_url('/');?>"><img src="<?php echo base_url().$system['logo'];?>" alt=""></a>
+        </div>
+
+<!-- 导航 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
+            <li ><a href="<?php echo site_url('/');?>">首页</a></li>
+            <li class="dropdown navidc">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    IDC产品<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/tuoguan');?>">服务器托管</a></li>
+                    <li><a href="<?php echo site_url('Welcome/zuyong');?>">服务器租用</a></li>
+                    <li><a href="<?php echo site_url('Welcome/jigui');?>">机柜租赁</a></li>
+                    <li><a href="<?php echo site_url('Welcome/dakuandai');?>">大带宽业务</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navyun">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    云服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.qcloud.com/product/cvm">腾讯云</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navhaiwai">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    海外服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">美国服务器</a></li>
+                    <li><a href="#">香港服务器</a></li>
+                    <li><a href="#">韩国服务器</a></li>
+                    <li><a href="#">日本服务器</a></li>
+                    <li><a href="#">新加坡服务器</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navgaofang">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    高防服务器<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">DDOS高防IP</a></li>
+                    <li><a href="#">高防服务器</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navshuju">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    数据中心<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/dataDetail0');?>">温江多线数据中心</a></li>
+                    <li><a href="#">中国西部数据中心</a></li>
+                    <li><a href="#">二枢纽数据中心</a></li>
+                    <li><a href="#">光华电信数据中心</a></li>
+                    <li><a href="#">万达数据中心</a></li>
+                    <li><a href="#">香港数据中心</a></li>
+                    <li><a href="#">美国数据中心</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navfuwu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    服务支持<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/yunwei');?>">运维服务</a></li>
+                    <li><a href="<?php echo site_url('Welcome/beian');?>">免费备案</a></li>
+                    <li><a href="<?php echo site_url('Welcome/jishu');?>">技术支持</a></li>
+                </ul>
+            </li>
+            <li class="dropdown navwomen">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    关于我们<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo site_url('Welcome/about');?>#jianjie">公司简介</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>">客服案例</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>">极云团队</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>#women">联系我们</a></li>
+                </ul>
+            </li>
+
+            <!-- <li ><a href="<?php echo site_url('/');?>#programme">解决方案</a></li> -->
+            <!-- <li><a href="<?php echo site_url('/');?>#case">案例</a></li> -->
+            <!-- <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li> -->
+
+          </ul>
+        </div>
+        <!-- 导航 结束-->
+      </div>
+    </nav>
+
+    <div class="container">
+        <ol>
+    <li/>
+<p style="margin-top: 0.22in; margin-bottom: 0.22in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="6" style="font-size: 22pt"><b>&#22791;&#26696;&#22522;&#30784;&#30693;&#35782;</b></font></font></span></font></p>
+</ol>
+<p class="western" style="text-indent: 0.39in; margin-top: 0.11in; margin-bottom: 0.11in; line-height: 150%">
+<font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>1</b></font></font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#12289;&#22791;&#26696;&#30340;&#30446;&#30340;</b></font></font></span></font></p>
+<p align="justify" style="margin-left: 0.22in; margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#26681;&#25454;&#22269;&#23478;&#26377;&#20851;&#35268;&#23450;&#65292;&#20351;&#29992;&#22823;&#38470;&#26381;&#21153;&#22120;&#24320;&#21150;&#32593;&#31449;&#65292;&#38656;&#35201;&#20808;&#36827;&#34892;&#32593;&#31449;&#22791;&#26696;&#24182;&#33719;&#21462;&#36890;&#20449;&#31649;&#29702;&#23616;&#19979;&#21457;&#30340;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">ICP</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22791;&#26696;&#21495;&#65292;&#28982;&#21518;&#25165;&#33021;&#24320;&#36890;&#32593;&#31449;&#35775;&#38382;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.31in; margin-right: 1.07in; text-indent: -0.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22791;&#26696;&#25104;&#21151;&#21518;&#65292;&#36890;&#20449;&#31649;&#29702;&#23616;&#20250;&#20998;&#37197;&#20027;&#20307;&#22791;&#26696;&#21495;&#32473;&#22791;&#26696;&#20027;&#20307;&#65288;&#20010;&#20154;&#25110;&#21333;&#20301;&#22343;&#21487;&#31216;&#20026;&#20027;&#20307;&#65289;&#65292;&#21516;&#26102;&#20063;&#20250;&#32473;&#27492;&#27425;&#22791;&#26696;&#30340;&#32593;&#31449;&#20998;&#37197;&#32593;&#31449;&#22791;&#26696;&#21495;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20027;&#20307;&#22791;&#26696;&#21495;&#26684;&#24335;&#20026;&#65306;&#65288;&#30465;&#31616;&#20889;&#65289;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">ICP</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22791;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20027;&#20307;&#24207;&#21015;&#21495;&#65288;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">8</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20301;&#25968;&#23383;&#65289;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#22791;&#26696;&#21495;&#26684;&#24335;&#20026;&#65306;&#65288;&#30465;&#31616;&#20889;&#65289;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">ICP</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22791;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20027;&#20307;&#24207;&#21015;&#21495;&#65288;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">8</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20301;&#25968;&#23383;&#65289;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">-</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#24207;&#21015;&#21495;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20030;&#20363;&#65306;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#33150;&#35759;&#20113;&#23448;&#32593;&#65288;&#22495;&#21517;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">qcloud.com</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;&#30340;&#32593;&#31449;&#22791;&#26696;&#21495;&#20026;&#65306;&#20140;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">ICP</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22791;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">11018762</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21495;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">-11<br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20844;&#21496;&#20027;&#20307;&#22791;&#26696;&#21495;&#20026;&#65306;&#20140;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">ICP</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22791;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">11018762</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21495;&#12290;</font></font></span></font></font></p>
+<p class="western" style="text-indent: 0.39in; margin-top: 0.11in; margin-bottom: 0.11in; line-height: 150%">
+<font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>2</b></font></font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#12289;&#22914;&#20309;&#22791;&#26696;</b></font></font></span></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">1</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#30331;&#38470;&#33150;&#35759;&#20113;&#22791;&#26696;&#31995;&#32479;&#65306;&#28857;&#20987;&ldquo;<a href="https://console.qcloud.com/beian">&#24320;&#22987;&#22791;&#26696;</a>&rdquo;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">2</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#22635;&#20889;&#20851;&#38190;&#20449;&#24687;&#39564;&#35777;&#22791;&#26696;&#31867;&#22411;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">3</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#23436;&#21892;&#22791;&#26696;&#20449;&#24687;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">4</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#19978;&#20256;&#36164;&#26009;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">/</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21150;&#29702;&#25293;&#29031;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">5</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#25552;&#20132;&#31649;&#23616;&#23457;&#26680;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">6</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#22791;&#26696;&#23436;&#25104;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>3</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#12289;&#22495;&#21517;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21482;&#38656;&#22791;&#26696;&#19968;&#32423;&#22495;&#21517;&#65292;&#19968;&#32423;&#22495;&#21517;&#22791;&#26696;&#21518;&#23545;&#24212;&#30340;&#20108;&#32423;&#22495;&#21517;&#12289;&#19977;&#32423;&#22495;&#21517;&#21487;&#20197;&#27491;&#24120;&#20351;&#29992;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.36in; margin-right: 1.07in; text-indent: -0.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20030;&#20363;&#65306;&#33150;&#35759;&#20113;&#23448;&#32593;&#30340;&#19968;&#32423;&#22495;&#21517;&#20026;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">qcloud.com</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65292;&#22791;&#26696;&#23436;&#25104;&#21518;&#23545;&#24212;&#30340;&#20108;&#32423;&#22495;&#21517;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">www.qcloud.com</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#12289;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">bbs.qcloud.com</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22343;&#21487;&#27491;&#24120;&#20351;&#29992;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20961;&#26159;&#22312;&#24037;&#19994;&#21644;&#20449;&#24687;&#21270;&#37096;&#32593;&#31449;&#19978;&#21487;&#20197;&#26597;&#21040;&#30340;&#22495;&#21517;&#21518;&#32512;&#65292;&#37117;&#26159;&#21487;&#20197;&#22791;&#26696;&#30340;&#12290;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#29305;&#27530;&#30465;&#20221;&#65292;&#22914;&#21271;&#20140;&#65292;&#19981;&#25903;&#25345;&#22791;&#26696;&#22659;&#22806;&#22495;&#21517;&#22791;&#26696;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>4</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#12289;&#22791;&#26696;&#35201;&#22810;&#20037;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">1</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#33150;&#35759;&#20113;&#23545;&#22791;&#26696;&#20449;&#24687;&#30340;&#23457;&#26680;&#19981;&#36229;&#36807;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">1</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#24037;&#20316;&#26085;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">2</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#65289;
+&#22791;&#26696;&#20449;&#24687;&#25552;&#20132;&#33267;&#36890;&#20449;&#31649;&#29702;&#23616;&#21518;&#65292;&#21508;&#30465;&#23457;&#26680;&#26102;&#38388;&#19981;&#19968;&#65292;&#23457;&#26680;&#26102;&#38388;&#19981;&#36229;&#36807;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">20</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#24037;&#20316;&#26085;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>5.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#22791;&#26696;&#31867;&#22411;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#26681;&#25454;&#20027;&#20307;&#21644;&#22495;&#21517;&#26159;&#21542;&#31532;&#19968;&#27425;&#20570;&#22791;&#26696;&#65292;&#21487;&#20197;&#20998;&#20026;&#19981;&#21516;&#30340;&#22791;&#26696;&#31867;&#22411;&#65292;&#19981;&#21516;&#30340;&#22791;&#26696;&#31867;&#22411;&#22635;&#20889;&#30340;&#20449;&#24687;&#30053;&#26377;&#24046;&#24322;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">1)
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22686;&#21152;&#22791;&#26696;&#20449;&#24687;&#30340;&#31867;&#22411;&#26377;&#65306;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#39318;&#27425;&#22791;&#26696;&#65288;&#26032;&#22686;&#22791;&#26696;&#65289;&#65306;&#20027;&#20307;&#21644;&#22495;&#21517;&#22343;&#20026;&#31532;&#19968;&#27425;&#20570;&#22791;&#26696;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#26032;&#22686;&#32593;&#31449;&#65306;&#35813;&#20027;&#20307;&#24050;&#22791;&#26696;&#36807;&#20854;&#20182;&#32593;&#31449;&#65292;&#27492;&#27425;&#22635;&#20889;&#30340;&#22495;&#21517;&#26159;&#31532;&#19968;&#27425;&#20570;&#22791;&#26696;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#36716;&#20837;&#22791;&#26696;&#65306;&#20027;&#20307;&#21644;&#22495;&#21517;&#22343;&#24050;&#22791;&#26696;&#65292;&#27492;&#27425;&#22791;&#26696;&#26159;&#21150;&#29702;&#25509;&#20837;&#21830;&#30340;&#21464;&#26356;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22312;&#24744;&#22635;&#20889;&#22791;&#26696;&#20449;&#24687;&#30340;&#36807;&#31243;&#20013;&#65292;&#31995;&#32479;&#20250;&#33258;&#21160;&#21028;&#26029;&#22791;&#26696;&#31867;&#22411;&#65292;&#24744;&#26080;&#38656;&#33258;&#24049;&#36873;&#25321;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">2)
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21024;&#38500;&#22791;&#26696;&#20449;&#24687;&#30340;&#31867;&#22411;&#26377;&#65306;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#27880;&#38144;&#20027;&#20307;&#65306;&#21024;&#38500;&#35813;&#20027;&#20307;&#19979;&#30340;&#25152;&#26377;&#22791;&#26696;&#20449;&#24687;&#65292;&#21253;&#25324;&#20027;&#20307;&#20449;&#24687;&#21644;&#32593;&#31449;&#20449;&#24687;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#27880;&#38144;&#32593;&#31449;&#65306;&#21024;&#38500;&#20027;&#20307;&#19979;&#30340;&#26576;&#20010;&#32593;&#31449;&#65292;&#20027;&#20307;&#20449;&#24687;&#20173;&#28982;&#20445;&#30041;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21462;&#28040;&#25509;&#20837;&#65306;&#21024;&#38500;&#22791;&#26696;&#20449;&#24687;&#21644;&#25509;&#20837;&#21830;&#30340;&#20851;&#32852;&#65292;&#24314;&#35758;&#22312;&#26032;&#30340;&#25509;&#20837;&#21830;&#22788;&#23436;&#25104;&#36716;&#20837;&#22791;&#26696;&#21518;&#20877;&#21462;&#28040;&#25509;&#20837;&#65292;&#21542;&#21017;&#22791;&#26696;&#20449;&#24687;&#21487;&#33021;&#20250;&#34987;&#36890;&#20449;&#31649;&#29702;&#23616;&#27880;&#38144;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22312;&#33150;&#35759;&#20113;&#23436;&#25104;&#22791;&#26696;&#21518;&#65292;&#21487;&#20197;&#30475;&#21040;&#30456;&#24212;&#30340;&#20837;&#21475;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">3)
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20462;&#25913;&#22791;&#26696;&#20449;&#24687;&#30340;&#31867;&#22411;&#26377;&#65306;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21464;&#26356;&#20027;&#20307;&#65306;&#21464;&#26356;&#20027;&#20307;&#20449;&#24687;&#65292;&#22914;&#20462;&#25913;&#20844;&#21496;&#36890;&#20449;&#22320;&#22336;&#31561;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21464;&#26356;&#32593;&#31449;&#65306;&#21464;&#26356;&#32593;&#31449;&#20449;&#24687;&#65292;&#22914;&#26032;&#22686;&#22495;&#21517;&#12289;&#20462;&#25913;&#32593;&#31449;&#36127;&#36131;&#20154;&#31561;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22312;&#33150;&#35759;&#20113;&#23436;&#25104;&#22791;&#26696;&#21518;&#65292;&#21487;&#20197;&#30475;&#21040;&#30456;&#24212;&#30340;&#20837;&#21475;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>6.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#32593;&#31449;&#22791;&#26696;&#26399;&#38388;&#33021;&#27491;&#24120;&#35775;&#38382;&#21527;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#26159;&#21542;&#21487;&#20197;&#25171;&#24320;&#26159;&#26681;&#25454;&#22791;&#26696;&#31867;&#22411;&#26469;&#20915;&#23450;&#30340;&#65306;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#39318;&#27425;&#22791;&#26696;&#65288;&#26032;&#22686;&#22791;&#26696;&#65289;&#12289;&#26032;&#22686;&#32593;&#31449;&#65306;&#32593;&#31449;&#19981;&#20801;&#35768;&#25171;&#24320;&#65292;&#22791;&#26696;&#23436;&#25104;&#21518;&#25165;&#33021;&#35775;&#38382;&#65292;&#23457;&#26680;&#26399;&#38388;&#32593;&#31449;&#25171;&#24320;&#20250;&#23548;&#33268;&#22791;&#26696;&#22833;&#36133;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#36716;&#20837;&#22791;&#26696;&#65306;&#32593;&#31449;&#19981;&#20801;&#35768;&#25171;&#24320;&#65292;&#25552;&#20132;&#21021;&#23457;&#21518;&#25165;&#33021;&#35775;&#38382;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21464;&#26356;&#20027;&#20307;&#12289;&#21464;&#26356;&#32593;&#31449;&#65306;&#32593;&#31449;&#21487;&#20197;&#27491;&#24120;&#25171;&#24320;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>7.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#22791;&#26696;&#38656;&#35201;&#20934;&#22791;&#20160;&#20040;&#36164;&#26009;</b></font></font></span></font></font></p>
+<h3 class="western" align="justify" style="margin-right: 1.07in; text-indent: 0.29in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#20154;&#22791;&#26696;</font></font></span></font></h3>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">A.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20108;&#20195;&#36523;&#20221;&#35777;&#25195;&#25551;&#20214;&#25110;&#25293;&#29031;&#20214;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">B.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#12298;&#32593;&#31449;&#22791;&#26696;&#30495;&#23454;&#24615;&#26680;&#39564;&#21333;&#12299;&#65306;&#22791;&#26696;&#36807;&#31243;&#20013;&#30001;&#31995;&#32479;&#33258;&#21160;&#29983;&#25104;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">C.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#30005;&#23376;&#29256;&#22495;&#21517;&#35777;&#20070;&#65288;&#21487;&#36873;&#65289;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#28246;&#21335;&#12289;&#36149;&#24030;&#12289;&#27743;&#33487;&#12289;&#38485;&#35199;&#12289;&#23665;&#19996;&#65288;&#19968;&#27425;&#25552;&#20132;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">4</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#22495;&#21517;&#20197;&#19978;&#65289;&#12289;&#27827;&#21335;&#65288;&#19968;&#27425;&#25552;&#20132;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">10</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#22495;&#21517;&#20197;&#19978;&#65289;&#20010;&#20154;&#22791;&#26696;&#38656;&#25552;&#20379;&#30005;&#23376;&#29256;&#22495;&#21517;&#35777;&#20070;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">D.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#26242;&#20303;&#35777;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">/</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#23621;&#20303;&#35777;&#65288;&#21487;&#36873;&#65289;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#22312;&#22235;&#24029;&#12289;&#19978;&#28023;&#12289;&#27743;&#33487;&#12289;&#27743;&#35199;&#12289;&#28246;&#21271;&#21150;&#29702;&#22791;&#26696;&#65292;&#22914;&#36523;&#20221;&#35777;&#22320;&#22336;&#38750;&#36825;&#20960;&#20010;&#30465;&#20221;&#65292;&#38656;&#25552;&#20379;&#26242;&#20303;&#35777;&#25110;&#23621;&#20303;&#35777;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">E.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#24314;&#35774;&#26041;&#26696;&#20070;&#65288;&#21487;&#36873;&#65289;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#24191;&#19996;&#30465;&#20010;&#20154;&#22791;&#26696;&#36229;&#36807;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">10</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#30340;&#65292;&#32487;&#32493;&#21150;&#29702;&#22791;&#26696;&#26102;&#38656;&#25552;&#20379;&#32593;&#31449;&#24314;&#35774;&#26041;&#26696;&#20070;</font></font></span></font></font></p>
+<h3 class="western" align="justify" style="margin-right: 1.07in; text-indent: 0.29in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21333;&#20301;&#22791;&#26696;</font></font></span></font></h3>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">A.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21333;&#20301;&#35777;&#20214;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20225;&#19994;&#38656;&#25552;&#20379;&#33829;&#19994;&#25191;&#29031;&#65288;&#21103;&#26412;&#65289;&#25195;&#25551;&#20214;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">/</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25293;&#29031;&#20214;&#12289;&#20225;&#20107;&#19994;&#31561;&#21333;&#20301;&#25552;&#20379;&#32452;&#32455;&#32467;&#26500;&#20195;&#30721;&#35777;&#25195;&#25551;&#20214;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">/</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25293;&#29031;&#20214;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">B.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#36127;&#36131;&#20154;&#36523;&#20221;&#35777;&#25195;&#25551;&#20214;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">/</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25293;&#29031;&#20214;&#65288;&#22806;&#22269;&#20154;&#21487;&#25552;&#20379;&#25252;&#29031;&#31561;&#20854;&#20182;&#35777;&#20214;&#65289;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">C.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#12298;&#32593;&#31449;&#22791;&#26696;&#30495;&#23454;&#24615;&#26680;&#39564;&#21333;&#12299;&#65306;&#22791;&#26696;&#36807;&#31243;&#20013;&#30001;&#31995;&#32479;&#33258;&#21160;&#29983;&#25104;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">D.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#30005;&#23376;&#29256;&#22495;&#21517;&#35777;&#20070;&#65288;&#21487;&#36873;&#65289;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#28246;&#21335;&#12289;&#36149;&#24030;&#12289;&#27743;&#33487;&#12289;&#38485;&#35199;&#12289;&#23665;&#19996;&#65288;&#19968;&#27425;&#25552;&#20132;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">4</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#22495;&#21517;&#20197;&#19978;&#65289;&#12289;&#27827;&#21335;&#65288;&#19968;&#27425;&#25552;&#20132;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">10</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20010;&#22495;&#21517;&#20197;&#19978;&#65289;&#21333;&#20301;&#22791;&#26696;&#38656;&#25552;&#20379;&#30005;&#23376;&#29256;&#22495;&#21517;&#35777;&#20070;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">E.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20027;&#20307;&#36127;&#36131;&#20154;&#27861;&#20154;&#25480;&#26435;&#20070;&#65288;&#21487;&#36873;&#65289;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#27827;&#21335;&#12289;&#22235;&#24029;&#12289;&#29976;&#32899;&#19977;&#30465;&#65292;&#22914;&#26524;&#20027;&#20307;&#36127;&#36131;&#20154;&#22635;&#20889;&#30340;&#19981;&#26159;&#27861;&#20154;&#65292;&#36824;&#38656;&#39069;&#22806;&#25552;&#20379;&#27861;&#20154;&#25480;&#26435;&#20070;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">F.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#36127;&#36131;&#20154;&#27861;&#20154;&#25480;&#26435;&#20070;&#65288;&#21487;&#36873;&#65289;&#65306;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt"><br/>
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#28246;&#21335;&#12289;&#28246;&#21271;&#12289;&#22825;&#27941;&#19977;&#30465;&#65292;&#22914;&#26524;&#32593;&#31449;&#36127;&#36131;&#20154;&#22635;&#20889;&#30340;&#19981;&#26159;&#27861;&#20154;&#65292;&#36824;&#38656;&#39069;&#22806;&#25552;&#20379;&#27861;&#20154;&#25480;&#26435;&#20070;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2"><a name="_GoBack"></a>
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">G.
+</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#24314;&#35774;&#26041;&#26696;&#20070;&#65288;&#21487;&#36873;&#65289;&#65306;&#24191;&#19996;&#30465;&#21333;&#20301;&#22791;&#26696;&#36229;&#36807;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">30</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#30340;&#65292;&#32487;&#32493;&#21150;&#29702;&#22791;&#26696;&#26102;&#38656;&#25552;&#20379;&#32593;&#31449;&#24314;&#35774;&#26041;&#26696;&#20070;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>8.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#36716;&#20837;&#22791;&#26696;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20026;&#20160;&#20040;&#35201;&#21150;&#29702;&#36716;&#20837;&#22791;&#26696;&#65311;&#26681;&#25454;&#22269;&#23478;&#30456;&#20851;&#35201;&#27714;&#65292;&#22914;&#26524;&#24744;&#24050;&#22312;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">A</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25509;&#20837;&#21830;&#36141;&#20080;&#26381;&#21153;&#22120;&#24182;&#25104;&#21151;&#21150;&#29702;&#20102;&#32593;&#31449;&#22791;&#26696;&#65292;&#24403;&#24744;&#23558;&#32593;&#31449;&#37325;&#26032;&#25645;&#24314;&#22312;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">B</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25509;&#20837;&#21830;&#24179;&#21488;&#19978;&#21518;&#65288;&#25110;&#32593;&#31449;&#21516;&#26102;&#22312;&#22810;&#23478;&#25509;&#20837;&#21830;&#24179;&#21488;&#19978;&#36816;&#33829;&#65289;&#65292;&#21407;&#26469;&#30340;&#22791;&#26696;&#20449;&#24687;&#38656;&#35201;&#21516;&#26102;&#36716;&#20837;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">B</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25509;&#20837;&#21830;&#65292;&#22791;&#26696;&#20449;&#24687;&#36716;&#20837;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">B</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25509;&#20837;&#21830;&#30340;&#36807;&#31243;&#31216;&#20026;&ldquo;&#36716;&#20837;&#22791;&#26696;&rdquo;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21478;&#22806;&#65292;&#22914;&#26524;&#19981;&#21150;&#29702;&#36716;&#20837;&#22791;&#26696;&#21363;&#24320;&#36890;&#32593;&#31449;&#65292;&#24744;&#30340;&#32593;&#31449;&#23558;&#26377;&#21487;&#33021;&#34987;&#38459;&#26029;&#26080;&#27861;&#35775;&#38382;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>9.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#20351;&#29992;&#28023;&#22806;&#26381;&#21153;&#22120;&#19981;&#38656;&#35201;&#22791;&#26696;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#36141;&#20080;&#39321;&#28207;&#25110;&#28023;&#22806;&#26381;&#21153;&#22120;&#26080;&#38656;&#22791;&#26696;&#65292;&#22791;&#26696;&#20165;&#38024;&#23545;&#22269;&#20869;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">ip</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>10.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#22659;&#22806;&#20225;&#19994;&#22914;&#20309;&#22791;&#26696;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#30446;&#21069;&#22659;&#22806;&#20225;&#19994;&#26080;&#27861;&#22791;&#26696;&#65292;&#38656;&#35201;&#22312;&#22823;&#38470;&#35774;&#31435;&#20998;&#20844;&#21496;&#25345;&#26377;&#22269;&#23478;&#35748;&#21487;&#30340;&#21333;&#20301;&#35777;&#20214;&#25165;&#33021;&#36827;&#34892;&#22791;&#26696;&#12290;&#65288;&#24314;&#35758;&#22659;&#22806;&#20225;&#19994;&#32771;&#34385;&#20351;&#29992;&#39321;&#28207;&#26381;&#21153;&#22120;&#65292;&#20351;&#29992;&#39321;&#28207;&#26381;&#21153;&#22120;&#26080;&#38656;&#22791;&#26696;&#65289;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.39in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>11.</b></font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#22791;&#26696;&#19987;&#26377;&#21517;&#35789;&#35299;&#37322;</b></font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#19968;&#32423;&#22495;&#21517;&#65306;&#19968;&#32423;&#22495;&#21517;&#20063;&#21483;&#39030;&#32423;&#22495;&#21517;&#65292;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">abc.com</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#21363;&#20026;&#19968;&#32423;&#22495;&#21517;&#65292;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">a.abc.com</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20026;&#20108;&#32423;&#22495;&#21517;&#65307;&#20960;&#32423;&#22495;&#21517;&#19981;&#21333;&#21333;&#26159;&#20197;&#31526;&#21495;&ldquo;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">.&rdquo;</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#30340;&#20010;&#25968;&#26469;&#23450;&#65292;&#22914;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">abc.edu.cn</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20063;&#20026;&#19968;&#32423;&#22495;&#21517;&#65292;&#22240;&#20026;</font></font></span></font></font><font size="3" style="font-size: 12pt"><font face="&#23435;&#20307;, serif"><font size="2" style="font-size: 10pt">edu.cn</font></font></font><font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#26412;&#36523;&#20063;&#26159;&#19968;&#20010;&#22495;&#21517;&#21518;&#32512;&#12290;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20027;&#20307;&#65306;&#21150;&#29702;&#22791;&#26696;&#30340;&#20010;&#20154;&#25110;&#32773;&#21333;&#20301;&#22343;&#31216;&#20026;&#22791;&#26696;&#20027;&#20307;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#25509;&#20837;&#21830;&#65306;&#25552;&#20379;&#32593;&#31449;&#25645;&#24314;&#24179;&#21488;&#24182;&#21327;&#21161;&#24744;&#21150;&#29702;&#22791;&#26696;&#30340;&#21363;&#20026;&#25509;&#20837;&#21830;</font></font></span></font></font></p>
+<p align="justify" style="margin-right: 1.07in; text-indent: 0.29in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#20027;&#20307;&#36127;&#36131;&#20154;&#65306;&#21333;&#20301;&#21150;&#29702;&#22791;&#26696;&#26102;&#22635;&#20889;&#30340;&#20027;&#21150;&#21333;&#20301;&#36127;&#36131;&#20154;&#65292;&#19968;&#33324;&#24314;&#35758;&#22635;&#20889;&#20844;&#21496;&#27861;&#20154;</font></font></span></font></font></p>
+<p align="justify" style="margin-left: 0.29in; margin-right: 1.07in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 150%; orphans: 2; widows: 2">
+<font face="&#23435;&#20307;"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="2" style="font-size: 10pt">&#32593;&#31449;&#36127;&#36131;&#20154;&#65306;&#21333;&#20301;&#21150;&#29702;&#22791;&#26696;&#26102;&#22635;&#20889;&#30340;&#32593;&#31449;&#36127;&#36131;&#20154;&#65292;&#36127;&#36131;&#32593;&#31449;&#24314;&#35774;&#31561;&#24037;&#20316;&#65292;&#21487;&#20197;&#22635;&#20889;&#27861;&#20154;&#20063;&#21487;&#20197;&#26681;&#25454;&#23454;&#38469;&#24773;&#20917;&#22635;&#20889;&#30456;&#20851;&#36127;&#36131;&#20154;</font></font></span></font></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><br/>
+
+</p>
+<p class="western" style="margin-top: 0.22in; margin-bottom: 0.22in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="6" style="font-size: 22pt"><b>&#20108;&#12289;&#22791;&#26696;&#27969;&#31243;</b></font></font></span></font></p>
+<ol>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#39564;&#35777;&#22791;&#26696;&#31867;&#22411;</b></font></font></span></font></p>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#22635;&#20889;&#22791;&#26696;&#20449;&#24687;</b></font></font></span></font></p>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#19978;&#20256;&#36164;&#26009;</b></font></font></span></font></p>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#21150;&#29702;&#25293;&#29031;</b></font></font></span></font></p>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#36890;&#36807;&#23457;&#26680;&#65292;&#23436;&#25104;&#22791;&#26696;</b></font></font></span></font></p>
+</ol>
+<p class="western" style="margin-top: 0.22in; margin-bottom: 0.22in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="6" style="font-size: 22pt"><b>&#19977;&#12289;&#22791;&#26696;&#25152;&#38656;&#26448;&#26009;</b></font></font></span></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><font face="&#23435;&#20307;, serif"><font size="4" style="font-size: 14pt"><b>1</b></font></font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><font size="4" style="font-size: 14pt"><b>&#12289;&#20225;&#20107;&#19994;&#21333;&#20301;&#22791;&#26696;&#25152;&#38656;&#26448;&#26009;</b></font></font></span></font></p>
+<ol>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><b>&#20225;&#20107;&#19994;&#21333;&#20301;&#35777;&#20214;</b></font></span></font></p>
+</ol>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">  
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#25919;&#24220;&#21333;&#20301;&#65306;&#32452;&#32455;&#26426;&#26500;&#20195;&#30721;&#35777;&#20070;&#12289;&#32479;&#19968;&#31038;&#20250;&#20449;&#29992;&#20195;&#30721;&#35777;&#20070;</font></span></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">  
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#20107;&#19994;&#21333;&#20301;&#65306;&#32452;&#32455;&#26426;&#26500;&#20195;&#30721;&#35777;&#20070;&#12289;&#20107;&#19994;&#27861;&#20154;&#35777;&#20070;</font></span></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">  
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#20225;&#19994;&#65306;&#24037;&#21830;&#33829;&#19994;&#25191;&#29031;&#65288;&#32479;&#19968;&#31038;&#20250;&#20449;&#29992;&#20195;&#30721;&#35777;&#20070;&#65289;</font></span></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">  
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#31038;&#20250;&#22242;&#20307;&#65306;&#31038;&#22242;&#27861;&#20154;&#35777;&#20070;&#12289;&#32452;&#32455;&#26426;&#26500;&#20195;&#30721;&#35777;&#20070;</font></span></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">  
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#27665;&#21150;&#38750;&#20225;&#19994;&#65306;&#32452;&#32455;&#26426;&#26500;&#20195;&#30721;&#35777;&#20070;&#12289;&#27665;&#21150;&#38750;&#20225;&#19994;&#21333;&#20301;&#30331;&#35760;&#35777;&#20070;</font></span></font></p>
+<p class="western" style="text-indent: 0.22in; margin-bottom: 0in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#22522;&#37329;&#20250;&#65306;&#32452;&#32455;&#26426;&#26500;&#20195;&#30721;&#35777;&#20070;&#12289;&#22522;&#37329;&#20250;&#27861;&#20154;&#30331;&#35760;&#35777;&#20070;</font></span></font></p>
+<p class="western" style="text-indent: 0.15in; margin-bottom: 0in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#24459;&#24072;&#20107;&#21153;&#25152;&#65306;&#32452;&#32455;&#26426;&#26500;&#20195;&#30721;&#35777;&#20070;&#12289;&#24459;&#24072;&#20107;&#21153;&#25152;&#25191;&#19994;&#35768;&#21487;&#35777;</font></span></font></p>
+<ol start="2">
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><b>&#36127;&#36131;&#20154;&#20010;&#20154;&#36523;&#20221;&#35777;&#20214;</b></font></span></font></p>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><b>&#12298;&#32593;&#31449;&#22791;&#26696;&#30495;&#23454;&#24615;&#26680;&#39564;&#21333;&#12299;</b></font></span></font><font face="&#23435;&#20307;, serif"><b>-</b></font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><b>&#22791;&#26696;&#36807;&#31243;&#20013;&#30001;&#31995;&#32479;&#33258;&#21160;&#29983;&#25104;</b></font></span></font></p>
+    <li/>
+<p class="western" style="margin-bottom: 0in; line-height: 150%">
+    <font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;"><b>&#20854;&#20182;&#26448;&#26009;</b></font></span></font></p>
+</ol>
+<p class="western" style="margin-left: 0.73in; text-indent: -0.73in; margin-bottom: 0in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#22495;&#21517;&#35777;&#20070;&#65306;&#28246;&#21335;&#12289;&#36149;&#24030;&#12289;&#27743;&#33487;&#12289;&#38485;&#35199;&#12289;&#23665;&#19996;&#65288;&#19968;&#27425;&#25552;&#20132;
+</font></span></font><font face="&#23435;&#20307;, serif">4
+</font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#20010;&#22495;&#21517;&#20197;&#19978;&#65289;&#12289;&#27827;&#21335;&#65288;&#19968;&#27425;&#25552;&#20132;
+</font></span></font><font face="&#23435;&#20307;, serif">10
+</font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#20010;&#22495;&#21517;&#20197;&#19978;&#65289;&#21333;&#20301;&#22791;&#26696;&#38656;&#25552;&#20379;&#22495;&#21517;&#35777;&#20070;&#12290;</font></span></font></p>
+<p class="western" style="margin-left: 0.73in; text-indent: -0.73in; margin-bottom: 0in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#21069;&#32622;&#25110;&#19987;&#39033;&#23457;&#25209;&#25991;&#20214;&#65306;&#33509;&#32593;&#31449;&#20869;&#23481;&#28041;&#21450;&#26032;&#38395;&#12289;&#20986;&#29256;&#12289;&#25945;&#32946;&#12289;&#21307;&#30103;&#20445;&#20581;&#12289;&#33647;&#21697;&#21644;&#21307;&#30103;&#22120;&#26800;&#12289;&#24191;&#25773;&#30005;&#24433;&#30005;&#35270;&#33410;&#30446;&#12289;&#25991;&#21270;&#31561;&#30456;&#20851;&#20869;&#23481;&#65292;&#38656;&#35201;&#20986;&#20855;&#25351;&#23450;&#21333;&#20301;&#24320;&#20855;&#30340;&#21069;&#32622;&#25110;&#19987;&#39033;&#23457;&#25209;&#25991;&#20214;&#12290;</font></span></font></p>
+<p class="western" style="margin-left: 0.73in; text-indent: -0.73in; margin-bottom: 0in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#20027;&#20307;&#36127;&#36131;&#20154;&#27861;&#20154;&#25480;&#26435;&#20070;&#65306;&#27827;&#21335;&#12289;&#22235;&#24029;&#12289;&#29976;&#32899;&#19977;&#30465;&#65292;&#22914;&#26524;&#20027;&#20307;&#36127;&#36131;&#20154;&#22635;&#20889;&#30340;&#19981;&#26159;&#27861;&#20154;&#65292;&#38656;&#39069;&#22806;&#25552;&#20379;&#20027;&#20307;&#36127;&#36131;&#20154;&#27861;&#20154;&#25480;&#26435;&#20070;&#12290;</font></span></font></p>
+<p class="western" style="margin-left: 0.73in; text-indent: -0.73in; margin-bottom: 0in; line-height: 150%">
+<font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#32593;&#31449;&#36127;&#36131;&#20154;&#27861;&#20154;&#25480;&#26435;&#20070;&#65306;&#28246;&#21335;&#12289;&#28246;&#21271;&#12289;&#22825;&#27941;&#19977;&#30465;&#65292;&#22914;&#26524;&#32593;&#31449;&#36127;&#36131;&#20154;&#22635;&#20889;&#30340;&#19981;&#26159;&#27861;&#20154;&#65292;&#38656;&#39069;&#22806;&#25552;&#20379;&#32593;&#31449;&#36127;&#36131;&#20154;&#27861;&#20154;&#25480;&#26435;&#20070;&#12290;</font></span></font></p>
+<p class="western" style="margin-bottom: 0in; line-height: 150%"><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#32593;&#31449;&#24314;&#35774;&#26041;&#26696;&#20070;&#65306;&#24191;&#19996;&#30465;&#21333;&#20301;&#22791;&#26696;&#36229;&#36807;
+</font></span></font><font face="&#23435;&#20307;, serif">30
+</font><font face="&#23435;&#20307;"><span lang="zh-CN"><font face="&#23435;&#20307;">&#20010;&#32593;&#31449;&#30340;&#65292;&#32487;&#32493;&#21150;&#29702;&#22791;&#26696;&#26102;&#38656;&#25552;&#20379;&#32593;&#31449;&#24314;&#35774;&#26041;&#26696;&#20070;&#12290;</font></span></font></p>
+    </div>
+   

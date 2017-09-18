@@ -30,3 +30,65 @@
     padding: 5px;
     font-size: 16px;
 }
+
+.zuyongDiv{
+    width: 32%;
+    box-shadow: rgba(0,0,0,.2) 1px 1px 8px;
+    float: left;
+    margin: 40px;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.zuyongDiv img{
+    width: 100%;
+
+}
+.zuyongDiv b{
+    font-size: 40px;
+    color: red;
+}
+.zutongT{
+    margin-left: 40px;
+    width: 60%;
+}
+.zutongT td{
+    border: 1px solid #999;
+    padding: 5px;
+    font-size: 16px;
+}
+.zutongT td.active{
+    text-align: center;
+    color: red;
+}
+.jigui1 p{
+    font-size: 16px;
+}
+.jigui1 h3{
+    margin-top: 40px;
+    margin-bottom: 26px;
+    font-size: 28px;
+}
+.jigui2{
+    box-shadow: rgba(0,0,0,.2) 1px 1px 8px;
+    float: left;
+    width: 40%;
+    margin: 20px;
+    padding: 8px;
+}
+.jigui2 img{
+    width: 100%;
+}
+.dadaikuan  .row{
+    margin-top:5%;
+} 
+.dadaikuan p{
+    font-size: 16px;
+}
+.ppp1{
+    font-size: 16px;
+    line-height: 1.8;
+}
+.ppp1 h{
+
+}

@@ -296,7 +296,7 @@ class Welcome extends Public_Controller {
    		$config['total_rows'] = $total;
  
 		$this->load->library('pagination');//加载ci pagination类
-		$listpage =  $this->public_model->select_page('jy_news',$current_page,$config['per_page'],'');
+		$listpage =  $this->public_model->select_page('jy_news',$current_page,$config['per_page'],'news_id');
 		$this->pagination->initialize($config);
 
 		$cates = $this->public_model->select_where('jy_category','type','2','');
