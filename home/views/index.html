@@ -63,6 +63,9 @@
     .advantage img{
         width: 15% !important;
     }
+    .col-md-35{
+        width: 20%;
+    }
     </style>
 </head>
 <body>
@@ -104,7 +107,7 @@
                     云服务器<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="https://www.qcloud.com/product/cvm">腾讯云</a></li>
+                    <li><a>腾讯云</a></li>
                 </ul>
             </li>
             <li class="dropdown navhaiwai">
@@ -158,8 +161,8 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo site_url('Welcome/about');?>#jianjie">公司简介</a></li>
-                    <li><a href="<?php echo site_url('Welcome/about');?>">客服案例</a></li>
-                    <li><a href="<?php echo site_url('Welcome/about');?>">极云团队</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>#wenhua">公司文化</a></li>
+                    <li><a href="<?php echo site_url('Welcome/about');?>#lilian">经营理念</a></li>
                     <li><a href="<?php echo site_url('Welcome/about');?>#women">联系我们</a></li>
                 </ul>
             </li>
@@ -215,76 +218,130 @@
                     <p class="yingcang">计算、存储、监控、安全，完善的云产品满足您的一切所需</p>
                 </div>
 
-                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
-                        <span class="span1">IDC产品</span>
+                        <span class="span1">服务器托管</span>
                         <img class="priceLogo" src="home/img/fuwuqi.svg">
-                        <p>
-                           <a href="<?php echo site_url('Welcome/tuoguan');?>">服务器托管 <br></a> 
-                            <a href="<?php echo site_url('Welcome/zuyong');?>">服务器租用 <br></a> 
-                            <a href="<?php echo site_url('Welcome/jigui');?>">机柜租赁 <br> </a>
-                            <a href="<?php echo site_url('Welcome/dakuandai');?>">大带宽</a> 
-                        </p>
-                        <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                            <a>
-                                <button type="button" class="btn btn-info">立即购买</button>
+                            <a href="<?php echo site_url('Welcome/tuoguan');?>">
                                 <button type="button" class="btn btn-default">查看详情</button>
                             </a>    
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1">服务器租用</span>
+                        <img class="priceLogo" src="home/img/fuwuanquan.svg">
+                        <div>
+                            <a href="<?php echo site_url('Welcome/zuyong');?>">
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">云服务器</span>
                         <img class="priceLogo" src="home/img/yunfuwuqi.svg">
-                        <!-- <h3>安全稳定的计算服务</h3> -->
-                        <p>
-                            云服务器（Cloud Virtual <br> Machine，CVM）为您提供安全可靠的弹性计算服务。
-                            <br> <span style="visibility: hidden;">占位</span>
-                        </p>
-                        
-                        <!-- <p>全网部署独立万兆光纤 <br> 独立IP，共享宽带，专人维护</p> -->
-                        <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                            <a href="https://www.qcloud.com/product/cvm">
-                                <button type="button" class="btn btn-info">立即购买</button>
+                            <a >
                                 <button type="button" class="btn btn-default">查看详情</button>
-                            </a>
-                            
+                            </a>    
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">海外服务器</span>
                         <img class="priceLogo" src="home/img/haiwai.svg">
-                        <p>包括了全球各地的服务器<br>，除了中国大陆以外的服务器都是海外服务器<br> <span style="visibility: hidden;">占位</span></p>
-                        <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                            <a href="<?php echo site_url('Welcome/jishu');?>">
-                                <button type="button" class="btn btn-info">立即购买</button>
+                            <a>
                                 <button type="button" class="btn btn-default">查看详情</button>
-                            </a>
-                            
+                            </a>    
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="price-table text-center">
                         <span class="span1">高防服务器</span>
                         <img class="priceLogo" src="home/img/fuwuanquan.svg">
-                        <p>为企业客户提供 <br> 基于电信平台全面安全监控、检测、加固服务。<br> <span style="visibility: hidden;">占位</span></p>
-                        <span class="span2"> <b>￥300</b>/月起 </span>
                         <div>
-                            <a href="<?php echo site_url('Welcome/safetyFun');?>">
-                                <button type="button" class="btn btn-info">立即购买</button>
+                            <a>
                                 <button type="button" class="btn btn-default">查看详情</button>
-                            </a>
-                            
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="text-center wow animated fadeInDown animated tuijianJ" style="visibility: visible; animation-name: fadeInDown;">
+                   精品推荐
+                </div>
+
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1 span111">IU 托管</span>
+                        <b class="jiaqian"> <b>4500</b> 元/年 </b>
+                        <div>
+                            <a href="<?php echo site_url('Welcome/tuoguan');?>">
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1 span111">服务器租用</span>
+                        <b class="jiaqian"> <b>5800</b> 元/年 </b>
+                        <div>
+                            <a href="<?php echo site_url('Welcome/zuyong');?>">
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1 span111">三线宽带</span>
+                        <b class="jiaqian"> <b>100M</b>独享 </b>
+                        <div>
+                            <a >
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1 span111">云服务器</span>
+                        <b class="jiaqian"> <b>68</b> 元/月 </b>
+                        <div>
+                            <a>
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-35 col-md-3 wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="price-table text-center">
+                        <span class="span1 span111">香港服务器</span>
+                        <b class="jiaqian"> <b>4800</b> 元/年 </b>
+                        <div>
+                            <a>
+                                <button type="button" class="btn btn-default">查看详情</button>
+                            </a>    
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,9 @@
+.disnone{
+    display: none;
+}
+.dropdown-menu{
+    left: 0 !important;
+}
 .oneEll{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -138,14 +144,16 @@ a{
     font-size: 12px;
 }
 .col-md-3{
-   padding-right: .2%;
-   padding-left: .2%; 
+   padding-right: .5%;
+   padding-left: .5%; 
 }
 #price{
     padding-bottom: 4%; 
 }
 .priceLogo{
-    width: 20%;
+    width: 35%;
+    margin: 10% 0px;
+    margin-bottom: 21%;
 }
 .price-table p{
     padding: 5% 7%;
@@ -158,10 +166,12 @@ a{
     text-decoration: underline;
 }
 .price-table span.span1{
-    background-color: #eee;
-    padding: 20px 0;
+   background-color: rgba(38, 177, 229, 0.65);
+    padding: 16px 0;
     margin-bottom: 11%;
+    color: #fff;
 }
+
 .price-table span.span2{
     font-size: 18px;
     visibility: hidden;
@@ -176,7 +186,7 @@ body{
     /*padding-top: 50px;*/
 }
 .fadeInUp{
-    -webkit-transform:scale(0.85,0.85);
+    /*-webkit-transform:scale(0.9,0.9);*/
 }
 .price-table span.span1, .price-table .btn-info, .fadeInUp{
     transition: all .2s;
@@ -190,7 +200,7 @@ body{
     text-decoration: underline;
 }
 .fadeInUpActive{
-    -webkit-transform:scale(0.9,0.9);
+    /*-webkit-transform:scale(0.9,0.9);*/
 
 }
 .fadeInUpActive .price-table span.span1{
@@ -206,11 +216,16 @@ body{
 .fadeInUpActive .price-table{
     box-shadow: 4px 7px 7px rgba(208,205,205,.51);
 }
+.price-table span.span111, .fadeInUpActive .price-table span.span111{
+   background-color: #27303F;
+}
 
 .price-table div{
     padding: 10%;
+    padding-bottom: 15%;
     padding-top: 0;
     overflow: hidden;
+    /*visibility: hidden;*/
 }
 .price-table .btn-info{
     background-color: #fff;
@@ -224,7 +239,7 @@ body{
     border-color: #009eff;
     color: #009eff;
     font-size: 18px;
-    float: right;
+    /*float: right;*/
 }
 .sec-title h2{
     font-size: 32px;
@@ -292,6 +307,29 @@ body{
     font-size: 20px;
 
 }
+.tuijianJ{
+    visibility: visible;
+    animation-name: fadeInDown;
+    text-align: left;
+    line-height: 45px;
+    font-size: 25px;
+    margin: 16px 6px;
+    padding-left: 15px;
+    background-color: #eee;
+    color: #555;
+}
+.jiaqian{
+    display: block;
+    margin-top: 20%;
+    margin-bottom: 21%;
+    color: #de5241;
+    font-weight: initial;
+    font-size: 18px;
+}
+.jiaqian b{
+    font-weight: initial;
+    font-size: 36px;
+}
 img.img-responsive{
     width: 70%;
     margin-left: 16%;
@@ -321,7 +359,7 @@ img.img-responsive{
 .caseList img{
     width: 100%;
     height: 80px;
-    -webkit-filter: grayscale(1);
+    /*-webkit-filter: grayscale(1);*/
     transition: all .5s; 
     cursor: pointer;
 
@@ -483,12 +521,17 @@ img.img-responsive{
 .dropdown:hover .dropdown-menu{
     display: block;
 }
+
+
 .caret{
     display: none;
 }
-.navbar-nav>li:nth-child(4), .navbar-nav>li:nth-child(5), .navbar-nav>li:nth-child(6){
+/*.navbar-nav>li:nth-child(3), .navbar-nav>li:nth-child(4), .navbar-nav>li:nth-child(5), .navbar-nav>li:nth-child(6){
     display: none;
 }
+.navbar-nav>li:nth-child(7) ul li:last-child{
+    display: none;
+}*/
 
 
 
@@ -502,7 +545,7 @@ img.img-responsive{
 }
 @media (min-width: 1400px){
    .container {
-        width: 1200px;
+        width: 1250px;
     } 
 }
 @media (max-width: 800px){
