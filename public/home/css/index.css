@@ -1,3 +1,7 @@
+.dropdown-menu{
+    background-color: rgba(255, 255, 255, 0.78);
+    border-radius:0px;
+}
 .disnone{
     display: none;
 }
@@ -21,6 +25,9 @@ body{
     -ms-user-select: none; 
     -khtml-user-select: none; 
     user-select: none;*/ 
+}
+body{
+    color: #555;
 }
 li{
     list-style: none;
@@ -68,6 +75,9 @@ a{
 .navbar {
     border: none;
     border-radius: 0px;
+}
+.navbar-default .navbar-nav>li>a, .dropdown-menu>li>a{
+    text-decoration: none !important;
 }
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
     color: #fff !important;
@@ -151,14 +161,14 @@ a{
     padding-bottom: 4%; 
 }
 .priceLogo{
-    width: 35%;
-    margin: 10% 0px;
-    margin-bottom: 21%;
+    width: 22%;
+    margin: 0% 0px;
+    margin-bottom: 0%;
 }
 .price-table p{
     padding: 5% 7%;
     padding-top: 11%;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
 }
 .price-table p a{
@@ -217,12 +227,12 @@ body{
     box-shadow: 4px 7px 7px rgba(208,205,205,.51);
 }
 .price-table span.span111, .fadeInUpActive .price-table span.span111{
-   background-color: #27303F;
+   background-color: rgba(38, 177, 229, 0.65);
 }
 
 .price-table div{
     padding: 10%;
-    padding-bottom: 15%;
+    margin-top: 10%;
     padding-top: 0;
     overflow: hidden;
     /*visibility: hidden;*/
@@ -320,8 +330,8 @@ body{
 }
 .jiaqian{
     display: block;
-    margin-top: 20%;
-    margin-bottom: 21%;
+    margin-top: 30%;
+    margin-bottom: 33%;
     color: #de5241;
     font-weight: initial;
     font-size: 18px;
@@ -504,7 +514,7 @@ img.img-responsive{
     color: #333;
     white-space: nowrap;
     height: 50px !important;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
 }
 .dropdown-menu>li:last-child a{
     border-bottom: none;
@@ -526,12 +536,15 @@ img.img-responsive{
 .caret{
     display: none;
 }
-/*.navbar-nav>li:nth-child(3), .navbar-nav>li:nth-child(4), .navbar-nav>li:nth-child(5), .navbar-nav>li:nth-child(6){
+
+/* 隐藏导航内容 */
+/* .navbar-nav>li:nth-child(3), .navbar-nav>li:nth-child(4), .navbar-nav>li:nth-child(5), .navbar-nav>li:nth-child(6){
     display: none;
-}
+} */
+/* 隐藏技术支持 */
 .navbar-nav>li:nth-child(7) ul li:last-child{
     display: none;
-}*/
+}
 
 
 
@@ -548,7 +561,10 @@ img.img-responsive{
         width: 1250px;
     } 
 }
-@media (max-width: 800px){
+@media (max-width: 800px){/* 手机布局 */
+    .col-md-35 {
+        width: 100% !important;
+    }
     .navbar-default {
         background-color: rgba(0,0,0,.4);
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);

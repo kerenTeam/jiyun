@@ -70,7 +70,199 @@
             <a id="back-to-top"><img src="home/img/jiantou.svg"></a>
         </div>
     </div>
+
+    <!-- 企业邮箱 -->
+    <style>
+        .bizmail_loginpanel{font-size:12px;width:300px;height:auto;border:1px solid #cccccc;background:#ffffff;width: 550px;float: right;margin-top: -35px;margin-right: 50px;}
+        .bizmail_LoginBox{padding:10px 15px;}
+        .bizmail_loginpanel h3{padding-bottom:5px;margin:0 0 5px 0;border-bottom:1px solid #cccccc;font-size:14px;}
+        .bizmail_loginpanel form{margin:0;padding:0;}
+        .bizmail_loginpanel input.text{font-size:12px;width:100px;height:20px;margin:0 2px;border:1px solid #C3C3C3;border-color:#7C7C7C #C3C3C3 #C3C3C3 #9A9A9A;}
+        .bizmail_loginpanel .bizmail_column{height:28px;}
+        .bizmail_loginpanel .bizmail_column label{display:block;float:left;width:30px;height:24px;line-height:24px;font-size:12px;}
+        .bizmail_loginpanel .bizmail_column .bizmail_inputArea{float:left;width:240px;}
+        .bizmail_loginpanel .bizmail_column span{font-size:12px;word-wrap:break-word;margin-left: 2px;line-height:200%;}
+        .bizmail_loginpanel .bizmail_SubmitArea{margin-left:30px;clear:both;}
+        .bizmail_loginpanel .bizmail_SubmitArea a{font-size:12px;margin-left:5px;}
+        .bizmail_loginpanel select{width:110px;height:20px;margin:0 2px;}
+    </style>
+    <script type="text/javascript" src="http://exmail.qq.com/zh_CN/htmledition/js_biz/outerlogin.js"  charset="gb18030"></script>
+    <script type="text/javascript">
+        writeLoginPanel({domainlist:"cdjiyun.com", mode:"horizontal"});
+    </script>
+
+    <!-- 百度商桥 -->
+    <!-- <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?064d7ac8242a0eb4a17d8f12ea3ffb54";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script> -->
+
+
 </footer>
+
+<!-- qq客服 -->
+<style>
+    @font-face {
+        font-family: 'iconfontfixqq';  /* project id："187179" */
+        src: url('//at.alicdn.com/t/font_g31k92w6xi1i3sor.eot');
+        src: url('//at.alicdn.com/t/font_g31k92w6xi1i3sor.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_g31k92w6xi1i3sor.woff') format('woff'),
+        url('//at.alicdn.com/t/font_g31k92w6xi1i3sor.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_g31k92w6xi1i3sor.svg#iconfont') format('svg');
+    }
+
+    #fixQqKf{  font-size: 14px;  border: #ddd solid 1px; width: 150px; background-color: #fff;  color: #666;
+        position: fixed;right: -100%; bottom:-100%; z-index: 999;}
+    #fixQqKf .fix-qq-kf-qrcode{ padding:12px 14px;}
+    #fixQqKf .fix-qq-kf-items{ padding:18px 12px 0 12px;}
+    #fixQqKf .fix-qq-kf-item{ display: block; height: 33px;line-height: 30px; margin-bottom: 10px;
+        color: #666; text-decoration: none; overflow: hidden; padding-bottom: 2px; font-size: 14px;}
+    #fixQqKf .fix-qq-kf-item:hover{ color:#009fd9;}
+    #fixQqKf .fix-qq-kf-icon{float: left;
+        width: 30px; height: 100%; margin-right: 10px; margin-top: 2px;
+        font-size:28px;  font-family: 'iconfontfixqq';}
+    #fixQqKf .fix-qq-kf-name{display: block; white-space: nowrap; overflow: hidden;text-overflow: ellipsis;
+       overflow: hidden; border: #eee solid 1px; text-align: center;
+    }
+    #fixQqKf .fix-qq-kf-item:hover .fix-qq-kf-name{background:#009fd9;  color: #fff;}
+
+    #fixQqKf .fix-qq-kf-qrcode img{ width: 100%;}
+    #fixQqKf .fix-qq-kf-tel{
+        height: 40px; line-height: 40px; text-align: center; font-size: 20px;
+        background:#009fd9;
+        color: #fff;
+    }
+    #fixQqKf .fix-qq-kf-close{ position: absolute;right:0; top:0; z-index: 10; cursor: pointer;
+        font-size: 20px; font-family: SimSun;}
+    #fixQqKf .fix-qq-kf-close:hover{color:#009fd9;}
+
+    .fix-qq-kf-qrcode{
+       height: 10px;
+    }
+</style>
+<script>
+    /*
+     右侧浮动qq客服  by 懒人建站http://www.51xuediannao.com/
+     懒人建站专注于网页素材下载，提供网站模板素材、图片素材、ps素材、素材库等，服务于【个人站长】【网页设计师】和【web开发从业者】的代码素材与设计素材网站。
+
+     皮肤风格请修改css样式表
+
+     调用，及参数说明
+     qqkf.init({
+         closeBtn:true,    //是否显示关闭按钮
+         mainSize:1200,   //如果qq客服遮挡了内容影响阅读,所以您可以传入你的主体宽度，窗口过小浮动客服会消失，如果你想让他始终显示，请传入-1
+         data:{
+             //最后的 @694 这些图标定义可以省略，默认qq图标，@后面是图标字体的后3位，图标字体后三位参考icon.png
+             qq:'191221838@售前客服@694|191221839@售后客服@63e|191221840@测试客服',
+             qrCode:'wx-code.png',
+             tel:'15638527790'
+         },
+        diyItem:'<div class="fix-qq-kf-item"><span class="fix-qq-kf-icon fix-qq-kf-icon-qq">&#xe6b1;</span><span class="fix-qq-kf-name">自定义一个</span></div>'
+     })
+    * */
+    var LRQQKF = {
+        config:function(config){
+            return {
+                closeBtn:config.closeBtn||false,
+                defaultIcon:config.defaultIcon||'67c',
+                mainSize:config.mainSize||1000,
+                position:{
+                    right: (config.position&&config.position.right)||10,
+                    bottom: (config.position&&config.position.bottom)||300
+                },
+                data:{
+                    qq:config.data.qq||'993900778@售前客服|993900778@售后客服|993900778@测试客服',
+                    qrCode:config.data.qrCode||'wx-code.png',
+                    tel:config.data.tel||'18981809745'
+                },
+                diyItem:config.diyItem||''
+            }
+        },
+        tpl:function(){
+            var _opts = this.opts;
+            var html = [
+                '<div class="fix-qq-kf-con">',
+                    '<div class="fix-qq-kf-items">',
+                        '<a class="fix-qq-kf-item"><span class="fix-qq-kf-icon fix-qq-kf-icon-qq"></span><span class="fix-qq-kf-name">客服名称</span></a>',
+                    '</div>',
+                    '<div class="fix-qq-kf-qrcode"><img src="'+_opts.data.qrCode+'"/></div>',
+                    '<div class="fix-qq-kf-tel">'+_opts.data.tel+'</div>',
+                    '<span class="fix-qq-kf-close" title="关闭">×</span>',
+                '</div>'
+            ];
+            if(!_opts.closeBtn){
+                html[6] = ""
+            }
+            html[2] = this.makeQQList(_opts.data.qq.split("|"))+_opts.diyItem;
+            return html.join("");
+        },
+        makeQQList:function(qqArr){
+            var tempQQ = [];
+            for(var i=0;i<qqArr.length;i++){
+                var qq = qqArr[i].split("@");
+                var _icon = qq[2]||this.opts.defaultIcon;
+                tempQQ.push('<a href="http://wpa.qq.com/msgrd?v=3&uin='+qq[0]+'&site=qq&menu=yes" class="fix-qq-kf-item" target="_blank"><span class="fix-qq-kf-icon fix-qq-kf-icon-qq">&#xe'+_icon+';</span><span class="fix-qq-kf-name">'+qq[1]+'</span></a>')
+            }
+            return tempQQ.join("");
+        },
+        makeHtml:function(){
+            var position = this.opts.position;
+            var qqKf = document.createElement('div');
+            qqKf.id='fixQqKf';
+            qqKf.style.right = position.right+"px";
+            qqKf.style.bottom = position.bottom+"px";
+            document.getElementsByTagName('body')[0].appendChild(qqKf);
+
+            qqKf.innerHTML = this.tpl();
+
+            if(this.opts.closeBtn){
+                this.close(qqKf);
+            }
+
+            this.isShow(qqKf);
+        },
+        close:function(el){
+            el.onclick = function(e){
+                if(e.target.className=='fix-qq-kf-close'){
+                    el.style.display = 'none';
+                }
+            }
+        },
+        isShow:function(el){
+            if(!this.opts.mainSize){
+                return
+            }
+            var _mainSize = this.opts.mainSize+(el.clientWidth+this.opts.position.right)*2;
+            el.style.display = document.documentElement.clientWidth<_mainSize ? "none" : "block";
+            window.onresize = function(){
+                el.style.display = document.documentElement.clientWidth<_mainSize ? "none" : "block";
+            }
+        },
+        init:function(config){
+            this.opts = this.config(config);
+            this.makeHtml();
+        }
+    };
+
+    LRQQKF.init({
+        closeBtn:false,
+        mainSize:1000,
+        data:{
+            qq:'993900778@售前客服@694|993900778@售后客服@63e|993900778@配套定制@6b1',
+            qrCode:'wx-code.png',
+            tel:'18981809745'
+        }
+    })
+</script>
+<!-- qq客服 结束 -->
+
+
+
 
 
 <script src="home/js/jquery.min.js"></script>
