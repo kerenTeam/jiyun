@@ -19,6 +19,13 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
 }
+.fanganWrap{
+    background-color: #f2f2f5;
+    background-position: top center;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+}
+
 body{
 /*    -moz-user-select: none; 
     -webkit-user-select: none; 

@@ -185,15 +185,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer.html');
 	}
 
-
-	// 数据中心
-	function dataDetail0(){
-		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
-
-		$this->load->view('product/dataCenter/dataDetail.html',$data);
-		$this->load->view('footer.html');
-	}
-
 	// 服务支持
 	function yunwei(){
 		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
@@ -213,7 +204,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('service/technology.html',$data);
 		$this->load->view('footer.html');
 	}
-	
+
+	// 数据中心
+	function CAmerica(){
+		$data['system'] = $this->welcome_model->select_info('jy_system','id','1','');
+
+		$this->load->view('product/dataCenter/CAmerica.html',$data);
+		$this->load->view('footer.html');
+	}
 
 
 

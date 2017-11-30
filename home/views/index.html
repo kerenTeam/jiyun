@@ -66,6 +66,14 @@
     .col-md-35{
         width: 20%;
     }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+        cursor: default;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+        color: #009fd9 !important;
+        border-radius: 0px;
+    }
     </style>
     
 </head>
@@ -74,110 +82,9 @@
 
     <!-- 头部导航栏 -->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <?php if(empty($system['logo'])):?>
-          <a class="navbar-brand" href="<?php echo site_url('/');?>"  alt="">极云天下</a>
-          <?php else:?>
-            <a class="navbar-brand" href="<?php echo site_url('/');?>"  alt=""><img src="<?php echo base_url().$system['logo'];?>"></a>
-
-          <?php endif;?>
-        </div>
         <!-- 导航 -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="<?php echo site_url('/');?>#price">产品</a></li> -->
-            <li ><a href="<?php echo site_url('/');?>">首页</a></li>
-            <li class="dropdown navidc">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    IDC产品<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo site_url('Welcome/tuoguan');?>">服务器托管</a></li>
-                    <li><a href="<?php echo site_url('Welcome/zuyong');?>">服务器租用</a></li>
-                    <li><a href="<?php echo site_url('Welcome/jigui');?>">机柜租赁</a></li>
-                    <li><a href="<?php echo site_url('Welcome/dakuandai');?>">大带宽业务</a></li>
-                </ul>
-            </li>
-            <li class="dropdown navyun">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    云服务器<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a>腾讯云</a></li>
-                </ul>
-            </li>
-            <li class="dropdown navhaiwai">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    海外服务器<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">美国服务器</a></li>
-                    <li><a href="#">香港服务器</a></li>
-                    <li><a href="#">韩国服务器</a></li>
-                    <li><a href="#">日本服务器</a></li>
-                    <li><a href="#">新加坡服务器</a></li>
-                </ul>
-            </li>
-            <li class="dropdown navgaofang">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    高防服务器<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">DDOS高防IP</a></li>
-                    <li><a href="#">高防服务器</a></li>
-                </ul>
-            </li>
-            <li class="dropdown navshuju">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    数据中心<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo site_url('Welcome/dataDetail0');?>">温江多线数据中心</a></li>
-                    <li><a href="#">中国西部数据中心</a></li>
-                    <li><a href="#">二枢纽数据中心</a></li>
-                    <li><a href="#">光华电信数据中心</a></li>
-                    <li><a href="#">万达数据中心</a></li>
-                    <li><a href="#">香港数据中心</a></li>
-                    <li><a href="#">美国数据中心</a></li>
-                </ul>
-            </li>
-            <li class="dropdown navfuwu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    服务支持<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo site_url('Welcome/yunwei');?>">运维服务</a></li>
-                    <li><a href="<?php echo site_url('Welcome/beian');?>">免费备案</a></li>
-                    <li><a href="<?php echo site_url('Welcome/jishu');?>">技术支持</a></li>
-                </ul>
-            </li>
-            <li class="dropdown navwomen">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    关于我们<span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo site_url('Welcome/about');?>#jianjie">公司简介</a></li>
-                    <li><a href="<?php echo site_url('Welcome/about');?>#wenhua">公司文化</a></li>
-                    <li><a href="<?php echo site_url('Welcome/about');?>#lilian">经营理念</a></li>
-                    <li><a href="<?php echo site_url('Welcome/about');?>#women">联系我们</a></li>
-                </ul>
-            </li>
-
-            <!-- <li ><a href="<?php echo site_url('/');?>#programme">解决方案</a></li> -->
-            <!-- <li><a href="<?php echo site_url('/');?>#case">案例</a></li> -->
-            <!-- <li><a href="<?php echo site_url('/');?>#dynamic">最新动态</a></li> -->
-
-          </ul>
-        </div>
+        <?php $this->load->view('header.html');?>
         <!-- 导航 结束-->
-      </div>
     </nav>
     <!-- 轮播图 -->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -358,9 +265,122 @@
             </div>
         </div>
     </section>
-    <!--优势栅格布局-->
 
-<div class="width200">
+
+
+
+<!-- 解决方案 -->
+<div class="fanganWrap">
+    <div class="container summary" >
+       <h3 class="myTitle" id="programme" style="text-align: center;  margin:0% 0 5% 0;padding-top: 6%">行业解决<span>方案</span>
+            <div class="yingcang">针对各行业业务特性，打造个性化行业解决方案，为您提供一站式的产品与服务</div>
+       </h3>
+        <ul class="nav nav-tabs" id="tablists" role="tablist">
+            <li role="presentation" class="active">
+                <a  href="#gameF" role="tab" data-toggle="tab" aria-controls="home">游戏行业解决方案</a>
+            </li>
+            <li role="presentation">
+                <a href="#videoF" role="tab" data-toggle="tab" aria-controls="profile" >视频行业解决方案</a>
+            </li>
+            <li role="presentation">
+                <a href="#ElebusF" role="tab" data-toggle="tab" aria-controls="messages">电商行业解决方案</a>
+            </li>
+            <li role="presentation">
+                <a href="#financialF" role="tab" data-toggle="tab" aria-controls="messages">金融行业解决方案</a>
+            </li>
+            <li role="presentation">
+                <a href="#APPF" role="tab" data-toggle="tab" aria-controls="messages">移动APP解决方案</a>
+            </li>
+        </ul>
+        <div class="tab-content" >
+            <div role="tabpanel" class="tab-pane active" id="gameF">
+                <div class="row feature">
+                    <div class="col-md-8">
+                        <!-- <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2> -->
+                        <p class="lead">
+                            覆盖全球数据中心及网络资源,多中心布局规划,实现手游, 页游, 端游高可用架构;
+                        </p>
+                        <p class="lead">
+                            接入负载均衡, 提供充足的机柜, 宽带, IP资源及最高性能服务器, 支持数达十万pps, Gbps级宽带的网络吞吐能力, 满足玩家在高峰期的游戏体验;
+                        </p>
+                        <a href="<?php echo site_url('Welcome/program');?>">
+                            <button type="button" class="btn btn-default programBtn">查看详情</button>
+                        </a>
+                    </div>
+                    <div class="col-md-4 fangan11" style=""><img class="feature-image img-responsive" src="home/img/youxi.svg"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="videoF">
+                <div class="row feature">
+                    <div class="col-md-8">
+                        <p class="lead">
+                            全球资源布局, 实现海量视频存储;
+                        </p>
+                        <p class="lead">
+                            全球CDN节点, 可实现直播加速, 点播加速, 上传加速, 移动加速, 点对点云传输加速等, 全方位保障视频文件快速安全传输, 带来更流畅的视频观看体验;
+                        </p>
+                           <a href="<?php echo site_url('Welcome/program');?>">
+                        <button type="button" class="btn btn-default programBtn">查看详情</button>
+                        </a>
+                    </div>
+                    <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/jianzhan.svg"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="ElebusF">
+                <div class="row feature">
+                    <div class="col-md-8">
+                        <p class="lead">
+                            中港, 中美, 港美 ,等国际专线及全球BGP网络 ,实现全球快速访问 ;
+                        </p>
+                        <p class="lead">
+                            对静态内容, 流媒体等内容, 进行全网加速 ,解决跨运营商跨网访问瓶颈, 提升用户注册, 登录 , 浏览商品, 购物结算的体验;
+                        </p>
+                        <a href="<?php echo site_url('Welcome/program');?>">
+                            <button type="button" class="btn btn-default programBtn">查看详情</button>
+                        </a>
+                    </div>
+                    <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/dianshang.svg"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="financialF">
+                <div class="row feature">
+                    <div class="col-md-8">
+                        <p class="lead">
+                            全球数据中心分布, 提供全球多点备份.
+                        </p>
+                        <p class="lead">
+                            提供按需接入方案 ,主机租用 ,私有云 ,混合云多种接入模式 ,灾备节点通过私有云与物理集群打通 ,实现异地容灾;
+                        </p>
+                        <a href="<?php echo site_url('Welcome/program');?>">
+                            <button type="button" class="btn btn-default programBtn">查看详情</button>
+                        </a>
+                    </div>
+                    <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/jingrong.svg"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="APPF">
+                <div class="row feature">
+                    <div class="col-md-8">
+                        <p class="lead">
+                            智能BGP优化用户访问质量.
+                        </p>
+                        <p class="lead">
+                            移动云应用虚拟化系统为客户提供最佳的应用性能及灵活的应用虚拟化服务，帮助客户实现手机、平板电脑等移动设备安全顺畅地访问各种应用软件。
+                        </p>
+                           <a href="<?php echo site_url('Welcome/program');?>">
+                        <button type="button" class="btn btn-default programBtn">查看详情</button>
+                        </a>
+                    </div>
+                    <div class="col-md-4 fangan11" ><img class="feature-image img-responsive" src="home/img/appF.svg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--优势栅格布局-->
+<div class="width200" style="background:none !important;">
     <div class="container summary">
         <h3 class="myTitle" style="text-align: center;  margin:0% 0 5% 0;padding-top: 5%">我们的<span>优势</span>
             <!-- <div class="yingcang">我们以行业需求切入云计算领域，化繁为简，助你轻松实现云端部署</div> -->
@@ -411,118 +431,6 @@
         </div>
     </div>
 </div>
-<div class="container summary" >
-    <!-- <hr class="feature-divider"> -->
-
-<!--特性 标签页-->
-<!-- <hr class="feature-divider" id="programme"> -->
-   <h3 class="myTitle" id="programme" style="text-align: center;  margin:0% 0 5% 0;padding-top: 6%">行业解决<span>方案</span>
-        <div class="yingcang">针对各行业业务特性，打造个性化行业解决方案，为您提供一站式的产品与服务</div>
-   </h3>
-    <ul class="nav nav-tabs" id="tablists" role="tablist">
-        <li role="presentation" class="active">
-            <a  href="#gameF" role="tab" data-toggle="tab" aria-controls="home">游戏行业解决方案</a>
-        </li>
-        <li role="presentation">
-            <a href="#videoF" role="tab" data-toggle="tab" aria-controls="profile" >视频行业解决方案</a>
-        </li>
-        <li role="presentation">
-            <a href="#ElebusF" role="tab" data-toggle="tab" aria-controls="messages">电商行业解决方案</a>
-        </li>
-        <li role="presentation">
-            <a href="#financialF" role="tab" data-toggle="tab" aria-controls="messages">金融行业解决方案</a>
-        </li>
-        <li role="presentation">
-            <a href="#APPF" role="tab" data-toggle="tab" aria-controls="messages">移动APP解决方案</a>
-        </li>
-    </ul>
-    <div class="tab-content" >
-        <div role="tabpanel" class="tab-pane active" id="gameF">
-            <div class="row feature">
-                <div class="col-md-8">
-                    <!-- <h2 class="feature-heading">腾讯云<span class="text-muted">使用最广的云服务</span></h2> -->
-                    <p class="lead">
-                        覆盖全球数据中心及网络资源,多中心布局规划,实现手游, 页游, 端游高可用架构;
-                    </p>
-                    <p class="lead">
-                        接入负载均衡, 提供充足的机柜, 宽带, IP资源及最高性能服务器, 支持数达十万pps, Gbps级宽带的网络吞吐能力, 满足玩家在高峰期的游戏体验;
-                    </p>
-                    <a href="<?php echo site_url('Welcome/program');?>">
-                        <button type="button" class="btn btn-default programBtn">查看详情</button>
-                    </a>
-                </div>
-                <div class="col-md-4 fangan11" style=""><img class="feature-image img-responsive" src="home/img/youxi.svg"></div>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="videoF">
-            <div class="row feature">
-                <div class="col-md-8">
-                    <p class="lead">
-                        全球资源布局, 实现海量视频存储;
-                    </p>
-                    <p class="lead">
-                        全球CDN节点, 可实现直播加速, 点播加速, 上传加速, 移动加速, 点对点云传输加速等, 全方位保障视频文件快速安全传输, 带来更流畅的视频观看体验;
-                    </p>
-                       <a href="<?php echo site_url('Welcome/program');?>">
-                    <button type="button" class="btn btn-default programBtn">查看详情</button>
-                    </a>
-                </div>
-                <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/jianzhan.svg"></div>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="ElebusF">
-            <div class="row feature">
-                <div class="col-md-8">
-                    <p class="lead">
-                        中港, 中美, 港美 ,等国际专线及全球BGP网络 ,实现全球快速访问 ;
-                    </p>
-                    <p class="lead">
-                        对静态内容, 流媒体等内容, 进行全网加速 ,解决跨运营商跨网访问瓶颈, 提升用户注册, 登录 , 浏览商品, 购物结算的体验;
-                    </p>
-                    <a href="<?php echo site_url('Welcome/program');?>">
-                        <button type="button" class="btn btn-default programBtn">查看详情</button>
-                    </a>
-                </div>
-                <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/dianshang.svg"></div>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="financialF">
-            <div class="row feature">
-                <div class="col-md-8">
-                    <p class="lead">
-                        全球数据中心分布, 提供全球多点备份.
-                    </p>
-                    <p class="lead">
-                        提供按需接入方案 ,主机租用 ,私有云 ,混合云多种接入模式 ,灾备节点通过私有云与物理集群打通 ,实现异地容灾;
-                    </p>
-                    <a href="<?php echo site_url('Welcome/program');?>">
-                        <button type="button" class="btn btn-default programBtn">查看详情</button>
-                    </a>
-                </div>
-                <div class="col-md-4 fangan11"><img class="feature-image img-responsive" src="home/img/jingrong.svg"></div>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="APPF">
-            <div class="row feature">
-                <div class="col-md-8">
-                    <p class="lead">
-                        智能BGP优化用户访问质量.
-                    </p>
-                    <p class="lead">
-                        移动云应用虚拟化系统为客户提供最佳的应用性能及灵活的应用虚拟化服务，帮助客户实现手机、平板电脑等移动设备安全顺畅地访问各种应用软件。
-                    </p>
-                       <a href="<?php echo site_url('Welcome/program');?>">
-                    <button type="button" class="btn btn-default programBtn">查看详情</button>
-                    </a>
-                </div>
-                <div class="col-md-4 fangan11" ><img class="feature-image img-responsive" src="home/img/appF.svg"></div>
-            </div>
-        </div>
-    </div>
-    
-
-</div><!-- contain -->
-
 
 
 <!-- 案例 -->
